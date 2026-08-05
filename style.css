@@ -8,6 +8,8 @@
     --primary-hover: #827aff;
     --line: #2c3442;
     --success: #48d597;
+    --secondary: #3b4050;
+    --secondary-hover: #4a5060;
 }
 
 * {
@@ -24,6 +26,7 @@ body {
     color: var(--text);
     font-family: Tahoma, Arial, sans-serif;
     line-height: 1.8;
+    direction: rtl; /* برای زبان فارسی */
 }
 
 a {
@@ -34,6 +37,7 @@ a {
 .container {
     width: min(1120px, calc(100% - 36px));
     margin: 0 auto;
+    padding: 0 18px; /* اضافه شده برای اطمینان از فاصله در موبایل */
 }
 
 nav {
@@ -43,10 +47,10 @@ nav {
     justify-content: space-between;
     gap: 20px;
     border-bottom: 1px solid var(--line);
+    padding: 0 18px; /* برای هماهنگی با کانتینر */
 }
 
 .logo {
-    direction: ltr;
     color: var(--text);
     font-family: Arial, sans-serif;
     font-size: 21px;
@@ -71,135 +75,424 @@ nav {
 .hero {
     padding: 100px 0 80px;
     max-width: 760px;
+    text-align: center; /* مرکز چین کردن متن در هیرو */
+}
+
+.hero .badge {
+    color: var(--primary);
+    font-size: 14px;
+    font-weight: 600;
+    letter-spacing: 1px;
+    margin-bottom: 16px;
+    display: inline-block; /* برای اینکه مارجین پایین اعمال شود */
 }
 
 .hero h1 {
     margin: 0 0 18px;
-    direction: ltr;
-    font-family: Arial, sans-serif;
     font-size: clamp(42px, 8vw, 78px);
     line-height: 1.1;
     letter-spacing: 0;
 }
 
-.hero p {
-    max-width: 650px;
-    margin: 0;
-    color: var(--muted);
-    font-size: 18px;
-}
-
-.projects {
-    padding: 20px 0 90px;
-}
-
-.projects > h2 {
-    margin: 0 0 25px;
-    font-size: 28px;
-}
-
-.project-grid {
-    display: grid;
-    grid-template-columns: repeat(3,:root {
-    --bg: #0f1117;
-    --panel: #171b24;
-    --panel-hover: #202632;
-    --text: #f2f4f8;
-    --muted: #aab2c0;
-    --primary: #6c63ff;
-    --primary-hover: #827aff;
-    --line: #2c3442;
-    --success: #48d597;
-}
-
-* {
-    box-sizing: border-box;
-}
-
-html {
-    scroll-behavior: smooth;
-}
-
-body {
-    margin: 0;
-    background: var(--bg);
-    color: var(--text);
-    font-family: Tahoma, Arial, sans-serif;
-    line-height: 1.8;
-}
-
-a {
-    color: inherit;
-    text-decoration: none;
-}
-
-.container {
-    width: min(1120px, calc(100% - 36px));
-    margin: 0 auto;
-}
-
-nav {
-    min-height: 78px;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    gap: 20px;
-    border-bottom: 1px solid var(--line);
-}
-
-.logo {
-    direction: ltr;
-    color: var(--text);
-    font-family: Arial, sans-serif;
-    font-size: 21px;
-    font-weight: 800;
-    letter-spacing: 0;
-}
-
-.logo span {
+.hero h1 .accent {
     color: var(--primary);
 }
 
-.nav-link {
+.hero p {
+    margin: 0 auto 30px; /* مرکز چین کردن پاراگراف */
+    color: var(--muted);
+    font-size: 18px;
+    max-width: 650px; /* محدود کردن عرض پاراگراف */
+}
+
+.btn {
+    min-height: 46px;
+    display: inline-flex; /* استفاده از فلکس برای هم‌ترازی */
+    align-items: center;
+    justify-content: center;
+    padding: 9px 18px;
+    border: 1px solid transparent;
+    border-radius: 6px;
+    font-family: inherit;
+    font-size: 14px;
+    cursor: pointer;
+    transition:
+        background 0.2s ease,
+        border-color 0.2s ease,
+        transform 0.2s ease;
+    text-decoration: none; /* حذف زیرخط لینک */
+}
+
+.btn:hover {
+    transform: translateY(-2px);
+}
+
+.btn.primary {
+    background: var(--primary);
+    color: #ffffff;
+}
+
+.btn.primary:hover {
+    background: var(--primary-hover);
+}
+
+.btn.secondary {
+    background: var(--secondary);
+    color: var(--text);
+    border: 1px solid var(--line);
+}
+
+.btn.secondary:hover {
+    background: var(--secondary-hover);
+    border-color: var(--primary);
+}
+
+.section {
+    padding: 90px 0;
+}
+
+.section-title {
+    margin: 0 0 25px;
+    font-size: 28px;
+    text-align: center;
+}
+
+.section-subtitle {
+    margin: 0 auto 50px;
+    color: var(--muted);
+    font-size: 16px;
+    text-align: center;
+    max-width: 600px;
+}
+
+.grid {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 18px;
+}
+
+.card {
+    padding: 25px;
+    border: 1px solid var(--line);
+    border-radius: 8px;
+    background: var(--panel);
+    transition:
+        background 0.2s ease,
+        border-color 0.2s ease,
+        transform 0.2s ease;
+    display: flex; /* استفاده از فلکس برای چیدمان داخلی کارت */
+    flex-direction: column;
+    justify-content: space-between; /* توزیع فضا بین عناصر */
+}
+
+.card:hover {
+    background: var(--panel-hover);
+    border-color: var(--primary);
+    transform: translateY(-4px);
+}
+
+.card .icon {
+    font-size: 32px;
+    margin-bottom: 12px;
+    display: inline-block;
+    color: var(--primary); /* رنگ آیکون */
+}
+
+.card h3 {
+    margin: 0 0 12px;
+    color: var(--text);
+    font-size: 20px;
+}
+
+.card p {
+    margin: 0 0 20px; /* فاصله تا تگ‌ها */
+    color: var(--muted);
+    font-size: 14px;
+    flex-grow: 1; /* اجازه به پاراگراف برای گرفتن فضای اضافی */
+}
+
+.tags {
+    display: flex;
+    gap: 8px;
+    flex-wrap: wrap; /* اجازه به رپ شدن تگ‌ها */
+    margin-bottom: 15px;
+}
+
+.tag {
+    background: var(--line);
+    color: var(--muted);
+    font-size: 12px;
+    padding: 4px 8px;
+    border-radius: 4px;
+}
+
+.card .btn {
+    margin-top: auto; /* دکمه را به پایین کارت می‌برد */
+}
+
+footer {
+    padding: 28px 0 35px;
+    border-top: 1px solid var(--line);
+    color: var(--muted);
+    font-size: 13px;
+    text-align: center;
+}
+
+.visitor-counter {
+    margin-top: 18px;
+}
+
+.visitor-counter p {
+    margin: 0 0 8px;
+}
+
+.visitor-counter img {
+    max-width: 100%;
+    height: auto;
+}
+
+/* استایل‌های مربوط به صفحات جزئیات پروژه */
+.page-hero {
+    padding: 70px 0 50px;
+    text-align: center; /* مرکز چین کردن */
+}
+
+.back {
+    display: inline-block;
+    margin-bottom: 25px;
     color: var(--muted);
     font-size: 14px;
     transition: color 0.2s ease;
 }
 
-.nav-link:hover {
+.back:hover {
+    color: var(--primary-hover);
+}
+
+.project-title {
+    margin: 0 0 12px;
+    font-size: clamp(30px, 5vw, 52px);
+    line-height: 1.3;
     color: var(--text);
 }
 
-.hero {
-    padding: 100px 0 80px;
-    max-width: 760px;
-}
-
-.hero h1 {
-    margin: 0 0 18px;
-    direction: ltr;
-    font-family: Arial, sans-serif;
-    font-size: clamp(42px, 8vw, 78px);
-    line-height: 1.1;
-    letter-spacing: 0;
-}
-
-.hero p {
-    max-width: 650px;
-    margin: 0;
+.lead {
+    margin: 0 auto 30px;
     color: var(--muted);
     font-size: 18px;
+    max-width: 650px;
 }
 
-.projects {
-    padding: 20px 0 90px;
-}
-
-.projects > h2 {
-    margin: 0 0 25px;
-    font-size: 28px;
-}
-
-.project-grid {
+.project-layout {
     display: grid;
-    grid-template-columns: repeat(3,
+    grid-template-columns: minmax(0, 1fr) 290px;
+    align-items: start;
+    gap: 24px;
+    padding-bottom: 90px;
+    text-align: right; /* تنظیم جهت متن برای راست‌چین */
+}
+
+.content-box,
+.download {
+    padding: 25px;
+    border: 1px solid var(--line);
+    border-radius: 8px;
+    background: var(--panel);
+}
+
+.content-box h2,
+.download h2 {
+    margin: 0 0 14px;
+    font-size: 21px;
+    color: var(--text);
+}
+
+.content-box p,
+.download p {
+    margin: 0 0 15px; /* فاصله بین پاراگراف‌ها */
+    color: var(--muted);
+    line-height: 1.9;
+}
+
+.content-box ul {
+    margin: 0;
+    padding-right: 22px;
+    color: var(--muted);
+}
+
+.content-box li {
+    margin-bottom: 8px;
+}
+
+.download {
+    margin-top: 22px;
+    border-color: rgba(108, 99, 255, 0.55);
+}
+
+.download .btn {
+    width: 100%; /* دکمه تمام عرض */
+}
+
+pre {
+    overflow-x: auto;
+    margin: 18px 0 0;
+    padding: 16px;
+    border: 1px solid var(--line);
+    border-radius: 6px;
+    background: #0b0d12;
+    direction: ltr; /* کدها معمولا چپ‌چین هستند */
+    text-align: left;
+    font-size: 13px;
+}
+
+code {
+    color: #b9f6d0;
+    font-family: Consolas, "Courier New", monospace;
+}
+
+/* Media Queries for Responsiveness */
+@media (max-width: 1024px) {
+    .container {
+        width: calc(100% - 24px);
+    }
+
+    .hero {
+        padding: 80px 0 60px;
+    }
+
+    .section {
+        padding: 70px 0;
+    }
+}
+
+@media (max-width: 850px) {
+    nav {
+        flex-wrap: wrap; /* اجازه چرخش در صورت کمبود جا */
+        justify-content: center; /* مرکز چین کردن ناوبری */
+    }
+    .logo {
+        margin-bottom: 10px;
+        width: 100%;
+        text-align: center;
+    }
+    .nav-link {
+        font-size: 13px;
+    }
+
+    .hero h1 {
+        font-size: clamp(38px, 7vw, 68px);
+    }
+
+    .hero p {
+        font-size: 16px;
+    }
+
+    .section-title {
+        font-size: 26px;
+    }
+
+    .section-subtitle {
+        font-size: 15px;
+    }
+
+    .grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+    .project-layout {
+        grid-template-columns: 1fr;
+    }
+
+    .content-box, .download {
+        margin-bottom: 20px; /* فاصله بین محتوا و سایدبار */
+    }
+}
+
+@media (max-width: 560px) {
+    .container {
+        width: 100%;
+        padding: 0 12px;
+    }
+    nav {
+        min-height: 68px;
+        padding: 10px 12px;
+    }
+    .logo {
+        font-size: 19px;
+    }
+    .nav-link {
+        font-size: 12px;
+    }
+
+    .hero {
+        padding: 70px 0 55px;
+    }
+
+    .hero h1 {
+        font-size: clamp(30px, 8vw, 58px);
+    }
+
+    .hero p {
+        font-size: 15px;
+        padding: 0 10px; /* کمی فضا در طرفین */
+    }
+
+    .btn {
+        width: 100%; /* دکمه‌ها در موبایل تمام عرض */
+    }
+
+    .section {
+        padding: 50px 0;
+    }
+
+    .section-title {
+        font-size: 24px;
+    }
+
+    .section-subtitle {
+        font-size: 14px;
+        padding: 0 10px;
+    }
+
+    .grid {
+        grid-template-columns: 1fr;
+    }
+
+    .card {
+        padding: 20px;
+    }
+
+    .card h3 {
+        font-size: 18px;
+    }
+
+    .card p {
+        font-size: 13px;
+    }
+
+    .page-hero {
+        padding: 55px 0 35px;
+    }
+
+    .project-title {
+        font-size: 31px;
+    }
+
+    .lead {
+        font-size: 15px;
+        padding: 0 10px;
+    }
+
+    .content-box, .download {
+        padding: 20px;
+    }
+
+    pre {
+        font-size: 12px;
+        padding: 12px;
+    }
+
+    footer {
+        padding: 25px 12px;
+    }
+}
