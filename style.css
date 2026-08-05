@@ -55,3 +55,39 @@ footer { padding: 30px 0; border-top: 1px solid var(--line); color: var(--muted)
     height: auto;
     border-radius: 10px;
 }
+.project-grid {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 18px;
+}
+
+.project-card {
+    min-height: 190px;
+    display: block;
+    padding: 25px;
+    border: 1px solid var(--line);
+    border-radius: 8px;
+    background: var(--panel);
+    transition:
+        background 0.2s ease,
+        border-color 0.2s ease,
+        transform 0.2s ease;
+}
+
+.project-card:hover {
+    background: var(--panel-hover);
+    border-color: var(--primary);
+    transform: translateY(-4px);
+}
+
+.project-card h3 {
+    margin: 0 0 12px;
+    color: var(--text);
+    font-size: 20px;
+}
+
+.project-card p {
+    margin: 0;
+    color: var(--muted);
+    font-size: 14px;
+}
