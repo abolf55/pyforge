@@ -1,498 +1,57 @@
+@import url('https://fonts.googleapis.com/css2?family=Vazirmatn:wght@400;500;600;700;800&family=JetBrains+Mono:wght@500;700&display=swap');
+
 :root {
-    --bg: #0f1117;
-    --panel: #171b24;
-    --panel-hover: #202632;
-    --text: #f2f4f8;
-    --muted: #aab2c0;
-    --primary: #6c63ff;
-    --primary-hover: #827aff;
-    --line: #2c3442;
-    --success: #48d597;
-    --secondary: #3b4050;
-    --secondary-hover: #4a5060;
+  --bg: #080b14;
+  --surface: #101625;
+  --surface-2: #151d2f;
+  --line: #27324b;
+  --text: #f1f5ff;
+  --muted: #9caac4;
+  --cyan: #36d7ff;
+  --purple: #8a70ff;
+  --green: #4ee8a8;
 }
+* { box-sizing: border-box; }
+html { scroll-behavior: smooth; }
+body { margin: 0; direction: rtl; color: var(--text); background: var(--bg); font-family: Vazirmatn, Tahoma, sans-serif; line-height: 1.9; }
+body::before { content: ''; position: fixed; inset: 0; z-index: -1; background: radial-gradient(circle at 12% 0%, rgba(54,215,255,.13), transparent 27rem), radial-gradient(circle at 88% 17%, rgba(138,112,255,.15), transparent 31rem), linear-gradient(135deg,#080b14,#0b1020 65%,#080b14); }
+a { color: inherit; text-decoration: none; }
+.container { width: min(1120px, calc(100% - 40px)); margin: auto; }
+nav { display: flex; justify-content: space-between; align-items: center; min-height: 82px; }
+.logo { direction: ltr; font-family: 'JetBrains Mono', monospace; font-weight: 700; font-size: 1.1rem; color: var(--cyan); }
+.logo span { color: var(--purple); }
+.nav-link { color: var(--muted); transition: .2s; }.nav-link:hover { color: var(--cyan); }
+.hero { min-height: 530px; display: grid; align-content: center; text-align: center; padding: 55px 0 95px; }
+.badge { width: fit-content; margin: auto; color: var(--green); background: rgba(78,232,168,.1); border: 1px solid rgba(78,232,168,.25); padding: 6px 15px; border-radius: 999px; font-size: .85rem; }
+h1 { font-size: clamp(2.3rem, 7vw, 5rem); line-height: 1.25; margin: 20px 0 15px; letter-spacing: -.08rem; } .accent { color: var(--cyan); }
+.hero p { max-width: 720px; margin: 0 auto 28px; color: var(--muted); font-size: 1.08rem; }
+.btn { display: inline-flex; justify-content: center; align-items: center; gap: 8px; border-radius: 12px; border: 1px solid transparent; padding: 11px 20px; cursor: pointer; font: inherit; transition: transform .2s, box-shadow .2s, background .2s; }
+.btn:hover { transform: translateY(-3px); }.primary { color:#041018; background: linear-gradient(135deg,var(--cyan),#88ebff); box-shadow: 0 9px 30px rgba(54,215,255,.2); }.secondary { border-color: var(--line); background: rgba(21,29,47,.65); color: var(--text); }
+.section { padding: 75px 0; }.section-title { text-align: center; font-size: 2rem; margin: 0; }.section-subtitle { color: var(--muted); text-align: center; margin: 5px 0 35px; }
+.grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 18px; }.card { padding: 26px; border: 1px solid var(--line); border-radius: 19px; background: linear-gradient(145deg,rgba(21,29,47,.9),rgba(11,16,30,.92)); transition: .25s; }.card:hover { border-color: rgba(54,215,255,.65); transform: translateY(-5px); box-shadow: 0 20px 45px rgba(0,0,0,.25); }.icon { width: 48px; height: 48px; display:grid; place-items:center; background: rgba(54,215,255,.1); border: 1px solid rgba(54,215,255,.2); border-radius: 14px; font-size: 1.5rem; }.card h3 { margin: 16px 0 7px; font-size: 1.28rem; }.card p { color: var(--muted); margin: 0 0 17px; line-height: 1.8; }.card .btn { padding: 8px 14px; font-size: .9rem; }
+.tags { display:flex; flex-wrap:wrap; gap:7px; margin-bottom: 18px; direction:ltr; justify-content:flex-end; }.tag { padding: 3px 9px; color:#c6dcff; font: .75rem 'JetBrains Mono', monospace; background: rgba(138,112,255,.13); border-radius: 6px; }
+footer { padding: 30px 0; border-top: 1px solid var(--line); color: var(--muted); text-align:center; font-size:.9rem; }
+.page-hero { padding: 75px 0 44px; }.back { color: var(--cyan); }.project-title { font-size:clamp(2rem,6vw,3.6rem); margin:25px 0 8px; }.lead { color:var(--muted); max-width:760px; font-size:1.1rem; }.project-layout { display:grid; grid-template-columns: 1fr 300px; gap:22px; padding-bottom:80px; }.content-box,.info { padding:25px; background:rgba(16,22,37,.82); border:1px solid var(--line); border-radius:17px; }.content-box h2 { margin-top: 0; font-size:1.35rem; }.content-box ul { padding-right:22px; }.content-box li { margin:7px 0; }.info { height:fit-content; position:sticky; top:18px; }.info h3 { margin-top:0; }.info p { color:var(--muted); margin:8px 0; }.download { margin-top:22px; padding:30px; border-radius:17px; border:1px solid rgba(78,232,168,.28); background:linear-gradient(135deg,rgba(78,232,168,.11),rgba(54,215,255,.08)); text-align:center; }.download h2 { margin:0 0 7px; }.download p { color:var(--muted); margin:0 0 17px; }.disabled { opacity:.75; cursor:not-allowed; }
+@media(max-width:720px){ .grid,.project-layout { grid-template-columns:1fr; } .info { position:static; } nav { min-height:65px; } h1 { letter-spacing:-.04rem; } .hero { min-height:470px; } }
 
-* {
-    box-sizing: border-box;
-}
-
-html {
-    scroll-behavior: smooth;
-}
-
-body {
-    margin: 0;
-    background: var(--bg);
-    color: var(--text);
-    font-family: Tahoma, Arial, sans-serif;
-    line-height: 1.8;
-    direction: rtl; /* برای زبان فارسی */
-}
-
-a {
-    color: inherit;
-    text-decoration: none;
-}
-
-.container {
-    width: min(1120px, calc(100% - 36px));
-    margin: 0 auto;
-    padding: 0 18px; /* اضافه شده برای اطمینان از فاصله در موبایل */
-}
-
-nav {
-    min-height: 78px;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    gap: 20px;
-    border-bottom: 1px solid var(--line);
-    padding: 0 18px; /* برای هماهنگی با کانتینر */
-}
-
-.logo {
-    color: var(--text);
-    font-family: Arial, sans-serif;
-    font-size: 21px;
-    font-weight: 800;
-    letter-spacing: 0;
-}
-
-.logo span {
-    color: var(--primary);
-}
-
-.nav-link {
-    color: var(--muted);
-    font-size: 14px;
-    transition: color 0.2s ease;
-}
-
-.nav-link:hover {
-    color: var(--text);
-}
-
-.hero {
-    padding: 100px 0 80px;
-    max-width: 760px;
-    text-align: center; /* مرکز چین کردن متن در هیرو */
-}
-
-.hero .badge {
-    color: var(--primary);
-    font-size: 14px;
-    font-weight: 600;
-    letter-spacing: 1px;
-    margin-bottom: 16px;
-    display: inline-block; /* برای اینکه مارجین پایین اعمال شود */
-}
-
-.hero h1 {
-    margin: 0 0 18px;
-    font-size: clamp(42px, 8vw, 78px);
-    line-height: 1.1;
-    letter-spacing: 0;
-}
-
-.hero h1 .accent {
-    color: var(--primary);
-}
-
-.hero p {
-    margin: 0 auto 30px; /* مرکز چین کردن پاراگراف */
-    color: var(--muted);
-    font-size: 18px;
-    max-width: 650px; /* محدود کردن عرض پاراگراف */
-}
-
-.btn {
-    min-height: 46px;
-    display: inline-flex; /* استفاده از فلکس برای هم‌ترازی */
-    align-items: center;
-    justify-content: center;
-    padding: 9px 18px;
-    border: 1px solid transparent;
-    border-radius: 6px;
-    font-family: inherit;
-    font-size: 14px;
-    cursor: pointer;
-    transition:
-        background 0.2s ease,
-        border-color 0.2s ease,
-        transform 0.2s ease;
-    text-decoration: none; /* حذف زیرخط لینک */
-}
-
-.btn:hover {
-    transform: translateY(-2px);
-}
-
-.btn.primary {
-    background: var(--primary);
-    color: #ffffff;
-}
-
-.btn.primary:hover {
-    background: var(--primary-hover);
-}
-
-.btn.secondary {
-    background: var(--secondary);
-    color: var(--text);
-    border: 1px solid var(--line);
-}
-
-.btn.secondary:hover {
-    background: var(--secondary-hover);
-    border-color: var(--primary);
-}
-
-.section {
-    padding: 90px 0;
-}
-
-.section-title {
-    margin: 0 0 25px;
-    font-size: 28px;
-    text-align: center;
-}
-
-.section-subtitle {
-    margin: 0 auto 50px;
-    color: var(--muted);
-    font-size: 16px;
-    text-align: center;
-    max-width: 600px;
-}
-
-.grid {
-    display: grid;
-    grid-template-columns: repeat(3, minmax(0, 1fr));
-    gap: 18px;
-}
-
-.card {
-    padding: 25px;
-    border: 1px solid var(--line);
-    border-radius: 8px;
-    background: var(--panel);
-    transition:
-        background 0.2s ease,
-        border-color 0.2s ease,
-        transform 0.2s ease;
-    display: flex; /* استفاده از فلکس برای چیدمان داخلی کارت */
-    flex-direction: column;
-    justify-content: space-between; /* توزیع فضا بین عناصر */
-}
-
-.card:hover {
-    background: var(--panel-hover);
-    border-color: var(--primary);
-    transform: translateY(-4px);
-}
-
-.card .icon {
-    font-size: 32px;
-    margin-bottom: 12px;
-    display: inline-block;
-    color: var(--primary); /* رنگ آیکون */
-}
-
-.card h3 {
-    margin: 0 0 12px;
-    color: var(--text);
-    font-size: 20px;
-}
-
-.card p {
-    margin: 0 0 20px; /* فاصله تا تگ‌ها */
-    color: var(--muted);
-    font-size: 14px;
-    flex-grow: 1; /* اجازه به پاراگراف برای گرفتن فضای اضافی */
-}
-
-.tags {
-    display: flex;
-    gap: 8px;
-    flex-wrap: wrap; /* اجازه به رپ شدن تگ‌ها */
-    margin-bottom: 15px;
-}
-
-.tag {
-    background: var(--line);
-    color: var(--muted);
-    font-size: 12px;
-    padding: 4px 8px;
-    border-radius: 4px;
-}
-
-.card .btn {
-    margin-top: auto; /* دکمه را به پایین کارت می‌برد */
-}
-
-footer {
-    padding: 28px 0 35px;
-    border-top: 1px solid var(--line);
-    color: var(--muted);
-    font-size: 13px;
-    text-align: center;
-}
 
 .visitor-counter {
-    margin-top: 18px;
+    margin-top: 24px;
+    padding: 16px;
+    border: 1px solid rgba(255,255,255,0.08);
+    border-radius: 16px;
+    background: rgba(255,255,255,0.03);
+    text-align: center;
 }
 
 .visitor-counter p {
-    margin: 0 0 8px;
+    margin: 0 0 10px;
+    color: #cfcfe8;
+    font-size: 0.95rem;
 }
 
 .visitor-counter img {
     max-width: 100%;
     height: auto;
-}
-
-/* استایل‌های مربوط به صفحات جزئیات پروژه */
-.page-hero {
-    padding: 70px 0 50px;
-    text-align: center; /* مرکز چین کردن */
-}
-
-.back {
-    display: inline-block;
-    margin-bottom: 25px;
-    color: var(--muted);
-    font-size: 14px;
-    transition: color 0.2s ease;
-}
-
-.back:hover {
-    color: var(--primary-hover);
-}
-
-.project-title {
-    margin: 0 0 12px;
-    font-size: clamp(30px, 5vw, 52px);
-    line-height: 1.3;
-    color: var(--text);
-}
-
-.lead {
-    margin: 0 auto 30px;
-    color: var(--muted);
-    font-size: 18px;
-    max-width: 650px;
-}
-
-.project-layout {
-    display: grid;
-    grid-template-columns: minmax(0, 1fr) 290px;
-    align-items: start;
-    gap: 24px;
-    padding-bottom: 90px;
-    text-align: right; /* تنظیم جهت متن برای راست‌چین */
-}
-
-.content-box,
-.download {
-    padding: 25px;
-    border: 1px solid var(--line);
-    border-radius: 8px;
-    background: var(--panel);
-}
-
-.content-box h2,
-.download h2 {
-    margin: 0 0 14px;
-    font-size: 21px;
-    color: var(--text);
-}
-
-.content-box p,
-.download p {
-    margin: 0 0 15px; /* فاصله بین پاراگراف‌ها */
-    color: var(--muted);
-    line-height: 1.9;
-}
-
-.content-box ul {
-    margin: 0;
-    padding-right: 22px;
-    color: var(--muted);
-}
-
-.content-box li {
-    margin-bottom: 8px;
-}
-
-.download {
-    margin-top: 22px;
-    border-color: rgba(108, 99, 255, 0.55);
-}
-
-.download .btn {
-    width: 100%; /* دکمه تمام عرض */
-}
-
-pre {
-    overflow-x: auto;
-    margin: 18px 0 0;
-    padding: 16px;
-    border: 1px solid var(--line);
-    border-radius: 6px;
-    background: #0b0d12;
-    direction: ltr; /* کدها معمولا چپ‌چین هستند */
-    text-align: left;
-    font-size: 13px;
-}
-
-code {
-    color: #b9f6d0;
-    font-family: Consolas, "Courier New", monospace;
-}
-
-/* Media Queries for Responsiveness */
-@media (max-width: 1024px) {
-    .container {
-        width: calc(100% - 24px);
-    }
-
-    .hero {
-        padding: 80px 0 60px;
-    }
-
-    .section {
-        padding: 70px 0;
-    }
-}
-
-@media (max-width: 850px) {
-    nav {
-        flex-wrap: wrap; /* اجازه چرخش در صورت کمبود جا */
-        justify-content: center; /* مرکز چین کردن ناوبری */
-    }
-    .logo {
-        margin-bottom: 10px;
-        width: 100%;
-        text-align: center;
-    }
-    .nav-link {
-        font-size: 13px;
-    }
-
-    .hero h1 {
-        font-size: clamp(38px, 7vw, 68px);
-    }
-
-    .hero p {
-        font-size: 16px;
-    }
-
-    .section-title {
-        font-size: 26px;
-    }
-
-    .section-subtitle {
-        font-size: 15px;
-    }
-
-    .grid {
-        grid-template-columns: repeat(2, minmax(0, 1fr));
-    }
-
-    .project-layout {
-        grid-template-columns: 1fr;
-    }
-
-    .content-box, .download {
-        margin-bottom: 20px; /* فاصله بین محتوا و سایدبار */
-    }
-}
-
-@media (max-width: 560px) {
-    .container {
-        width: 100%;
-        padding: 0 12px;
-    }
-    nav {
-        min-height: 68px;
-        padding: 10px 12px;
-    }
-    .logo {
-        font-size: 19px;
-    }
-    .nav-link {
-        font-size: 12px;
-    }
-
-    .hero {
-        padding: 70px 0 55px;
-    }
-
-    .hero h1 {
-        font-size: clamp(30px, 8vw, 58px);
-    }
-
-    .hero p {
-        font-size: 15px;
-        padding: 0 10px; /* کمی فضا در طرفین */
-    }
-
-    .btn {
-        width: 100%; /* دکمه‌ها در موبایل تمام عرض */
-    }
-
-    .section {
-        padding: 50px 0;
-    }
-
-    .section-title {
-        font-size: 24px;
-    }
-
-    .section-subtitle {
-        font-size: 14px;
-        padding: 0 10px;
-    }
-
-    .grid {
-        grid-template-columns: 1fr;
-    }
-
-    .card {
-        padding: 20px;
-    }
-
-    .card h3 {
-        font-size: 18px;
-    }
-
-    .card p {
-        font-size: 13px;
-    }
-
-    .page-hero {
-        padding: 55px 0 35px;
-    }
-
-    .project-title {
-        font-size: 31px;
-    }
-
-    .lead {
-        font-size: 15px;
-        padding: 0 10px;
-    }
-
-    .content-box, .download {
-        padding: 20px;
-    }
-
-    pre {
-        font-size: 12px;
-        padding: 12px;
-    }
-
-    footer {
-        padding: 25px 12px;
-    }
+    border-radius: 10px;
 }
