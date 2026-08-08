@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PyVault - مدیریت رمز عبور | PyForge</title>
+    <!-- اتصال به فایل CSS مشترک در ریشه اصلی -->
+    <link rel="stylesheet" href="../style.css">
+</head>
+<body>
+
+    <div class="container">
+        <!-- هدر سایت -->
+        <nav>
+            <a href="../index.html" class="logo">
+                Py<span>Forge</span>
+            </a>
+            <a href="../index.html" class="nav-link">بازگشت به صفحه اصلی</a>
+        </nav>
+
+        <main>
+            <!-- بخش معرفی اصلی پروژه -->
+            <section class="page-hero">
+                <a href="../index.html" class="back">← بازگشت به پروژه‌ها</a>
+                <h1 class="project-title">PyVault Password Manager</h1>
+                <p class="lead">
+                    نرم‌افزار دسکتاپ مدیریت و ذخیره‌سازی امن گذرواژه‌ها به همراه تولیدکننده رمز عبور تصادفی و دیتابیس لوکال رمزنگاری‌شده.
+                </p>
+            </section>
+
+            <!-- چیدمان دو ستونه صفحه جزئیات -->
+            <section class="project-layout">
+                
+                <!-- ستون اصلی (محتوا و توضیحات) -->
+                <div class="main-content" style="display: flex; flex-direction: column; gap: 22px;">
+                    
+                    <article class="content-box">
+                        <h2>توضیحات پروژه</h2>
+                        <p>
+                            پروژه <strong>PyVault</strong> یک گاوصندوق دیجیتال شخصی برای نگهداری گذرواژه‌ها و اطلاعات حساب‌های کاربری شماست. این برنامه با هدف ذخیره‌سازی آفلاین و محلی اطلاعات طراحی شده تا امنیت داده‌ها بدون نیاز به اینترنت و سرورهای ابری کاملاً تضمین شود. تمامی اطلاعات ورودی در پایگاه داده محلی ذخیره می‌شوند.
+                        </p>
+                        
+                        <h2>قابلیت‌های کلیدی نرم‌افزار</h2>
+                        <ul>
+                            <li><strong>رمز عبور مستر (Master Password):</strong> دسترسی به نرم‌افزار تنها از طریق یک رمز عبور اصلی و تاییدشده امکان‌پذیر است.</li>
+                            <li><strong>مولد رمزهای قدرتمند:</strong> ساخت خودکار پسوردهای تصادفی و پیچیده با ترکیب حروف، اعداد و نشانه‌ها.</li>
+                            <li><strong>دیتابیس آفلاین SQLite:</strong> ذخیره سوابق و ویرایش آسان آن‌ها در سیستم عامل محلی بدون نیاز به اشتراک‌گذاری داده‌ها.</li>
+                            <li><strong>رابط کاربری مدرن دسکتاپ:</strong> استفاده از المان‌های گرافیکی روان و بهینه‌سازی‌شده برای تجربه کاربری آسان.</li>
+                        </ul>
+                    </article>
+
+                    <!-- بخش اختصاصی پنل مدیریت و لاگین اصلی (PyVault Admin/Master Access) -->
+                    <article class="content-box admin-box">
+                        <div class="admin-header">
+                            <div class="admin-icon">🔑</div>
+                            <div>
+                                <h2>قفل مستر و دسترسی مدیریت</h2>
+                                <p>سیستم کنترل ورود به گاوصندوق پسوردها</p>
+                            </div>
+                        </div>
+
+                        <p>
+                            برای ورود به برنامه و دسترسی به اطلاعات ثبت‌شده در پایگاه داده، باید اطلاعات لاگین اولیه را وارد کنید. این ویژگی مانع از دسترسی افراد غیرمجاز سیستم به گذرواژه‌های شما می‌شود.
+                        </p>
+
+                        <div class="admin-login">
+                            <h3>اطلاعات ورود به برنامه (جهت تست و اجرا):</h3>
+                            <div class="login-row">
+                                <span>رمز عبور اصلی (Master Password):</span>
+                                <code>admin123</code>
+                            </div>
+                        </div>
+
+                        <div class="security-warning">
+                            ⚠️ <strong>توصیه امنیتی مهم:</strong> جهت حفظ امنیت اطلاعات کاربری خود، پیشنهاد می‌شود بلافاصله پس از اولین اجرا، رمز عبور مستر (Master Password) پیش‌فرض را در فایل سورس برنامه به یک رمز قوی‌تر تغییر دهید تا دیتابیس شما در مقابل حملات محلی مصون بماند.
+                        </div>
+                    </article>
+
+                    <!-- بخش دانلود سورس و فایل اجرایی -->
+                    <article class="download">
+                        <h2>دریافت پروژه PyVault</h2>
+                        <p>شما می‌توانید سورس کد پایتون و فایل اجرایی مستقیم برنامه (EXE) را در قالب یک فایل فشرده دانلود کنید.</p>
+                        <a href="https://github.com/abolf55/pyforge/raw/main/manage_pasword.rar" class="btn primary">
+                            📥 دانلود پکیج کامل PyVault (RAR)
+                        </a>
+                    </article>
+
+                </div>
+
+                <!-- ستون کناری (اطلاعات فنی) -->
+                <aside class="info">
+                    <h3>اطلاعات فنی</h3>
+                    <p><strong>زبان توسعه:</strong> Python</p>
+                    <p><strong>رابط کاربری:</strong> CustomTkinter / Tkinter</p>
+                    <p><strong>پایگاه داده:</strong> SQLite 3</p>
+                    <p><strong>خروجی اجرایی:</strong> EXE (PyInstaller)</p>
+                    <p><strong>نسخه پایدار:</strong> 1.1.0</p>
+                    
+                    <div class="tags" style="margin-top: 15px;">
+                        <span class="tag">Python</span>
+                        <span class="tag">Tkinter</span>
+                        <span class="tag">Database</span>
+                        <span class="tag">Security</span>
+                        <span class="tag">PyInstaller</span>
+                    </div>
+                </aside>
+
+            </section>
+        </main>
+
+        <!-- فوتر سایت -->
+        <footer>
+            <p>© 2026 PyForge. ساخته شده توسط Abolfazl Nikbakht</p>
+        </footer>
+    </div>
+
+</body>
+</html>
