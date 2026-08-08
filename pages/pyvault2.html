@@ -1,118 +1,63 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="fa" dir="rtl">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>PyVault - مدیریت رمز عبور | PyForge</title>
-    <!-- اتصال به فایل CSS مشترک در ریشه اصلی -->
+    <meta name="viewport" content="width=device-width,initial-scale=1.0">
+    <title>PyVault 2 | PyForge</title>
     <link rel="stylesheet" href="../style.css">
 </head>
 <body>
-
     <div class="container">
-        <!-- هدر سایت -->
         <nav>
-            <a href="../index.html" class="logo">
-                Py<span>Forge</span>
-            </a>
-            <a href="../index.html" class="nav-link">بازگشت به صفحه اصلی</a>
+            <a class="logo" href="../index.html">ABOLF<span>AZL</span>.DEV</a>
+            <a class="nav-link" href="../index.html#projects">→ بازگشت به پروژه‌ها</a>
         </nav>
-
+        
         <main>
-            <!-- بخش معرفی اصلی پروژه -->
-            <section class="page-hero">
-                <a href="../index.html" class="back">← بازگشت به پروژه‌ها</a>
-                <h1 class="project-title">PyVault Password Manager</h1>
-                <p class="lead">
-                    نرم‌افزار دسکتاپ مدیریت و ذخیره‌سازی امن گذرواژه‌ها به همراه تولیدکننده رمز عبور تصادفی و دیتابیس لوکال رمزنگاری‌شده.
-                </p>
+            <section class="hero">
+                <div class="badge">🛡️ پروژه امنیتی و مدیریت پسورد</div>
+                <h1>پروژه <span class="accent">PyVault 2</span></h1>
+                <p>نسخه پیشرفته سامانه مدیریت و ساخت رمز عبور (mnag_password) با قابلیت تولید رمزهای تصادفی، کپی آسان و مدیریت کاربران.</p>
             </section>
 
-            <!-- چیدمان دو ستونه صفحه جزئیات -->
-            <section class="project-layout">
+            <section class="section">
+                <h2>مشخصات و قابلیت‌های پروژه</h2>
+                <p>این پروژه یک ابزار دسکتاپ با رابط کاربری فارسی است که به کاربران اجازه می‌دهد رمزهای عبور خود را به همراه مشخصات سرویس مربوطه ذخیره کرده و به راحتی آن‌ها را مدیریت کنند.</p>
                 
-                <!-- ستون اصلی (محتوا و توضیحات) -->
-                <div class="main-content" style="display: flex; flex-direction: column; gap: 22px;">
-                    
-                    <article class="content-box">
-                        <h2>توضیحات پروژه</h2>
-                        <p>
-                            پروژه <strong>PyVault</strong> یک گاوصندوق دیجیتال شخصی برای نگهداری گذرواژه‌ها و اطلاعات حساب‌های کاربری شماست. این برنامه با هدف ذخیره‌سازی آفلاین و محلی اطلاعات طراحی شده تا امنیت داده‌ها بدون نیاز به اینترنت و سرورهای ابری کاملاً تضمین شود. تمامی اطلاعات ورودی در پایگاه داده محلی ذخیره می‌شوند.
-                        </p>
-                        
-                        <h2>قابلیت‌های کلیدی نرم‌افزار</h2>
-                        <ul>
-                            <li><strong>رمز عبور مستر (Master Password):</strong> دسترسی به نرم‌افزار تنها از طریق یک رمز عبور اصلی و تاییدشده امکان‌پذیر است.</li>
-                            <li><strong>مولد رمزهای قدرتمند:</strong> ساخت خودکار پسوردهای تصادفی و پیچیده با ترکیب حروف، اعداد و نشانه‌ها.</li>
-                            <li><strong>دیتابیس آفلاین SQLite:</strong> ذخیره سوابق و ویرایش آسان آن‌ها در سیستم عامل محلی بدون نیاز به اشتراک‌گذاری داده‌ها.</li>
-                            <li><strong>رابط کاربری مدرن دسکتاپ:</strong> استفاده از المان‌های گرافیکی روان و بهینه‌سازی‌شده برای تجربه کاربری آسان.</li>
-                        </ul>
-                    </article>
+                <ul style="line-height: 1.8; margin-right: 20px; color: #b3b3b3;">
+                    <li>تولید رمز عبور تصادفی با قابلیت تنظیم طول رمز (۶ تا ۳۲ کاراکتر) و انتخاب نوع کاراکترها (حروف بزرگ، کوچک، اعداد و نمادها).</li>
+                    <li>سیستم ثبت‌نام، ورود دو مرحله‌ای با سؤال امنیتی و بازیابی رمز عبور.</li>
+                    <li>پایگاه داده محلی SQLite با دو جدول مجزای <code>users</code> و <code>saved_passwords</code>.</li>
+                    <li>امکان مدیریت کامل رکوردها (ذخیره، ویرایش، حذف، کپی کردن مستقیم در کلیپ‌بورد و پاک‌سازی فرم).</li>
+                    <li>دارای پنل مدیریت اختصاصی جهت مشاهده اطلاعات کاربران ثبت‌نام شده.</li>
+                </ul>
+            </section>
 
-                    <!-- بخش اختصاصی پنل مدیریت و لاگین اصلی (PyVault Admin/Master Access) -->
-                    <article class="content-box admin-box">
-                        <div class="admin-header">
-                            <div class="admin-icon">🔑</div>
-                            <div>
-                                <h2>قفل مستر و دسترسی مدیریت</h2>
-                                <p>سیستم کنترل ورود به گاوصندوق پسوردها</p>
-                            </div>
-                        </div>
-
-                        <p>
-                            برای ورود به برنامه و دسترسی به اطلاعات ثبت‌شده در پایگاه داده، باید اطلاعات لاگین اولیه را وارد کنید. این ویژگی مانع از دسترسی افراد غیرمجاز سیستم به گذرواژه‌های شما می‌شود.
-                        </p>
-
-                        <div class="admin-login">
-                            <h3>اطلاعات ورود به برنامه (جهت تست و اجرا):</h3>
-                            <div class="login-row">
-                                <span>رمز عبور اصلی (Master Password):</span>
-                                <code>admin123</code>
-                            </div>
-                        </div>
-
-                        <div class="security-warning">
-                            ⚠️ <strong>توصیه امنیتی مهم:</strong> جهت حفظ امنیت اطلاعات کاربری خود، پیشنهاد می‌شود بلافاصله پس از اولین اجرا، رمز عبور مستر (Master Password) پیش‌فرض را در فایل سورس برنامه به یک رمز قوی‌تر تغییر دهید تا دیتابیس شما در مقابل حملات محلی مصون بماند.
-                        </div>
-                    </article>
-
-                    <!-- بخش دانلود سورس و فایل اجرایی -->
-                    <article class="download">
-                        <h2>دریافت پروژه PyVault</h2>
-                        <p>شما می‌توانید سورس کد پایتون و فایل اجرایی مستقیم برنامه (EXE) را در قالب یک فایل فشرده دانلود کنید.</p>
-                        <a href="https://github.com/abolf55/pyforge/raw/main/manage_pasword.rar" class="btn primary">
-                            📥 دانلود پکیج کامل PyVault (RAR)
-                        </a>
-                    </article>
-
+            <!-- بخش پنل مدیریت و هشدارهای امنیتی -->
+            <section class="section" style="background: rgba(255, 75, 75, 0.05); border: 1px dashed #ff4b4b; padding: 25px; border-radius: 12px; margin: 30px 0;">
+                <h3 style="color: #ff4b4b; margin-top: 0;">⚠️ جزئیات امنیتی و پنل مدیریت پیش‌فرض</h3>
+                <p>جهت تست و بررسی قابلیت‌های مدیریتی پروژه، می‌توانید از مشخصات ورود زیر استفاده کنید:</p>
+                <div style="background: #1a1a24; padding: 15px; border-radius: 8px; border-left: 4px solid #ff4b4b; margin: 15px 0; font-family: monospace; direction: ltr; text-align: left;">
+                    <strong>Username:</strong> admin <br>
+                    <strong>Password:</strong> admin123
                 </div>
+                <p style="font-size: 0.9em; color: #ccacac;"><strong>هشدار امنیتی:</strong> این پروژه اطلاعات رمز عبور و پاسخ سوالات امنیتی را به صورت متن ساده (Plain Text) درون پایگاه داده محلی <code>users.db</code> ذخیره می‌کند. برای استفاده در محیط‌های عملیاتی، حتماً باید فرآیند هش‌گذاری رمزها (مانند استفاده از کتابخانه <code>cryptography</code> یا <code>bcrypt</code>) را روی آن اعمال کنید.</p>
+            </section>
 
-                <!-- ستون کناری (اطلاعات فنی) -->
-                <aside class="info">
-                    <h3>اطلاعات فنی</h3>
-                    <p><strong>زبان توسعه:</strong> Python</p>
-                    <p><strong>رابط کاربری:</strong> CustomTkinter / Tkinter</p>
-                    <p><strong>پایگاه داده:</strong> SQLite 3</p>
-                    <p><strong>خروجی اجرایی:</strong> EXE (PyInstaller)</p>
-                    <p><strong>نسخه پایدار:</strong> 1.1.0</p>
-                    
-                    <div class="tags" style="margin-top: 15px;">
-                        <span class="tag">Python</span>
-                        <span class="tag">Tkinter</span>
-                        <span class="tag">Database</span>
-                        <span class="tag">Security</span>
-                        <span class="tag">PyInstaller</span>
-                    </div>
-                </aside>
-
+            <section class="section">
+                <h2>فناوری‌های استفاده شده</h2>
+                <div class="tags">
+                    <span class="tag">Python</span>
+                    <span class="tag">Tkinter (GUI)</span>
+                    <span class="tag">SQLite3</span>
+                    <span class="tag">PyInstaller</span>
+                </div>
             </section>
         </main>
 
-        <!-- فوتر سایت -->
         <footer>
-            <p>© 2026 PyForge. ساخته شده توسط Abolfazl Nikbakht</p>
+            ساخته‌شده توسط PyForge — 2026
         </footer>
     </div>
-
 </body>
 </html>
