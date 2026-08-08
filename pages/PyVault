@@ -1,0 +1,43 @@
+<div class="content-box admin-box" style="margin-top:22px">
+    <div class="admin-header">
+        <span class="admin-icon">⚙</span>
+        <div>
+            <h2>پنل مدیریت سیستم</h2>
+            <p>بخش اختصاصی مدیریت کاربران و اطلاعات سیستم</p>
+        </div>
+    </div>
+
+    <p>
+        پنل ادمین بخش مدیریتی اصلی PyVault است و فقط مدیر مجاز می‌تواند
+        با استفاده از اطلاعات ورود مخصوص خود به آن دسترسی داشته باشد.
+    </p>
+
+    <div class="admin-login">
+        <h3>اطلاعات ورود نسخهٔ آزمایشی</h3>
+
+        <div class="login-row">
+            <span>نام کاربری:</span>
+            <code dir="ltr">admin</code>
+        </div>
+
+        <div class="login-row">
+            <span>رمز عبور:</span>
+            <code dir="ltr">admin123</code>
+        </div>
+    </div>
+
+    <h3>امکانات پنل ادمین</h3>
+    <ul>
+        <li>مشاهدهٔ فهرست کاربران</li>
+        <li>ویرایش نام کاربری و اطلاعات حساب‌ها</li>
+        <li>بررسی اطلاعات ثبت‌شده در سیستم</li>
+        <li>مدیریت حساب‌های کاربران</li>
+        <li>تازه‌سازی اطلاعات جدول کاربران</li>
+    </ul>
+
+    <div class="security-warning">
+        <strong>نکتهٔ امنیتی:</strong>
+        رمز پیش‌فرض بالا فقط برای تست پروژه است. در استفادهٔ واقعی،
+        یک رمز قوی و یکتا انتخاب کنید و رمزها را به‌صورت هش‌شده ذخیره کنید.
+    </div>
+</div>
