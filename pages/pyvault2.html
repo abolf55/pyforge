@@ -1,64 +1,123 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="fa" dir="rtl">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width,initial-scale=1.0">
-    <title>User Authentication Framework | PyForge</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PyVault 2 | PyForge</title>
+    <!-- اتصال به فایل CSS مشترک در ریشه اصلی -->
     <link rel="stylesheet" href="../style.css">
 </head>
 <body>
+
     <div class="container">
+        <!-- هدر سایت -->
         <nav>
-            <a class="logo" href="../index.html">ABOLF<span>AZL</span>.DEV</a>
-            <a class="nav-link" href="../index.html#projects">→ بازگشت به پروژه‌ها</a>
+            <a href="../index.html" class="logo">
+                Py<span>Forge</span>
+            </a>
+            <a href="../index.html" class="nav-link">همه پروژه ها</a>
         </nav>
-        
+
         <main>
-            <section class="hero">
-                <div class="badge">👤 چارچوب احراز هویت کاربر</div>
-                <h1>پروژه <span class="accent">User Authentication Framework</span></h1>
-                <p>یک چارچوب امن و ساده برای پیاده‌سازی ثبت‌نام، ورود کاربران و مدیریت جلسات (Sessions) در برنامه‌های دسکتاپ با رابط کاربری گرافیکی.</p>
+            <!-- بخش معرفی اصلی پروژه -->
+            <section class="page-hero">
+                <a href="../index.html" class="back">← بازگشت به پروژه‌ها</a>
+                <h1 class="project-title">PyVault 2</h1>
+                <p class="lead">
+                    نسخه پیشرفته و امن سیستم مدیریت رمز عبور با رابط کاربری گرافیکی مدرن (Tkinter/CustomTkinter) و قابلیت تولید رمزهای تصادفی.
+                </p>
             </section>
 
-            <section class="section">
-                <h2>مشخصات و قابلیت‌های چارچوب</h2>
-                <p>این پروژه با استفاده از Python و کتابخانه‌های استاندارد مانند Tkinter برای رابط کاربری و SQLite برای ذخیره‌سازی داده‌ها، یک سیستم کامل احراز هویت را فراهم می‌کند.</p>
+            <!-- چیدمان دو ستونه صفحه جزئیات -->
+            <section class="project-layout">
                 
-                <ul style="line-height: 1.8; margin-right: 20px; color: #b3b3b3;">
-                    <li><strong>ثبت‌نام کاربر (Sign Up):</strong> فرم ثبت‌نام با اعتبارسنجی ورودی‌ها (مانند طول رمز عبور، تطابق رمز عبور با تأییدیه).</li>
-                    <li><strong>ورود کاربر (Login):</strong> سیستم ورود امن با بررسی نام کاربری و رمز عبور در پایگاه داده.</li>
-                    <li><strong>مدیریت جلسات (Session Management):</strong> پیگیری وضعیت ورود کاربر و امکان خروج (Logout).</li>
-                    <li><strong>پنل ادمین (Admin Panel):</strong> یک بخش اختصاصی برای مدیر سیستم جهت مشاهده لیست کاربران ثبت‌نام شده.</li>
-                    <li><strong>امنیت داده‌ها:</strong> ذخیره‌سازی رمزهای عبور کاربران در پایگاه داده SQLite.</li>
-                </ul>
-            </section>
+                <!-- ستون اصلی (محتوا و توضیحات) -->
+                <div class="main-content" style="display: flex; flex-direction: column; gap: 22px;">
+                    
+                    <article class="content-box">
+                        <h2>توضیحات پروژه</h2>
+                        <p>
+                            PyVault 2 یک ابزار دسکتاپ برای مدیریت ایمن رمزهای عبور است. این پروژه به کاربران اجازه می‌دهد رمزهای عبور خود را به همراه جزئیات سرویس مربوطه ذخیره کرده و به راحتی آن‌ها را بازیابی یا ویرایش کنند. تمرکز اصلی بر سادگی استفاده و امنیت داده‌ها در سطح محلی است.
+                        </p>
+                        
+                        <h2>ویژگی‌های کلیدی پروژه</h2>
+                        <ul>
+                            <li><strong>مدیریت رمزهای عبور:</strong> امکان ذخیره، ویرایش، حذف و مشاهده امن رمزهای عبور.</li>
+                            <li><strong>تولید رمز تصادفی:</strong> قابلیت ساخت رمزهای قوی با تنظیم طول و نوع کاراکترها (اعداد، حروف، نمادها).</li>
+                            <li><strong>پایگاه داده محلی:</strong> استفاده از SQLite3 برای ذخیره‌سازی امن و مستقل داده‌ها.</li>
+                            <li><strong>رابط کاربری مدرن:</strong> طراحی جذاب و کاربرپسند با استفاده از CustomTkinter.</li>
+                            <li><strong>کپی آسان:</strong> دکمه اختصاصی برای کپی سریع رمز عبور یا نام کاربری در کلیپ‌بورد.</li>
+                        </ul>
+                    </article>
 
-            <!-- بخش پنل مدیریت و هشدارهای امنیتی -->
-            <section class="section" style="background: rgba(255, 75, 75, 0.05); border: 1px dashed #ff4b4b; padding: 25px; border-radius: 12px; margin: 30px 0;">
-                <h3 style="color: #ff4b4b; margin-top: 0;">⚠️ دسترسی به پنل مدیریت (Admin)</h3>
-                <p>در این پروژه برای دسترسی به بخش مدیریت کاربران، یک حساب کاربری پیش‌فرض تعریف شده است:</p>
-                <div style="background: #1a1a24; padding: 15px; border-radius: 8px; border-left: 4px solid #ff4b4b; margin: 15px 0; font-family: monospace; direction: ltr; text-align: left;">
-                    <strong>Username:</strong> admin <br>
-                    <strong>Password:</strong> admin123
-                </div>
-                <p style="font-size: 0.9em; color: #ccacac;"><strong>نکته فنی:</strong> پنل مدیریت به شما اجازه می‌دهد تمامی کاربران ثبت‌نام شده را مشاهده کنید. این بخش برای تست عملکرد سیستم احراز هویت طراحی شده است.</p>
-                <p style="font-size: 0.85em; color: #ff9f9f; margin-top: 10px;">⚠️ <strong>هشدار امنیتی:</strong> رمزهای عبور کاربران در حال حاضر به صورت متن ساده (Plain Text) در پایگاه داده ذخیره می‌شوند. برای پیاده‌سازی امن در پروژه‌های واقعی، لازم است از الگوریتم‌های هش‌گذاری مانند bcrypt استفاده کنید.</p>
-            </section>
+                    <!-- بخش اختصاصی پنل مدیریت (Admin Panel) -->
+                    <article class="content-box admin-box">
+                        <div class="admin-header">
+                            <div class="admin-icon">🛡️</div>
+                            <div>
+                                <h2>پنل مدیریت داخلی</h2>
+                                <p>دسترسی برای مشاهده اطلاعات کاربران و داده‌های ذخیره شده</p>
+                            </div>
+                        </div>
 
-            <section class="section">
-                <h2>فناوری‌های استفاده شده</h2>
-                <div class="tags">
-                    <span class="tag">Python</span>
-                    <span class="tag">Tkinter (GUI)</span>
-                    <span class="tag">SQLite3</span>
-                    <span class="tag">PyInstaller</span>
+                        <p>
+                            این بخش به ادمین اجازه می‌دهد لیست کاربران ثبت‌نام شده و اطلاعات مربوط به رمزهای ذخیره شده آن‌ها را مشاهده کند. این قابلیت برای اهداف تستی و بررسی عملکرد سیستم طراحی شده است.
+                        </p>
+
+                        <div class="admin-login">
+                            <h3>اطلاعات ورود پیش‌فرض (جهت تست):</h3>
+                            <div class="login-row">
+                                <span>نام کاربری (Username):</span>
+                                <code>admin</code>
+                            </div>
+                            <div class="login-row">
+                                <span>رمز عبور (Password):</span>
+                                <code>admin123</code>
+                            </div>
+                        </div>
+
+                        <div class="security-warning">
+                            ⚠️ <strong>توصیه امنیتی:</strong> این اطلاعات ورود صرفاً برای تست اولیه در محیط محلی (Development) تنظیم شده است. رمزهای عبور کاربران در این پروژه به صورت متن ساده (Plain Text) ذخیره می‌شوند. برای استفاده در محیط‌های عملیاتی، حتماً باید از الگوریتم‌های هش‌گذاری مانند <code>bcrypt</code> یا <code>hashlib</code> برای رمزنگاری رمزهای عبور استفاده کنید.
+                        </div>
+                    </article>
+
+                    <!-- بخش دانلود سورس پروژه -->
+                    <article class="download">
+                        <h2>دریافت سورس کد پروژه</h2>
+                        <p>سورس کامل پایتون به همراه دیتابیس آماده SQLite را دانلود کنید.</p>
+                        <a href="https://github.com/abolf55/pyforge/raw/main/manage_pasword.rar" class="btn primary">
+                            📥 دانلود فایل سورس (RAR)
+                        </a>
+                    </article>
+
                 </div>
+
+                <!-- ستون کناری (اطلاعات فنی) -->
+                <aside class="info">
+                    <h3>اطلاعات فنی</h3>
+                    <p><strong>زبان توسعه:</strong> Python</p>
+                    <p><strong>رابط کاربری:</strong> CustomTkinter / Tkinter</p>
+                    <p><strong>پایگاه داده:</strong> SQLite 3</p>
+                    <p><strong>امنیت:</strong> Local Password Storage</p>
+                    <p><strong>نسخه پایدار:</strong> 2.0.0</p>
+                    
+                    <div class="tags" style="margin-top: 15px;">
+                        <span class="tag">Python</span>
+                        <span class="tag">GUI</span>
+                        <span class="tag">Security</span>
+                        <span class="tag">Password Manager</span>
+                        <span class="tag">PyInstaller</span>
+                    </div>
+                </aside>
+
             </section>
         </main>
 
+        <!-- فوتر سایت -->
         <footer>
-            ساخته‌شده توسط PyForge — 2026
+            <p>© 2026 PyForge. ساخته شده توسط Abolfazl Nikbakht</p>
         </footer>
     </div>
+
 </body>
 </html>
