@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width,initial-scale=1.0">
-    <title>PyVault 2 | PyForge</title>
+    <title>User Authentication Framework | PyForge</title>
     <link rel="stylesheet" href="../style.css">
 </head>
 <body>
@@ -15,33 +15,34 @@
         
         <main>
             <section class="hero">
-                <div class="badge">🛡️ پروژه امنیتی و مدیریت پسورد</div>
-                <h1>پروژه <span class="accent">PyVault 2</span></h1>
-                <p>نسخه پیشرفته سامانه مدیریت و ساخت رمز عبور (mnag_password) با قابلیت تولید رمزهای تصادفی، کپی آسان و مدیریت کاربران.</p>
+                <div class="badge">👤 چارچوب احراز هویت کاربر</div>
+                <h1>پروژه <span class="accent">User Authentication Framework</span></h1>
+                <p>یک چارچوب امن و ساده برای پیاده‌سازی ثبت‌نام، ورود کاربران و مدیریت جلسات (Sessions) در برنامه‌های دسکتاپ با رابط کاربری گرافیکی.</p>
             </section>
 
             <section class="section">
-                <h2>مشخصات و قابلیت‌های پروژه</h2>
-                <p>این پروژه یک ابزار دسکتاپ با رابط کاربری فارسی است که به کاربران اجازه می‌دهد رمزهای عبور خود را به همراه مشخصات سرویس مربوطه ذخیره کرده و به راحتی آن‌ها را مدیریت کنند.</p>
+                <h2>مشخصات و قابلیت‌های چارچوب</h2>
+                <p>این پروژه با استفاده از Python و کتابخانه‌های استاندارد مانند Tkinter برای رابط کاربری و SQLite برای ذخیره‌سازی داده‌ها، یک سیستم کامل احراز هویت را فراهم می‌کند.</p>
                 
                 <ul style="line-height: 1.8; margin-right: 20px; color: #b3b3b3;">
-                    <li>تولید رمز عبور تصادفی با قابلیت تنظیم طول رمز (۶ تا ۳۲ کاراکتر) و انتخاب نوع کاراکترها (حروف بزرگ، کوچک، اعداد و نمادها).</li>
-                    <li>سیستم ثبت‌نام، ورود دو مرحله‌ای با سؤال امنیتی و بازیابی رمز عبور.</li>
-                    <li>پایگاه داده محلی SQLite با دو جدول مجزای <code>users</code> و <code>saved_passwords</code>.</li>
-                    <li>امکان مدیریت کامل رکوردها (ذخیره، ویرایش، حذف، کپی کردن مستقیم در کلیپ‌بورد و پاک‌سازی فرم).</li>
-                    <li>دارای پنل مدیریت اختصاصی جهت مشاهده اطلاعات کاربران ثبت‌نام شده.</li>
+                    <li><strong>ثبت‌نام کاربر (Sign Up):</strong> فرم ثبت‌نام با اعتبارسنجی ورودی‌ها (مانند طول رمز عبور، تطابق رمز عبور با تأییدیه).</li>
+                    <li><strong>ورود کاربر (Login):</strong> سیستم ورود امن با بررسی نام کاربری و رمز عبور در پایگاه داده.</li>
+                    <li><strong>مدیریت جلسات (Session Management):</strong> پیگیری وضعیت ورود کاربر و امکان خروج (Logout).</li>
+                    <li><strong>پنل ادمین (Admin Panel):</strong> یک بخش اختصاصی برای مدیر سیستم جهت مشاهده لیست کاربران ثبت‌نام شده.</li>
+                    <li><strong>امنیت داده‌ها:</strong> ذخیره‌سازی رمزهای عبور کاربران در پایگاه داده SQLite.</li>
                 </ul>
             </section>
 
             <!-- بخش پنل مدیریت و هشدارهای امنیتی -->
             <section class="section" style="background: rgba(255, 75, 75, 0.05); border: 1px dashed #ff4b4b; padding: 25px; border-radius: 12px; margin: 30px 0;">
-                <h3 style="color: #ff4b4b; margin-top: 0;">⚠️ جزئیات امنیتی و پنل مدیریت پیش‌فرض</h3>
-                <p>جهت تست و بررسی قابلیت‌های مدیریتی پروژه، می‌توانید از مشخصات ورود زیر استفاده کنید:</p>
+                <h3 style="color: #ff4b4b; margin-top: 0;">⚠️ دسترسی به پنل مدیریت (Admin)</h3>
+                <p>در این پروژه برای دسترسی به بخش مدیریت کاربران، یک حساب کاربری پیش‌فرض تعریف شده است:</p>
                 <div style="background: #1a1a24; padding: 15px; border-radius: 8px; border-left: 4px solid #ff4b4b; margin: 15px 0; font-family: monospace; direction: ltr; text-align: left;">
                     <strong>Username:</strong> admin <br>
                     <strong>Password:</strong> admin123
                 </div>
-                <p style="font-size: 0.9em; color: #ccacac;"><strong>هشدار امنیتی:</strong> این پروژه اطلاعات رمز عبور و پاسخ سوالات امنیتی را به صورت متن ساده (Plain Text) درون پایگاه داده محلی <code>users.db</code> ذخیره می‌کند. برای استفاده در محیط‌های عملیاتی، حتماً باید فرآیند هش‌گذاری رمزها (مانند استفاده از کتابخانه <code>cryptography</code> یا <code>bcrypt</code>) را روی آن اعمال کنید.</p>
+                <p style="font-size: 0.9em; color: #ccacac;"><strong>نکته فنی:</strong> پنل مدیریت به شما اجازه می‌دهد تمامی کاربران ثبت‌نام شده را مشاهده کنید. این بخش برای تست عملکرد سیستم احراز هویت طراحی شده است.</p>
+                <p style="font-size: 0.85em; color: #ff9f9f; margin-top: 10px;">⚠️ <strong>هشدار امنیتی:</strong> رمزهای عبور کاربران در حال حاضر به صورت متن ساده (Plain Text) در پایگاه داده ذخیره می‌شوند. برای پیاده‌سازی امن در پروژه‌های واقعی، لازم است از الگوریتم‌های هش‌گذاری مانند bcrypt استفاده کنید.</p>
             </section>
 
             <section class="section">
@@ -61,3 +62,4 @@
     </div>
 </body>
 </html>
+
