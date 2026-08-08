@@ -80,6 +80,121 @@ footer { padding: 30px 0; border-top: 1px solid var(--line); color: var(--muted)
     border-radius: 10px;
 }
 
+/* ==========================================================================
+   بخش استایل‌های اختصاصی پنل ادمین (کاملاً هماهنگ با تم تاریک و فیروزه‌ای PyForge)
+   ========================================================================== */
+.admin-box {
+    border: 1px solid rgba(54, 215, 255, 0.35); /* استفاده از رنگ فیروزه‌ای قالب */
+    background: linear-gradient(
+        145deg,
+        rgba(54, 215, 255, 0.05),
+        rgba(16, 22, 37, 0.95)
+    );
+    box-shadow: 0 12px 35px rgba(54, 215, 255, 0.05);
+    position: relative;
+    overflow: hidden;
+}
+
+.admin-box::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 4px;
+    height: 100%;
+    background: var(--cyan); /* نوار شاخص فیروزه‌ای در سمت راست */
+}
+
+.admin-header {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    margin-bottom: 18px;
+}
+
+.admin-header h2 {
+    margin: 0 0 4px;
+    color: var(--text);
+    font-size: 1.35rem;
+}
+
+.admin-header p {
+    margin: 0;
+    color: var(--muted);
+    font-size: 0.9rem;
+}
+
+.admin-icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 46px;
+    height: 46px;
+    border-radius: 12px;
+    background: rgba(54, 215, 255, 0.1);
+    border: 1px solid rgba(54, 215, 255, 0.25);
+    color: var(--cyan);
+    font-size: 1.4rem;
+}
+
+.admin-login {
+    margin: 20px 0;
+    padding: 18px;
+    border: 1px dashed var(--line);
+    border-radius: 12px;
+    background: rgba(8, 11, 20, 0.5);
+}
+
+.admin-login h3 {
+    margin-top: 0;
+    color: var(--cyan);
+    font-size: 1rem;
+    margin-bottom: 12px;
+}
+
+.login-row {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 15px;
+    margin-top: 10px;
+    padding: 8px 14px;
+    border-radius: 8px;
+    background: rgba(21, 29, 47, 0.6);
+    border: 1px solid rgba(39, 50, 75, 0.3);
+}
+
+.login-row span {
+    color: var(--muted);
+    font-size: 0.9rem;
+}
+
+.login-row code {
+    direction: ltr;
+    color: var(--cyan);
+    background: #080b14;
+    padding: 4px 10px;
+    border-radius: 6px;
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 0.95rem;
+    border: 1px solid var(--line);
+}
+
+.security-warning {
+    margin-top: 20px;
+    padding: 14px;
+    border-right: 4px solid var(--green); /* استفاده از رنگ سبز کمکی */
+    border-radius: 8px;
+    background: rgba(78, 232, 168, 0.05);
+    color: #b2f3d6;
+    font-size: 0.9rem;
+    line-height: 1.8;
+}
+
+.security-warning strong {
+    color: var(--green);
+}
+
 /* Media Queries برای ریسپانسیو بودن */
 @media(max-width: 1024px) {
     .container {
