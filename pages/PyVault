@@ -1,43 +1,132 @@
-<div class="content-box admin-box" style="margin-top:22px">
-    <div class="admin-header">
-        <span class="admin-icon">⚙</span>
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>PyVault | مدیریت و امنیت حساب‌ها</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- نورپردازی پس‌زمینه -->
+  <div class="ambient-light-1"></div>
+  <div class="ambient-light-2"></div>
+
+  <div class="container">
+    
+    <!-- نوار ناوبری -->
+    <header class="navbar">
+      <a href="index.html" class="brand">Py<span>Forge</span></a>
+      <nav class="nav-links">
+        <a href="index.html">بازگشت به خانه</a>
+      </nav>
+    </header>
+
+    <!-- معرفی اصلی پروژه -->
+    <section class="detail-hero-card">
+      <div class="detail-header-top">
+        <div class="project-big-icon">🔐</div>
+        <div class="project-title-area">
+          <h1>سامانه امنیتی PyVault</h1>
+          <div class="project-badge-pill">
+            <span class="status-dot"></span>
+            <span>نسخه فعال و تست‌شده</span>
+          </div>
+        </div>
+      </div>
+      <p class="detail-description">
+        سیستم پیشرفته مدیریت کاربران، احراز هویت و ذخیره‌سازی امن اطلاعات با رابط کاربری اختصاصی پایتون و پنل مدیریتی قدرتمند.
+      </p>
+    </section>
+
+    <!-- مشخصات سریع فنی -->
+    <div class="specs-grid">
+      <div class="spec-item">
+        <div class="spec-title">زبان توسعه</div>
+        <div class="spec-value">Python</div>
+      </div>
+      <div class="spec-item">
+        <div class="spec-title">نوع پروژه</div>
+        <div class="spec-value">GUI / Security</div>
+      </div>
+      <div class="spec-item">
+        <div class="spec-title">سطح دسترسی</div>
+        <div class="spec-value">کاربر / ادمین</div>
+      </div>
+      <div class="spec-item">
+        <div class="spec-title">پایگاه داده</div>
+        <div class="spec-value">SQLite</div>
+      </div>
+    </div>
+
+    <!-- بخش پنل مدیریت سیستم -->
+    <section class="feature-card" style="margin-bottom: 25px; border-color: rgba(99, 102, 241, 0.35);">
+      <div style="display: flex; align-items: center; gap: 14px; margin-bottom: 16px;">
+        <div style="font-size: 1.6rem; background: rgba(99, 102, 241, 0.15); width: 48px; height: 48px; border-radius: 14px; display: flex; align-items: center; justify-content: center; border: 1px solid rgba(99, 102, 241, 0.3);">⚙️</div>
         <div>
-            <h2>پنل مدیریت سیستم</h2>
-            <p>بخش اختصاصی مدیریت کاربران و اطلاعات سیستم</p>
+          <h2 style="font-size: 1.3rem; font-weight: 800; color: #fff; margin: 0;">پنل مدیریت سیستم</h2>
+          <p style="font-size: 0.85rem; color: var(--text-muted); margin: 0;">بخش اختصاصی مدیریت کاربران و اطلاعات سیستم</p>
         </div>
-    </div>
+      </div>
 
-    <p>
-        پنل ادمین بخش مدیریتی اصلی PyVault است و فقط مدیر مجاز می‌تواند
-        با استفاده از اطلاعات ورود مخصوص خود به آن دسترسی داشته باشد.
-    </p>
+      <p style="color: var(--text-body); font-size: 0.95rem; margin-bottom: 20px;">
+        پنل ادمین بخش مدیریتی اصلی PyVault است و فقط مدیر مجاز می‌تواند با استفاده از اطلاعات ورود مخصوص خود به آن دسترسی داشته باشد.
+      </p>
 
-    <div class="admin-login">
-        <h3>اطلاعات ورود نسخهٔ آزمایشی</h3>
-
-        <div class="login-row">
-            <span>نام کاربری:</span>
-            <code dir="ltr">admin</code>
+      <!-- اطلاعات ورود دمو -->
+      <div style="background: rgba(5, 7, 14, 0.6); border: 1px solid var(--border-line); border-radius: 14px; padding: 18px; margin-bottom: 20px;">
+        <h3 style="font-size: 0.95rem; color: var(--cyan); margin-bottom: 12px; font-weight: 700;">🔑 اطلاعات ورود نسخهٔ آزمایشی</h3>
+        
+        <div style="display: flex; justify-content: space-between; align-items: center; padding: 8px 12px; background: rgba(255, 255, 255, 0.03); border-radius: 8px; margin-bottom: 8px;">
+          <span style="font-size: 0.88rem; color: var(--text-body);">نام کاربری:</span>
+          <code dir="ltr" style="color: #fff; background: rgba(99, 102, 241, 0.25); padding: 3px 10px; border-radius: 6px; font-family: monospace; font-size: 0.9rem; border: 1px solid rgba(99, 102, 241, 0.3);">admin</code>
         </div>
 
-        <div class="login-row">
-            <span>رمز عبور:</span>
-            <code dir="ltr">admin123</code>
+        <div style="display: flex; justify-content: space-between; align-items: center; padding: 8px 12px; background: rgba(255, 255, 255, 0.03); border-radius: 8px;">
+          <span style="font-size: 0.88rem; color: var(--text-body);">رمز عبور:</span>
+          <code dir="ltr" style="color: #fff; background: rgba(99, 102, 241, 0.25); padding: 3px 10px; border-radius: 6px; font-family: monospace; font-size: 0.9rem; border: 1px solid rgba(99, 102, 241, 0.3);">admin123</code>
         </div>
-    </div>
+      </div>
 
-    <h3>امکانات پنل ادمین</h3>
-    <ul>
-        <li>مشاهدهٔ فهرست کاربران</li>
+      <!-- امکانات پنل ادمین -->
+      <h3 style="font-size: 1rem; color: #fff; margin-bottom: 10px; font-weight: 700;">امکانات پنل ادمین</h3>
+      <ul style="color: var(--text-body); font-size: 0.92rem; padding-right: 20px; line-height: 2; margin-bottom: 20px;">
+        <li>مشاهدهٔ فهرست کامل کاربران</li>
         <li>ویرایش نام کاربری و اطلاعات حساب‌ها</li>
         <li>بررسی اطلاعات ثبت‌شده در سیستم</li>
         <li>مدیریت حساب‌های کاربران</li>
         <li>تازه‌سازی اطلاعات جدول کاربران</li>
-    </ul>
+      </ul>
 
-    <div class="security-warning">
-        <strong>نکتهٔ امنیتی:</strong>
-        رمز پیش‌فرض بالا فقط برای تست پروژه است. در استفادهٔ واقعی،
-        یک رمز قوی و یکتا انتخاب کنید و رمزها را به‌صورت هش‌شده ذخیره کنید.
-    </div>
-</div>
+      <!-- نکته امنیتی (با پالت طلایی/فیروزه‌ای به جای قرمز) -->
+      <div style="background: rgba(0, 242, 254, 0.06); border: 1px solid rgba(0, 242, 254, 0.25); border-radius: 12px; padding: 14px 18px; color: #e2e8f0; font-size: 0.88rem; display: flex; align-items: flex-start; gap: 10px;">
+        <span style="font-size: 1.2rem;">💡</span>
+        <div>
+          <strong style="color: var(--cyan);">نکتهٔ امنیتی:</strong>
+          رمز پیش‌فرض بالا فقط برای تست پروژه است. در استفادهٔ واقعی، یک رمز قوی و یکتا انتخاب کنید و رمزها را به‌صورت هش‌شده ذخیره کنید.
+        </div>
+      </div>
+    </section>
+
+    <!-- ایستگاه دریافت و دانلود -->
+    <section class="download-station">
+      <div class="download-info">
+        <h3>دریافت پروژه PyVault</h3>
+        <p>شامل فایل اجرایی، پایگاه داده و سورس پایتون</p>
+      </div>
+      <div class="download-buttons">
+        <a href="manage_pasword.rar" class="btn-luxury-download" download>
+          <span>📦</span>
+          <span>دانلود پکیج کامل (RAR)</span>
+        </a>
+      </div>
+    </section>
+
+    <!-- فوتر -->
+    <footer class="footer">
+      <p>© PyForge - تمامی پروژه‌ها متن‌باز و توسعه‌یافته با پایتون</p>
+    </footer>
+
+  </div>
+</body>
+</html>
