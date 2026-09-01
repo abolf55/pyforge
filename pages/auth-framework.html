@@ -1,121 +1,159 @@
 <!DOCTYPE html>
 <html lang="fa" dir="rtl">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>User Authentication Framework | PyForge</title>
-    <!-- اتصال به فایل CSS مشترک در ریشه اصلی -->
-    <link rel="stylesheet" href="../style.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>User Authentication Framework | PyForge</title>
+  <!-- لینک به CSS اصلی (یک پله بالاتر) -->
+  <link rel="stylesheet" href="../style.css">
 </head>
 <body>
 
-    <div class="container">
-        <!-- هدر سایت -->
-        <nav>
-            <a href="../index.html" class="logo">
-                Py<span>Forge</span>
-            </a>
-            <a href="../index.html" class="nav-link">همه پروژه ها</a>
-        </nav>
+  <!-- نورپردازی پس‌زمینه -->
+  <div class="ambient-light-1"></div>
+  <div class="ambient-light-2"></div>
 
-        <main>
-            <!-- بخش معرفی اصلی پروژه -->
-            <section class="page-hero">
-                <a href="../index.html" class="back">← بازگشت به پروژه‌ها</a>
-                <h1 class="project-title">User Authentication Framework</h1>
-                <p class="lead">
-                    یک چارچوب امن، سبک و ماژولار برای ثبت‌نام، ورود و مدیریت سطوح دسترسی کاربران با رابط کاربری اختصاصی Tkinter و پایگاه داده SQLite.
-                </p>
-            </section>
+  <div class="container">
+    
+    <!-- نوار ناوبری -->
+    <header class="navbar">
+      <a href="../index.html" class="brand">Py<span>Forge</span></a>
+      <nav class="nav-links">
+        <a href="../index.html">بازگشت به پروژه‌ها</a>
+      </nav>
+    </header>
 
-            <!-- چیدمان دو ستونه صفحه جزئیات -->
-            <section class="project-layout">
-                
-                <!-- ستون اصلی (محتوا و توضیحات) -->
-                <div class="main-content" style="display: flex; flex-direction: column; gap: 22px;">
-                    
-                    <article class="content-box">
-                        <h2>توضیحات پروژه</h2>
-                        <p>
-                            این پروژه یک فریم‌ورک آماده برای احراز هویت کاربران در برنامه‌های دسکتاپ پایتون است. با استفاده از این سیستم می‌توانید بخش ثبت‌نام و ورود برنامه خود را بدون نیاز به کدنویسی مجدد، به پایگاه داده متصل کرده و از امنیت داده‌های کاربران اطمینان حاصل کنید.
-                        </p>
-                        
-                        <h2>ویژگی‌های کلیدی پروژه</h2>
-                        <ul>
-                            <li><strong>احراز هویت دو مرحله‌ای منطقی:</strong> بررسی نام کاربری و تطابق رمز عبور به صورت رمزنگاری شده.</li>
-                            <li><strong>پایگاه داده محلی:</strong> استفاده از SQLite3 جهت ذخیره‌سازی بهینه مشخصات بدون نیاز به سرورهای خارجی.</li>
-                            <li><strong>طراحی ریسپانسیو دسکتاپ:</strong> پیاده‌سازی رابط کاربری زیبا و مدرن با استفاده از Tkinter/CustomTkinter.</li>
-                            <li><strong>کنترل خطاهای پیشرفته:</strong> بررسی صحت ایمیل، طول رمز عبور و جلوگیری از ثبت نام‌های تکراری.</li>
-                        </ul>
-                    </article>
+    <!-- ۱. هدر معرفی پروژه -->
+    <section class="detail-hero-card">
+      <div class="detail-header-top">
+        <div class="project-big-icon">🔑</div>
+        <div class="project-title-area">
+          <h1>User Authentication Framework</h1>
+          <div class="project-badge-pill">
+            <span class="status-dot"></span>
+            <span>نسخه پایدار ۱.۰.۰</span>
+          </div>
+        </div>
+      </div>
+      <p class="detail-description">
+        یک چارچوب امن، سبک و ماژولار برای ثبت‌نام، ورود و مدیریت سطوح دسترسی کاربران با رابط کاربری اختصاصی Tkinter / CustomTkinter و پایگاه داده SQLite.
+      </p>
+    </section>
 
-                    <!-- بخش اختصاصی پنل مدیریت (Admin Panel) -->
-                    <article class="content-box admin-box">
-                        <div class="admin-header">
-                            <div class="admin-icon">🛡️</div>
-                            <div>
-                                <h2>پنل مدیریت داخلی</h2>
-                                <p>دسترسی سطح بالا برای مدیریت پایگاه داده کاربران</p>
-                            </div>
-                        </div>
-
-                        <p>
-                            این فریم‌ورک شامل یک بخش مدیریتی مجزا است که به ادمین سیستم اجازه می‌دهد لیست تمام کاربران ثبت‌نام شده را مشاهده کند، دسترسی‌ها را تغییر دهد یا کاربری را حذف کند.
-                        </p>
-
-                        <div class="admin-login">
-                            <h3>اطلاعات ورود پیش‌فرض (جهت تست):</h3>
-                            <div class="login-row">
-                                <span>نام کاربری (Username):</span>
-                                <code>admin</code>
-                            </div>
-                            <div class="login-row">
-                                <span>رمز عبور (Password):</span>
-                                <code>admin123</code>
-                            </div>
-                        </div>
-
-                        <div class="security-warning">
-                            ⚠️ <strong>توصیه امنیتی:</strong> این اطلاعات ورود صرفاً برای تست اولیه در محیط محلی (Development) تنظیم شده است. برای استفاده در پروژه‌های واقعی، حتماً رمز عبور پیش‌فرض را در کد سورس تغییر داده و از الگوریتم‌های هش مانند <code>bcrypt</code> یا <code>hashlib</code> استفاده کنید.
-                        </div>
-                    </article>
-
-                    <!-- بخش دانلود سورس پروژه -->
-                    <article class="download">
-                        <h2>دریافت سورس کد پروژه</h2>
-                        <p>سورس کامل پایتون به همراه دیتابیس آماده SQLite را دانلود کنید.</p>
-                        <a href="https://github.com/abolf55/pyforge/raw/main/user_login.rar" class="btn primary">
-                            📥 دانلود فایل سورس (RAR)
-                        </a>
-                    </article>
-
-                </div>
-
-                <!-- ستون کناری (اطلاعات فنی) -->
-                <aside class="info">
-                    <h3>اطلاعات فنی</h3>
-                    <p><strong>زبان توسعه:</strong> Python</p>
-                    <p><strong>رابط کاربری:</strong> CustomTkinter / Tkinter</p>
-                    <p><strong>پایگاه داده:</strong> SQLite 3</p>
-                    <p><strong>امنیت:</strong> Local Password Check</p>
-                    <p><strong>نسخه پایدار:</strong> 1.0.0</p>
-                    
-                    <div class="tags" style="margin-top: 15px;">
-                        <span class="tag">Python</span>
-                        <span class="tag">GUI</span>
-                        <span class="tag">Database</span>
-                        <span class="tag">Security</span>
-                    </div>
-                </aside>
-
-            </section>
-        </main>
-
-        <!-- فوتر سایت -->
-        <footer>
-            <p>© 2026 PyForge. ساخته شده توسط Abolfazl Nikbakht</p>
-        </footer>
+    <!-- ۲. مشخصات سریع فنی -->
+    <div class="specs-grid">
+      <div class="spec-item">
+        <div class="spec-title">زبان توسعه</div>
+        <div class="spec-value">Python</div>
+      </div>
+      <div class="spec-item">
+        <div class="spec-title">رابط کاربری</div>
+        <div class="spec-value">CustomTkinter</div>
+      </div>
+      <div class="spec-item">
+        <div class="spec-title">پایگاه داده</div>
+        <div class="spec-value">SQLite 3</div>
+      </div>
+      <div class="spec-item">
+        <div class="spec-title">سطح امنیت</div>
+        <div class="spec-value">Local Check</div>
+      </div>
     </div>
 
+    <!-- ۳. توضیحات پروژه -->
+    <section class="feature-card" style="margin-bottom: 25px;">
+      <h2 style="font-size: 1.25rem; font-weight: 800; color: #fff; margin-bottom: 12px;">📌 توضیحات پروژه</h2>
+      <p style="color: var(--text-body); font-size: 0.98rem; line-height: 1.8;">
+        این پروژه یک فریم‌ورک آماده برای احراز هویت کاربران در برنامه‌های دسکتاپ پایتون است. با استفاده از این سیستم می‌توانید بخش ثبت‌نام و ورود برنامه خود را بدون نیاز به کدنویسی مجدد، به پایگاه داده متصل کرده و از امنیت داده‌های کاربران اطمینان حاصل کنید.
+      </p>
+    </section>
+
+    <!-- ۴. ویژگی‌های کلیدی -->
+    <h2 class="section-title">✨ ویژگی‌های کلیدی</h2>
+    <div class="features-grid">
+      <div class="feature-card">
+        <span class="icon">🛡️</span>
+        <h3>احراز هویت دو مرحله‌ای منطقی</h3>
+        <p>بررسی نام کاربری و تطابق رمز عبور به صورت رمزنگاری شده.</p>
+      </div>
+
+      <div class="feature-card">
+        <span class="icon">🗄️</span>
+        <h3>پایگاه داده محلی</h3>
+        <p>استفاده از SQLite3 جهت ذخیره‌سازی بهینه مشخصات بدون نیاز به سرور خارجی.</p>
+      </div>
+
+      <div class="feature-card">
+        <span class="icon">🎨</span>
+        <h3>طراحی مدرن دسکتاپ</h3>
+        <p>پیاده‌سازی رابط کاربری زیبا با Tkinter و CustomTkinter.</p>
+      </div>
+
+      <div class="feature-card">
+        <span class="icon">⚠️</span>
+        <h3>کنترل خطاهای پیشرفته</h3>
+        <p>بررسی صحت ایمیل، طول رمز عبور و جلوگیری از ثبت‌نام‌های تکراری.</p>
+      </div>
+    </div>
+
+    <!-- ۵. پنل مدیریت داخلی -->
+    <section class="feature-card" style="margin-bottom: 30px; border-color: rgba(99, 102, 241, 0.35);">
+      <div style="display: flex; align-items: center; gap: 14px; margin-bottom: 16px;">
+        <div style="font-size: 1.6rem; background: rgba(99, 102, 241, 0.15); width: 48px; height: 48px; border-radius: 14px; display: flex; align-items: center; justify-content: center; border: 1px solid rgba(99, 102, 241, 0.3);">⚙️</div>
+        <div>
+          <h2 style="font-size: 1.25rem; font-weight: 800; color: #fff; margin: 0;">پنل مدیریت داخلی (Admin Panel)</h2>
+          <p style="font-size: 0.85rem; color: var(--text-muted); margin: 0;">دسترسی سطح بالا برای مدیریت پایگاه داده کاربران</p>
+        </div>
+      </div>
+
+      <p style="color: var(--text-body); font-size: 0.95rem; margin-bottom: 20px; line-height: 1.7;">
+        این فریم‌ورک شامل یک بخش مدیریتی مجزا است که به ادمین سیستم اجازه می‌دهد لیست تمام کاربران ثبت‌نام شده را مشاهده کند، دسترسی‌ها را تغییر دهد یا کاربری را حذف کند.
+      </p>
+
+      <!-- اطلاعات ورود دمو -->
+      <div style="background: rgba(5, 7, 14, 0.6); border: 1px solid var(--border-line); border-radius: 14px; padding: 18px; margin-bottom: 20px;">
+        <h3 style="font-size: 0.95rem; color: var(--cyan); margin-bottom: 12px; font-weight: 700;">🔑 اطلاعات ورود پیش‌فرض (جهت تست)</h3>
+        
+        <div style="display: flex; justify-content: space-between; align-items: center; padding: 8px 12px; background: rgba(255, 255, 255, 0.03); border-radius: 8px; margin-bottom: 8px;">
+          <span style="font-size: 0.88rem; color: var(--text-body);">نام کاربری (Username):</span>
+          <code dir="ltr" style="color: #fff; background: rgba(99, 102, 241, 0.25); padding: 3px 10px; border-radius: 6px; font-family: monospace; font-size: 0.9rem; border: 1px solid rgba(99, 102, 241, 0.3);">admin</code>
+        </div>
+
+        <div style="display: flex; justify-content: space-between; align-items: center; padding: 8px 12px; background: rgba(255, 255, 255, 0.03); border-radius: 8px;">
+          <span style="font-size: 0.88rem; color: var(--text-body);">رمز عبور (Password):</span>
+          <code dir="ltr" style="color: #fff; background: rgba(99, 102, 241, 0.25); padding: 3px 10px; border-radius: 6px; font-family: monospace; font-size: 0.9rem; border: 1px solid rgba(99, 102, 241, 0.3);">admin123</code>
+        </div>
+      </div>
+
+      <!-- هشدار امنیتی (پالت فیروزه‌ای مدرن) -->
+      <div style="background: rgba(0, 242, 254, 0.06); border: 1px solid rgba(0, 242, 254, 0.25); border-radius: 12px; padding: 14px 18px; color: #e2e8f0; font-size: 0.88rem; display: flex; align-items: flex-start; gap: 10px;">
+        <span style="font-size: 1.2rem;">💡</span>
+        <div>
+          <strong style="color: var(--cyan);">توصیه امنیتی:</strong>
+          این اطلاعات ورود صرفاً برای تست اولیه در محیط محلی (Development) تنظیم شده است. برای استفاده در پروژه‌های واقعی، حتماً رمز عبور پیش‌فرض را در کد سورس تغییر داده و از الگوریتم‌های هش مانند <code dir="ltr" style="color: var(--cyan);">bcrypt</code> یا <code dir="ltr" style="color: var(--cyan);">hashlib</code> استفاده کنید.
+        </div>
+      </div>
+    </section>
+
+    <!-- ۶. ایستگاه دانلود -->
+    <section class="download-station">
+      <div class="download-info">
+        <h3>دریافت سورس کد پروژه</h3>
+        <p>سورس کامل پایتون به همراه دیتابیس آماده SQLite را دانلود کنید.</p>
+      </div>
+      <div class="download-buttons">
+        <a href="https://github.com/abolf55/pyforge/raw/main/user_login.rar" class="btn-luxury-download">
+          <span>📦</span>
+          <span>دانلود فایل سورس (RAR)</span>
+        </a>
+      </div>
+    </section>
+
+    <!-- فوتر -->
+    <footer class="footer">
+      <p>© 2026 PyForge. ساخته شده توسط Abolfazl Nikbakht</p>
+    </footer>
+
+  </div>
 </body>
 </html>
