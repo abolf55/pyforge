@@ -3,201 +3,170 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>PyForge | مهندسی و ساخت نرم‌افزار</title>
+    <title>PyForge | اکوسیستم نرم‌افزاری پایتون</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <!-- پس‌زمینه‌های نوری نئونی -->
-    <div class="bg-glow-1"></div>
-    <div class="bg-glow-2"></div>
-
-    <div class="container">
-        <!-- هدر شناور مدرن -->
-        <header class="header">
-            <div class="header-inner">
-                <a class="logo" href="index.html">Py<span>Forge</span></a>
-                <nav class="nav">
-                    <a class="nav-link" href="#projects">پروژه‌ها</a>
-                    <a class="nav-link nav-btn" href="https://github.com/abolf55" target="_blank" rel="noopener noreferrer">گیت‌هاب من ↗</a>
-                </nav>
-            </div>
+    <div class="wrapper">
+        <!-- نوار ناوبری -->
+        <header class="navbar">
+            <a class="brand" href="index.html">
+                <span>PyForge</span>
+                <span class="brand-badge">2026 Core</span>
+            </a>
+            <nav class="nav-links">
+                <a href="#hub">محور پروژه‌ها</a>
+                <a href="https://github.com/abolf55" target="_blank" rel="noopener noreferrer">گیت‌هاب رسمی ↗</a>
+            </nav>
         </header>
 
-        <main>
-            <!-- بخش Hero چشم‌نواز -->
-            <section class="hero">
-                <div class="hero-badge">⚡ دنیای توسعه پایتون و ابزارهای کاربردی</div>
-                <h1>پروژه‌های مدرن <span>PyForge</span></h1>
-                <p>مجموعه‌ای کامل از ابزارهای دسکتاپ، اسکریپت‌های کاربردی، رابط‌های کاربری مدرن و تجربیات توسعه نرم‌افزار من.</p>
-                <a class="btn btn-primary" href="#projects">کاوش پروژه‌ها ↓</a>
-            </section>
-
-            <!-- گرید پروژه‌ها -->
-            <section class="projects-section" id="projects">
-                <div class="section-header">
-                    <h2 class="section-title">پروژه‌های منتخب</h2>
-                    <p class="section-subtitle">برای مشاهده توضیحات کامل، سورس‌کد و دانلود، هر پروژه را انتخاب کن.</p>
+        <!-- شبکه بنتو (Bento Hub) -->
+        <main class="bento-grid" id="hub">
+            
+            <!-- باکس اصلی هیرو (بزرگ) -->
+            <div class="bento-item col-8 hero-box">
+                <div>
+                    <h1>خلق ابزارهای قدرتمند با <span>پایتون و مهندسی معکوس</span></h1>
+                    <p>به محیط اختصاصی PyForge خوش آمدید. مجموعه‌ای دست‌چین‌شده از نرم‌افزارهای دسکتاپ، ماژول‌های امنیتی و ابزارهای بهینه‌سازی سیستم با کارایی بالا.</p>
                 </div>
-
-                <div class="grid">
-                    <!-- 1. Easy CMD -->
-                    <article class="card">
-                        <div class="card-top">
-                            <div class="card-icon">⌘</div>
-                        </div>
-                        <h3>Easy CMD</h3>
-                        <p>ابزار چندکاره و سریع خط فرمان برای انجام خودکار امور سیستمی، مدیریت شبکه و اجرای تسک‌های پایتون.</p>
-                        <div class="tags">
-                            <span class="tag">Python</span>
-                            <span class="tag">PyInstaller</span>
-                            <span class="tag">Pillow</span>
-                        </div>
-                        <a class="btn btn-card" href="pages/easy-cmd.html">مشاهده جزئیات و دانلود ←</a>
-                    </article>
-
-                    <!-- 2. RGB Color Picker -->
-                    <article class="card">
-                        <div class="card-top">
-                            <div class="card-icon">🎨</div>
-                        </div>
-                        <h3>انتخابگر رنگ RGB</h3>
-                        <p>ابزار وب شیک برای طراحان و برنامه‌نویسان جهت انتخاب رنگ، تبدیل سریع HEX به RGB و کپی آسان کدها.</p>
-                        <div class="tags">
-                            <span class="tag">HTML5</span>
-                            <span class="tag">CSS3</span>
-                            <span class="tag">JavaScript</span>
-                        </div>
-                        <a class="btn btn-card" href="pages/rgb-color-picker.html">مشاهده جزئیات و دانلود ←</a>
-                    </article>
-
-                    <!-- 3. Supermarket App -->
-                    <article class="card">
-                        <div class="card-top">
-                            <div class="card-icon">🛒</div>
-                        </div>
-                        <h3>Supermarket App</h3>
-                        <p>سیستم دسکتاپ پیشرفته مدیریت فروشگاه با قابلیت ثبت فاکتور، مدیریت موجودی و پایگاه داده محلی.</p>
-                        <div class="tags">
-                            <span class="tag">CustomTkinter</span>
-                            <span class="tag">SQLite</span>
-                            <span class="tag">GUI</span>
-                        </div>
-                        <a class="btn btn-card" href="pages/supermarket-app.html">مشاهده جزئیات و دانلود ←</a>
-                    </article>
-
-                    <!-- 4. Turtle Flowers -->
-                    <article class="card">
-                        <div class="card-top">
-                            <div class="card-icon">✿</div>
-                        </div>
-                        <h3>رسم گل و اشکال هندسی</h3>
-                        <p>خلق الگوها و موتیف‌های ریاضیاتی و هندسی پیچیده به کمک الگوریتم‌های گرافیکی و ماژول ترتل پایتون.</p>
-                        <div class="tags">
-                            <span class="tag">Python</span>
-                            <span class="tag">Turtle</span>
-                            <span class="tag">Algorithms</span>
-                        </div>
-                        <a class="btn btn-card" href="pages/turtle-flowers.html">مشاهده جزئیات و دانلود ←</a>
-                    </article>
-
-                    <!-- 5. Calculator -->
-                    <article class="card">
-                        <div class="card-top">
-                            <div class="card-icon">🧮</div> 
-                        </div>
-                        <h3>ماشین حساب پایتون</h3>
-                        <p>یک ماشین حساب سریع با رابط کاربری اختصاصی برای انجام محاسبات ریاضی استاندارد و مهندسی.</p>
-                        <div class="tags">
-                            <span class="tag">Python</span>
-                            <span class="tag">Tkinter</span>
-                        </div>
-                        <a class="btn btn-card" href="pages/calculator.html">مشاهده جزئیات و دانلود ←</a>
-                    </article>
-
-                    <!-- 6. PyVault -->
-                    <article class="card">
-                        <div class="card-top">
-                            <div class="card-icon">🔒</div> 
-                        </div>
-                        <h3>PyVault</h3>
-                        <p>مدیریت امن رمزهای عبور با دیتابیس لوکال رمزنگاری‌شده و طراحی رابط کاربری مدرن تیره.</p>
-                        <div class="tags">
-                            <span class="tag">CustomTkinter</span>
-                            <span class="tag">SQLite</span>
-                            <span class="tag">Security</span>
-                        </div>
-                        <a class="btn btn-card" href="pages/pyvault.html">مشاهده جزئیات و دانلود ←</a>
-                    </article>
-
-                    <!-- 7. Auth Framework -->
-                    <article class="card">
-                        <div class="card-top">
-                            <div class="card-icon">👤</div> 
-                        </div>
-                        <h3>User Authentication Framework</h3>
-                        <p>معماری پایه احراز هویت، ثبت‌نام و ورود کاربران با اعتبارسنجی ورودی‌ها و پایگاه داده اختصاصی.</p>
-                        <div class="tags">
-                            <span class="tag">Tkinter</span>
-                            <span class="tag">SQLite</span>
-                            <span class="tag">Auth</span>
-                        </div>
-                        <a class="btn btn-card" href="pages/auth-framework.html">مشاهده جزئیات و دانلود ←</a>
-                    </article>
-
-                    <!-- 8. PyVault 2 -->
-                    <article class="card">
-                        <div class="card-top">
-                            <div class="card-icon">🛡️</div> 
-                        </div>
-                        <h3>PyVault 2</h3>
-                        <p>نسخه دوم و ارتقایافته مدیریت پسوردها با قابلیت ویرایش سریع، امنیت بالاتر و فایل اجرایی مستقل.</p>
-                        <div class="tags">
-                            <span class="tag">Python</span>
-                            <span class="tag">SQLite</span>
-                            <span class="tag">PyInstaller</span>
-                        </div>
-                        <a class="btn btn-card" href="pages/pyvault2.html">مشاهده جزئیات و دانلود ←</a>
-                    </article>
-
-                    <!-- 9. YouTube Downloader -->
-                    <article class="card">
-                        <div class="card-top">
-                            <div class="card-icon">🎬</div>
-                        </div>
-                        <h3>Download From YouTube</h3>
-                        <p>دانلودر اختصاصی ویدیو و صوت از یوتیوب با امکان انتخاب کیفیت و تبدیل فرمت به کمک yt-dlp.</p>
-                        <div class="tags">
-                            <span class="tag">Tkinter</span>
-                            <span class="tag">yt-dlp</span>
-                            <span class="tag">Media</span>
-                        </div>
-                        <a class="btn btn-card" href="pages/download-from-youtube.html">مشاهده جزئیات و دانلود ←</a>
-                    </article>
-
-                    <!-- 10. Database Reader -->
-                    <article class="card">
-                        <div class="card-top">
-                            <div class="card-icon">🗄️</div>
-                        </div>
-                        <h3>Database Reader</h3>
-                        <p>ابزار سبک و سریع برای باز کردن، خواندن و آنالیز محتوای جداول فایل‌های دیتابیس SQLite.</p>
-                        <div class="tags">
-                            <span class="tag">Python</span>
-                            <span class="tag">Tkinter</span>
-                            <span class="tag">Database</span>
-                        </div>
-                        <a class="btn btn-card" href="pages/database-viewer.html">مشاهده جزئیات و دانلود ←</a>
-                    </article>
+                <div style="margin-top: 24px;">
+                    <span class="bento-tag">● همه پروژه‌ها متن‌باز و آماده دریافت</span>
                 </div>
-            </section>
+            </div>
+
+            <!-- ترمینال ویجت زنده -->
+            <div class="bento-item col-4">
+                <div class="terminal-widget">
+                    <div class="terminal-header">
+                        <div class="dot"></div>
+                        <div class="dot"></div>
+                        <div class="dot"></div>
+                    </div>
+                    <div>$ pyforge --status</div>
+                    <div style="color: #38bdf8;">> System: Active & Online</div>
+                    <div style="color: var(--amber);">> Core: Python 3.12+</div>
+                    <div>> Ready for execution_</div>
+                </div>
+            </div>
+
+            <!-- پروژه ۱: YouTube Downloader (شاخص و عریض) -->
+            <div class="bento-item col-6">
+                <div class="bento-header">
+                    <div class="bento-icon">🎬</div>
+                    <span class="bento-tag">Media Engine</span>
+                </div>
+                <h3>Download From YouTube</h3>
+                <p>دانلودر حرفه‌ای ویدیو و صوت بدون محدودیت با قابلیت انتخاب کیفیت و تبدیل فرمت بر پایه yt-dlp.</p>
+                <div class="tech-stack">
+                    <span class="tech-pill">Python</span>
+                    <span class="tech-pill">Tkinter</span>
+                    <span class="tech-pill">yt-dlp</span>
+                </div>
+                <a class="bento-link" href="pages/download-from-youtube.html">مشاهده و دریافت سورس <span>←</span></a>
+            </div>
+
+            <!-- پروژه ۲: PyVault 2 (شاخص امنیتی) -->
+            <div class="bento-item col-6">
+                <div class="bento-header">
+                    <div class="bento-icon">🛡️</div>
+                    <span class="bento-tag">Security & Vault</span>
+                </div>
+                <h3>PyVault 2 — Password Manager</h3>
+                <p>سیستم مستقل ذخیره‌سازی، تولید و رمزنگاری داده‌های محرمانه با فایل اجرایی اختصاصی بدون نیاز به اینترنت.</p>
+                <div class="tech-stack">
+                    <span class="tech-pill">CustomTkinter</span>
+                    <span class="tech-pill">SQLite</span>
+                    <span class="tech-pill">PyInstaller</span>
+                </div>
+                <a class="bento-link" href="pages/pyvault2.html">مشاهده و دریافت سورس <span>←</span></a>
+            </div>
+
+            <!-- پروژه ۳: Database Reader -->
+            <div class="bento-item col-4">
+                <div class="bento-header">
+                    <div class="bento-icon">🗄️</div>
+                    <span class="bento-tag">Database</span>
+                </div>
+                <h3>Database Reader</h3>
+                <p>ابزار سبک برای بازرسی، نمایش و خواندن آنی محتوای جداول دیتابیس SQLite.</p>
+                <div class="tech-stack">
+                    <span class="tech-pill">Python</span>
+                    <span class="tech-pill">SQLite</span>
+                </div>
+                <a class="bento-link" href="pages/database-viewer.html">دریافت <span>←</span></a>
+            </div>
+
+            <!-- پروژه ۴: Easy CMD -->
+            <div class="bento-item col-4">
+                <div class="bento-header">
+                    <div class="bento-icon">⌘</div>
+                    <span class="bento-tag">CLI Tool</span>
+                </div>
+                <h3>Easy CMD</h3>
+                <p>ابزار همه‌کاره خط فرمان جهت اجرای دستورات سیستمی، مدیریت شبکه و تسک‌ها.</p>
+                <div class="tech-stack">
+                    <span class="tech-pill">PyInstaller</span>
+                    <span class="tech-pill">System</span>
+                </div>
+                <a class="bento-link" href="pages/easy-cmd.html">دریافت <span>←</span></a>
+            </div>
+
+            <!-- پروژه ۵: Supermarket App -->
+            <div class="bento-item col-4">
+                <div class="bento-header">
+                    <div class="bento-icon">🛒</div>
+                    <span class="bento-tag">Management</span>
+                </div>
+                <h3>Supermarket App</h3>
+                <p>نرم‌افزار دسکتاپ مدیریت فروشگاه با قابلیت محاسبه فاکتور و مدیریت انبار.</p>
+                <div class="tech-stack">
+                    <span class="tech-pill">CustomTkinter</span>
+                    <span class="tech-pill">Database</span>
+                </div>
+                <a class="bento-link" href="pages/supermarket-app.html">دریافت <span>←</span></a>
+            </div>
+
+            <!-- پروژه ۶: User Authentication -->
+            <div class="bento-item col-4">
+                <div class="bento-header">
+                    <div class="bento-icon">👤</div>
+                    <span class="bento-tag">Auth</span>
+                </div>
+                <h3>Auth Framework</h3>
+                <p>سیستم امن ورود و ثبت‌نام با بررسی اعتبار ورودی‌ها.</p>
+                <a class="bento-link" href="pages/auth-framework.html">جزئیات <span>←</span></a>
+            </div>
+
+            <!-- پروژه ۷: RGB Picker -->
+            <div class="bento-item col-4">
+                <div class="bento-header">
+                    <div class="bento-icon">🎨</div>
+                    <span class="bento-tag">Design Tool</span>
+                </div>
+                <h3>RGB Color Picker</h3>
+                <p>تبدیل و انتخاب کدهای رنگی وب با پالت مدرن و تعاملی.</p>
+                <a class="bento-link" href="pages/rgb-color-picker.html">جزئیات <span>←</span></a>
+            </div>
+
+            <!-- پروژه ۸: سایر پروژه‌ها (Turtle & Calc) -->
+            <div class="bento-item col-4">
+                <div class="bento-header">
+                    <div class="bento-icon">✿</div>
+                    <span class="bento-tag">Algorithms</span>
+                </div>
+                <h3>Turtle Flowers & Calc</h3>
+                <p>مجموعه ابزارهای محاسباتی و ترسیم الگوهای هندسی با ترتل.</p>
+                <a class="bento-link" href="pages/turtle-flowers.html">جزئیات <span>←</span></a>
+            </div>
+
         </main>
 
         <!-- فوتر -->
         <footer class="footer">
-            <p>© 2026 PyForge — MADE BY ABOLFAZL NIKBAKHT</p>
-            <div class="counter-badge">
+            <p>PyForge © 2026 — طراحی و توسعه اختصاصی توسط ابوالفضل نیک‌بخت</p>
+            <div style="margin-top: 10px;">
                 <a href="https://hits.seeyoufarm.com/" target="_blank" rel="noopener noreferrer">
-                    <img src="https://hits.seeyoufarm.com/api/count/incr/badge.svg?url=https%3A%2F%2Fabolf55.github.io%2Fpyforge%2F&count_bg=%236366f1&title_bg=%23101426&icon=&icon_color=%23E7E7E7&title=views&edge_flat=false" alt="Visitor Counter">
+                    <img src="https://hits.seeyoufarm.com/api/count/incr/badge.svg?url=https%3A%2F%2Fabolf55.github.io%2Fpyforge%2F&count_bg=%236366f1&title_bg=%230d111e&icon=&icon_color=%23E7E7E7&title=views&edge_flat=false" alt="Views">
                 </a>
             </div>
         </footer>
