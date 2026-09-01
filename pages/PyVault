@@ -4,25 +4,25 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>PyVault | مدیریت و امنیت حساب‌ها</title>
-  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="../style.css">
 </head>
 <body>
 
-  <!-- نورپردازی پس‌زمینه -->
+  <!-- Background Effects -->
   <div class="ambient-light-1"></div>
   <div class="ambient-light-2"></div>
 
   <div class="container">
     
-    <!-- نوار ناوبری -->
+    <!-- 1. Navigation (Standard) -->
     <header class="navbar">
-      <a href="index.html" class="brand">Py<span>Forge</span></a>
+      <a href="../index.html" class="brand">Py<span class="text-cyan">Forge</span></a>
       <nav class="nav-links">
-        <a href="index.html">بازگشت به خانه</a>
+        <a href="../index.html">بازگشت به خانه</a>
       </nav>
     </header>
 
-    <!-- معرفی اصلی پروژه -->
+    <!-- 2. Hero Section (Standard) -->
     <section class="detail-hero-card">
       <div class="detail-header-top">
         <div class="project-big-icon">🔐</div>
@@ -39,7 +39,7 @@
       </p>
     </section>
 
-    <!-- مشخصات سریع فنی -->
+    <!-- 3. Technical Specs (Standard) -->
     <div class="specs-grid">
       <div class="spec-item">
         <div class="spec-title">زبان توسعه</div>
@@ -59,38 +59,36 @@
       </div>
     </div>
 
-    <!-- بخش پنل مدیریت سیستم -->
-    <section class="feature-card" style="margin-bottom: 25px; border-color: rgba(99, 102, 241, 0.35);">
-      <div style="display: flex; align-items: center; gap: 14px; margin-bottom: 16px;">
-        <div style="font-size: 1.6rem; background: rgba(99, 102, 241, 0.15); width: 48px; height: 48px; border-radius: 14px; display: flex; align-items: center; justify-content: center; border: 1px solid rgba(99, 102, 241, 0.3);">⚙️</div>
+    <!-- 4. Management Panel Section (Custom Content within Standard Card) -->
+    <section class="feature-card">
+      <div class="feature-header">
+        <span class="feature-icon">⚙️</span>
         <div>
-          <h2 style="font-size: 1.3rem; font-weight: 800; color: #fff; margin: 0;">پنل مدیریت سیستم</h2>
-          <p style="font-size: 0.85rem; color: var(--text-muted); margin: 0;">بخش اختصاصی مدیریت کاربران و اطلاعات سیستم</p>
+          <h2 class="feature-title">پنل مدیریت سیستم</h2>
+          <p class="feature-subtitle">بخش اختصاصی مدیریت کاربران و اطلاعات سیستم</p>
         </div>
       </div>
 
-      <p style="color: var(--text-body); font-size: 0.95rem; margin-bottom: 20px;">
+      <p class="detail-description" style="margin-top: 15px;">
         پنل ادمین بخش مدیریتی اصلی PyVault است و فقط مدیر مجاز می‌تواند با استفاده از اطلاعات ورود مخصوص خود به آن دسترسی داشته باشد.
       </p>
 
-      <!-- اطلاعات ورود دمو -->
-      <div style="background: rgba(5, 7, 14, 0.6); border: 1px solid var(--border-line); border-radius: 14px; padding: 18px; margin-bottom: 20px;">
-        <h3 style="font-size: 0.95rem; color: var(--cyan); margin-bottom: 12px; font-weight: 700;">🔑 اطلاعات ورود نسخهٔ آزمایشی</h3>
-        
-        <div style="display: flex; justify-content: space-between; align-items: center; padding: 8px 12px; background: rgba(255, 255, 255, 0.03); border-radius: 8px; margin-bottom: 8px;">
-          <span style="font-size: 0.88rem; color: var(--text-body);">نام کاربری:</span>
-          <code dir="ltr" style="color: #fff; background: rgba(99, 102, 241, 0.25); padding: 3px 10px; border-radius: 6px; font-family: monospace; font-size: 0.9rem; border: 1px solid rgba(99, 102, 241, 0.3);">admin</code>
+      <!-- Login Credentials Box -->
+      <div class="credential-box">
+        <h3 class="credential-title">🔑 اطلاعات ورود نسخهٔ آزمایشی</h3>
+        <div class="credential-row">
+          <span>نام کاربری:</span>
+          <code class="credential-code">admin</code>
         </div>
-
-        <div style="display: flex; justify-content: space-between; align-items: center; padding: 8px 12px; background: rgba(255, 255, 255, 0.03); border-radius: 8px;">
-          <span style="font-size: 0.88rem; color: var(--text-body);">رمز عبور:</span>
-          <code dir="ltr" style="color: #fff; background: rgba(99, 102, 241, 0.25); padding: 3px 10px; border-radius: 6px; font-family: monospace; font-size: 0.9rem; border: 1px solid rgba(99, 102, 241, 0.3);">admin123</code>
+        <div class="credential-row">
+          <span>رمز عبور:</span>
+          <code class="credential-code">admin123</code>
         </div>
       </div>
 
-      <!-- امکانات پنل ادمین -->
-      <h3 style="font-size: 1rem; color: #fff; margin-bottom: 10px; font-weight: 700;">امکانات پنل ادمین</h3>
-      <ul style="color: var(--text-body); font-size: 0.92rem; padding-right: 20px; line-height: 2; margin-bottom: 20px;">
+      <!-- Admin Capabilities List -->
+      <h3 class="section-subtitle">امکانات پنل ادمین</h3>
+      <ul class="feature-list">
         <li>مشاهدهٔ فهرست کامل کاربران</li>
         <li>ویرایش نام کاربری و اطلاعات حساب‌ها</li>
         <li>بررسی اطلاعات ثبت‌شده در سیستم</li>
@@ -98,17 +96,17 @@
         <li>تازه‌سازی اطلاعات جدول کاربران</li>
       </ul>
 
-      <!-- نکته امنیتی (با پالت طلایی/فیروزه‌ای به جای قرمز) -->
-      <div style="background: rgba(0, 242, 254, 0.06); border: 1px solid rgba(0, 242, 254, 0.25); border-radius: 12px; padding: 14px 18px; color: #e2e8f0; font-size: 0.88rem; display: flex; align-items: flex-start; gap: 10px;">
-        <span style="font-size: 1.2rem;">💡</span>
-        <div>
-          <strong style="color: var(--cyan);">نکتهٔ امنیتی:</strong>
-          رمز پیش‌فرض بالا فقط برای تست پروژه است. در استفادهٔ واقعی، یک رمز قوی و یکتا انتخاب کنید و رمزها را به‌صورت هش‌شده ذخیره کنید.
+      <!-- Security Note (Cyberpunk Style Alert) -->
+      <div class="security-alert">
+        <span class="alert-icon">💡</span>
+        <div class="alert-text">
+          <strong class="text-cyan">نکتهٔ امنیتی:</strong>
+          رمز پیش‌فرض بالا فقط برای تست پروژه است. در استفادهٔ واقعی، یک رمز قوی و یکتا انتخاب کنید.
         </div>
       </div>
     </section>
 
-    <!-- ایستگاه دریافت و دانلود -->
+    <!-- 5. Download Station (Standard) -->
     <section class="download-station">
       <div class="download-info">
         <h3>دریافت پروژه PyVault</h3>
@@ -122,9 +120,9 @@
       </div>
     </section>
 
-    <!-- فوتر -->
+    <!-- 6. Footer (Standard) -->
     <footer class="footer">
-      <p>© PyForge - تمامی پروژه‌ها متن‌باز و توسعه‌یافته با پایتون</p>
+      <p>© 2026 PyForge - تمامی پروژه‌ها متن‌باز و توسعه‌یافته با پایتون</p>
     </footer>
 
   </div>
