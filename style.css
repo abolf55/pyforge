@@ -1,227 +1,471 @@
-@import url('https://fonts.googleapis.com/css2?family=Vazirmatn:wght@400;500;600;700;800&family=JetBrains+Mono:wght@500;700&display=swap');
-
 :root {
-  --bg: #080b14;
-  --surface: #101625;
-  --surface-2: #151d2f;
-  --line: #27324b;
-  --text: #f1f5ff;
-  --muted: #9caac4;
-  --cyan: #36d7ff;
-  --purple: #8a70ff;
-  --green: #4ee8a8;
-  --secondary: #151d2f; /* تعریف شده برای دکمه ثانویه */
-  --secondary-hover: #1a2335; /* رنگ هاور برای دکمه ثانویه */
-}
-* { box-sizing: border-box; }
-html { scroll-behavior: smooth; }
-body { margin: 0; direction: rtl; color: var(--text); background: var(--bg); font-family: Vazirmatn, Tahoma, sans-serif; line-height: 1.9; }
-body::before { content: ''; position: fixed; inset: 0; z-index: -1; background: radial-gradient(circle at 12% 0%, rgba(54,215,255,.13), transparent 27rem), radial-gradient(circle at 88% 17%, rgba(138,112,255,.15), transparent 31rem), linear-gradient(135deg,#080b14,#0b1020 65%,#080b14); }
-a { color: inherit; text-decoration: none; }
-.container { width: min(1120px, calc(100% - 40px)); margin: auto; padding: 0 20px; }
-nav { display: flex; justify-content: space-between; align-items: center; min-height: 82px; border-bottom: 1px solid var(--line); }
-.logo { direction: ltr; font-family: 'JetBrains Mono', monospace; font-weight: 700; font-size: 1.1rem; color: var(--cyan); }
-.logo span { color: var(--purple); }
-.nav-link { color: var(--muted); transition: .2s; }.nav-link:hover { color: var(--cyan); }
-.hero { min-height: 530px; display: grid; align-content: center; text-align: center; padding: 55px 0 95px; }
-.badge { width: fit-content; margin: auto; color: var(--green); background: rgba(78,232,168,.1); border: 1px solid rgba(78,232,168,.25); padding: 6px 15px; border-radius: 999px; font-size: .85rem; }
-h1 { font-size: clamp(2.3rem, 7vw, 5rem); line-height: 1.25; margin: 20px 0 15px; letter-spacing: -.08rem; } .accent { color: var(--cyan); }
-.hero p { max-width: 720px; margin: 0 auto 28px; color: var(--muted); font-size: 1.08rem; }
-.btn { display: inline-flex; justify-content: center; align-items: center; gap: 8px; border-radius: 12px; border: 1px solid transparent; padding: 11px 20px; cursor: pointer; font: inherit; transition: transform .2s, box-shadow .2s, background .2s; }
-.btn:hover { transform: translateY(-3px); }.primary { color:#041018; background: linear-gradient(135deg,var(--cyan),#88ebff); box-shadow: 0 9px 30px rgba(54,215,255,.2); }.secondary { border-color: var(--line); background: rgba(21,29,47,.65); color: var(--text); }
-.section { padding: 75px 0; }.section-title { text-align: center; font-size: 2rem; margin: 0; }.section-subtitle { color: var(--muted); text-align: center; margin: 5px 0 35px; }
-.grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 18px; } /* کارت‌ها در دو ستون */
-.card { padding: 26px; border: 1px solid var(--line); border-radius: 19px; background: linear-gradient(145deg,rgba(21,29,47,.9),rgba(11,16,30,.92)); transition: .25s; }
-.card:hover { border-color: rgba(54,215,255,.65); transform: translateY(-5px); box-shadow: 0 20px 45px rgba(0,0,0,.25); }
-.card .icon { width: 48px; height: 48px; display:grid; place-items:center; background: rgba(54,215,255,.1); border: 1px solid rgba(54,215,255,.2); border-radius: 14px; font-size: 1.5rem; }
-.card h3 { margin: 16px 0 7px; font-size: 1.28rem; }
-.card p { color: var(--muted); margin: 0 0 17px; line-height: 1.8; }
-.card .btn { padding: 8px 14px; font-size: .9rem; margin-top: auto; }
-.tags { display:flex; flex-wrap:wrap; gap:7px; margin-bottom: 18px; direction:ltr; justify-content:flex-end; }.tag { padding: 3px 9px; color:#c6dcff; font: .75rem 'JetBrains Mono', monospace; background: rgba(138,112,255,.13); border-radius: 6px; }
-footer { padding: 30px 0; border-top: 1px solid var(--line); color: var(--muted); text-align:center; font-size:.9rem; }
-.page-hero { padding: 75px 0 44px; }.back { color: var(--cyan); }.project-title { font-size:clamp(2rem,6vw,3.6rem); margin:25px 0 8px; }.lead { color:var(--muted); max-width:760px; font-size:1.1rem; }.project-layout { display:grid; grid-template-columns: 1fr 300px; gap:22px; padding-bottom:80px; }.content-box,.info { padding:25px; background:rgba(16,22,37,.82); border:1px solid var(--line); border-radius:17px; }.content-box h2 { margin-top: 0; font-size:1.35rem; }.content-box ul { padding-right:22px; }.content-box li { margin:7px 0; }.info { height:fit-content; position:sticky; top:18px; }.info h3 { margin-top:0; }.info p { color:var(--muted); margin:8px 0; }.download { margin-top:22px; padding:30px; border-radius:17px; border:1px solid rgba(78,232,168,.28); background:linear-gradient(135deg,rgba(78,232,168,.11),rgba(54,215,255,.08)); text-align:center; }.download h2 { margin:0 0 7px; }.download p { color:var(--muted); margin:0 0 17px; }.disabled { opacity:.75; cursor:not-allowed; }
-
-/* استایل‌های اضافی برای دکمه‌های ثانویه */
-.btn.secondary {
-    border-color: var(--line);
-    background: rgba(21,29,47,.65);
-    color: var(--text);
-}
-.btn.secondary:hover {
-    border-color: var(--cyan);
-    background: rgba(21,29,47,.85);
+    --bg-main: #0b0d14;
+    --bg-card: rgba(18, 22, 34, 0.75);
+    --bg-card-hover: rgba(26, 32, 50, 0.85);
+    --border-color: rgba(255, 255, 255, 0.08);
+    --border-glow: rgba(108, 99, 255, 0.35);
+    --primary: #6c63ff;
+    --primary-glow: #8b83ff;
+    --accent-cyan: #00f2fe;
+    --accent-emerald: #10b981;
+    --text-main: #f3f4f6;
+    --text-muted: #9ca3af;
+    --radius-lg: 18px;
+    --radius-md: 12px;
+    --radius-sm: 8px;
+    --transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
 }
 
-/* استایل برای PyVault */
-.icon.pyvault { /* کلاس آیکون PyVault */
-    background: rgba(78, 232, 168, 0.1); /* رنگ سبز */
-    border-color: rgba(78, 232, 168, 0.2);
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: 'Vazirmatn', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
 }
 
-/* شمارنده بازدید کننده */
-.visitor-counter {
-    margin-top: 24px;
-    padding: 16px;
-    border: 1px solid rgba(255,255,255,0.08);
-    border-radius: 16px;
-    background: rgba(255,255,255,0.03);
-    text-align: center;
+body {
+    background-color: var(--bg-main);
+    color: var(--text-main);
+    min-height: 100vh;
+    line-height: 1.7;
+    position: relative;
+    overflow-x: hidden;
+    background-image: 
+        radial-gradient(at 0% 0%, rgba(108, 99, 255, 0.15) 0px, transparent 50%),
+        radial-gradient(at 100% 100%, rgba(0, 242, 254, 0.1) 0px, transparent 50%),
+        linear-gradient(rgba(255, 255, 255, 0.02) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(255, 255, 255, 0.02) 1px, transparent 1px);
+    background-size: 100% 100%, 100% 100%, 40px 40px, 40px 40px;
 }
 
-.visitor-counter p {
-    margin: 0 0 10px;
-    color: #cfcfe8;
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 24px;
+}
+
+/* Header */
+.header {
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    background: rgba(11, 13, 20, 0.8);
+    backdrop-filter: blur(16px);
+    -webkit-backdrop-filter: blur(16px);
+    border-bottom: 1px solid var(--border-color);
+    padding: 16px 0;
+}
+
+.header .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    font-size: 1.4rem;
+    font-weight: 900;
+    color: #fff;
+    text-decoration: none;
+    letter-spacing: -0.5px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    background: linear-gradient(135deg, #fff 40%, var(--primary-glow));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.nav {
+    display: flex;
+    gap: 20px;
+}
+
+.nav a {
+    color: var(--text-muted);
+    text-decoration: none;
     font-size: 0.95rem;
+    font-weight: 500;
+    transition: var(--transition);
+    padding: 6px 12px;
+    border-radius: var(--radius-sm);
 }
 
-.visitor-counter img {
-    max-width: 100%;
-    height: auto;
-    border-radius: 10px;
+.nav a:hover {
+    color: #fff;
+    background: rgba(255, 255, 255, 0.05);
 }
 
-/* ==========================================================================
-   بخش استایل‌های اختصاصی پنل ادمین (کاملاً هماهنگ با تم تاریک و فیروزه‌ای PyForge)
-   ========================================================================== */
-.admin-box {
-    border: 1px solid rgba(54, 215, 255, 0.35); /* استفاده از رنگ فیروزه‌ای قالب */
-    background: linear-gradient(
-        145deg,
-        rgba(54, 215, 255, 0.05),
-        rgba(16, 22, 37, 0.95)
-    );
-    box-shadow: 0 12px 35px rgba(54, 215, 255, 0.05);
+/* Hero Section */
+.hero {
+    padding: 90px 0 60px;
+    text-align: center;
+    position: relative;
+}
+
+.hero-badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    background: rgba(108, 99, 255, 0.12);
+    border: 1px solid rgba(108, 99, 255, 0.3);
+    color: var(--primary-glow);
+    padding: 6px 16px;
+    border-radius: 99px;
+    font-size: 0.85rem;
+    font-weight: 600;
+    margin-bottom: 24px;
+}
+
+.hero h1 {
+    font-size: 3.2rem;
+    font-weight: 900;
+    line-height: 1.2;
+    margin-bottom: 18px;
+    letter-spacing: -1px;
+    background: linear-gradient(180deg, #ffffff 0%, #cbd5e1 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.hero h1 span {
+    background: linear-gradient(135deg, var(--primary) 0%, var(--accent-cyan) 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.hero p {
+    font-size: 1.15rem;
+    color: var(--text-muted);
+    max-width: 620px;
+    margin: 0 auto 30px;
+    font-weight: 400;
+}
+
+/* Projects Section */
+.projects-section {
+    padding: 40px 0 100px;
+}
+
+.section-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    margin-bottom: 36px;
+}
+
+.section-title {
+    font-size: 1.8rem;
+    font-weight: 800;
+    color: #fff;
+}
+
+.section-subtitle {
+    color: var(--text-muted);
+    font-size: 0.95rem;
+    margin-top: 4px;
+}
+
+/* Grid & Cards */
+.grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+    gap: 24px;
+}
+
+.card {
+    background: var(--bg-card);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    border: 1px solid var(--border-color);
+    border-radius: var(--radius-lg);
+    padding: 26px;
+    display: flex;
+    flex-direction: column;
     position: relative;
     overflow: hidden;
+    transition: var(--transition);
 }
 
-.admin-box::before {
+.card::before {
     content: "";
     position: absolute;
     top: 0;
+    left: 0;
     right: 0;
-    width: 4px;
-    height: 100%;
-    background: var(--cyan); /* نوار شاخص فیروزه‌ای در سمت راست */
+    height: 1px;
+    background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.15), transparent);
+    opacity: 0;
+    transition: var(--transition);
 }
 
-.admin-header {
-    display: flex;
-    align-items: center;
-    gap: 16px;
-    margin-bottom: 18px;
+.card:hover {
+    transform: translateY(-6px);
+    border-color: var(--border-glow);
+    background: var(--bg-card-hover);
+    box-shadow: 0 18px 36px -12px rgba(0, 0, 0, 0.5), 0 0 24px -6px rgba(108, 99, 255, 0.2);
 }
 
-.admin-header h2 {
-    margin: 0 0 4px;
-    color: var(--text);
-    font-size: 1.35rem;
+.card:hover::before {
+    opacity: 1;
 }
 
-.admin-header p {
-    margin: 0;
-    color: var(--muted);
-    font-size: 0.9rem;
-}
-
-.admin-icon {
+.card .icon {
+    width: 48px;
+    height: 48px;
+    border-radius: var(--radius-md);
+    background: rgba(255, 255, 255, 0.04);
+    border: 1px solid rgba(255, 255, 255, 0.08);
     display: flex;
     align-items: center;
     justify-content: center;
-    width: 46px;
-    height: 46px;
-    border-radius: 12px;
-    background: rgba(54, 215, 255, 0.1);
-    border: 1px solid rgba(54, 215, 255, 0.25);
-    color: var(--cyan);
-    font-size: 1.4rem;
+    font-size: 1.5rem;
+    margin-bottom: 18px;
 }
 
-.admin-login {
-    margin: 20px 0;
-    padding: 18px;
-    border: 1px dashed var(--line);
-    border-radius: 12px;
-    background: rgba(8, 11, 20, 0.5);
+.card h3 {
+    font-size: 1.25rem;
+    font-weight: 700;
+    color: #fff;
+    margin-bottom: 10px;
 }
 
-.admin-login h3 {
-    margin-top: 0;
-    color: var(--cyan);
-    font-size: 1rem;
-    margin-bottom: 12px;
+.card p {
+    color: var(--text-muted);
+    font-size: 0.92rem;
+    line-height: 1.6;
+    margin-bottom: 20px;
+    flex-grow: 1;
 }
 
-.login-row {
+/* Tags */
+.tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    margin-bottom: 22px;
+}
+
+.tag {
+    font-size: 0.75rem;
+    font-weight: 600;
+    padding: 4px 10px;
+    border-radius: 99px;
+    background: rgba(255, 255, 255, 0.04);
+    color: #cbd5e1;
+    border: 1px solid rgba(255, 255, 255, 0.06);
+}
+
+/* Buttons */
+.btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    padding: 10px 18px;
+    border-radius: var(--radius-md);
+    font-size: 0.92rem;
+    font-weight: 600;
+    text-decoration: none;
+    cursor: pointer;
+    transition: var(--transition);
+}
+
+.btn.primary {
+    background: linear-gradient(135deg, var(--primary) 0%, #5146e5 100%);
+    color: #fff;
+    box-shadow: 0 4px 14px rgba(108, 99, 255, 0.35);
+    border: none;
+}
+
+.btn.primary:hover {
+    box-shadow: 0 6px 20px rgba(108, 99, 255, 0.55);
+    transform: translateY(-2px);
+}
+
+.btn.secondary {
+    background: rgba(255, 255, 255, 0.05);
+    color: #fff;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    width: 100%;
+}
+
+.btn.secondary:hover {
+    background: rgba(255, 255, 255, 0.1);
+    border-color: rgba(255, 255, 255, 0.25);
+    color: var(--accent-cyan);
+}
+
+/* Project Detail Pages */
+.project-detail {
+    padding: 40px 24px 80px;
+}
+
+.back-link {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    color: var(--text-muted);
+    text-decoration: none;
+    font-size: 0.9rem;
+    font-weight: 500;
+    margin-bottom: 24px;
+    transition: var(--transition);
+}
+
+.back-link:hover {
+    color: var(--accent-cyan);
+    transform: translateX(4px);
+}
+
+.project-hero {
     display: flex;
     align-items: center;
-    justify-content: space-between;
-    gap: 15px;
-    margin-top: 10px;
-    padding: 8px 14px;
-    border-radius: 8px;
-    background: rgba(21, 29, 47, 0.6);
-    border: 1px solid rgba(39, 50, 75, 0.3);
+    gap: 20px;
+    background: var(--bg-card);
+    border: 1px solid var(--border-color);
+    padding: 32px;
+    border-radius: var(--radius-lg);
+    margin-bottom: 30px;
+    backdrop-filter: blur(12px);
 }
 
-.login-row span {
-    color: var(--muted);
-    font-size: 0.9rem;
+.project-hero .hero-icon {
+    width: 64px;
+    height: 64px;
+    border-radius: var(--radius-md);
+    background: rgba(108, 99, 255, 0.1);
+    border: 1px solid rgba(108, 99, 255, 0.25);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 2rem;
+    flex-shrink: 0;
 }
 
-.login-row code {
-    direction: ltr;
-    color: var(--cyan);
-    background: #080b14;
-    padding: 4px 10px;
-    border-radius: 6px;
-    font-family: 'JetBrains Mono', monospace;
+.project-hero h1 {
+    font-size: 1.8rem;
+    font-weight: 800;
+    color: #fff;
+    margin-bottom: 6px;
+}
+
+.hero-subtitle {
+    color: var(--text-muted);
     font-size: 0.95rem;
-    border: 1px solid var(--line);
 }
 
-.security-warning {
-    margin-top: 20px;
-    padding: 14px;
-    border-right: 4px solid var(--green); /* استفاده از رنگ سبز کمکی */
-    border-radius: 8px;
-    background: rgba(78, 232, 168, 0.05);
-    color: #b2f3d6;
-    font-size: 0.9rem;
+.project-content-grid {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    gap: 24px;
+}
+
+.section-card {
+    background: var(--bg-card);
+    border: 1px solid var(--border-color);
+    border-radius: var(--radius-lg);
+    padding: 26px;
+    margin-bottom: 24px;
+    backdrop-filter: blur(12px);
+}
+
+.section-card h2, .section-card h3 {
+    font-size: 1.25rem;
+    font-weight: 700;
+    color: #fff;
+    margin-bottom: 16px;
+    border-bottom: 1px solid var(--border-color);
+    padding-bottom: 10px;
+}
+
+.section-card p {
+    color: var(--text-muted);
+    font-size: 0.95rem;
     line-height: 1.8;
 }
 
-.security-warning strong {
-    color: var(--green);
+.feature-list {
+    list-style: none;
 }
 
-/* Media Queries برای ریسپانسیو بودن */
-@media(max-width: 1024px) {
-    .container {
-        width: calc(100% - 20px);
-    }
+.feature-list li {
+    position: relative;
+    padding-right: 22px;
+    color: var(--text-muted);
+    margin-bottom: 12px;
+    font-size: 0.95rem;
 }
 
-@media(max-width: 720px){
-    .grid {
-        grid-template-columns: 1fr; /* در موبایل، کارت‌ها تک ستونی می‌شوند */
-    }
-    .project-layout {
+.feature-list li::before {
+    content: "✦";
+    position: absolute;
+    right: 0;
+    color: var(--primary-glow);
+}
+
+.tech-specs {
+    list-style: none;
+}
+
+.tech-specs li {
+    display: flex;
+    justify-content: space-between;
+    padding: 10px 0;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.04);
+    font-size: 0.9rem;
+    color: var(--text-muted);
+}
+
+.tech-specs li strong {
+    color: #fff;
+    font-weight: 600;
+}
+
+.download-section {
+    text-align: center;
+    padding: 36px 26px;
+}
+
+.download-section .btn.primary {
+    width: auto;
+    font-size: 1rem;
+    padding: 14px 32px;
+    margin-top: 14px;
+}
+
+/* Counter & Footer */
+.footer {
+    border-top: 1px solid var(--border-color);
+    padding: 40px 0 30px;
+    text-align: center;
+    background: rgba(11, 13, 20, 0.8);
+}
+
+.footer p {
+    color: var(--text-muted);
+    font-size: 0.85rem;
+    margin-bottom: 16px;
+}
+
+.counter-badge {
+    display: inline-flex;
+    padding: 4px;
+    background: rgba(255, 255, 255, 0.03);
+    border: 1px solid var(--border-color);
+    border-radius: var(--radius-sm);
+}
+
+/* Responsive */
+@media (max-width: 860px) {
+    .project-content-grid {
         grid-template-columns: 1fr;
     }
-    .info {
-        position: static;
+    .hero h1 {
+        font-size: 2.2rem;
     }
-    nav {
-        min-height:65px;
-        flex-wrap: wrap;
-        justify-content: center;
-    }
-    .logo {
-        width: 100%;
+    .project-hero {
+        flex-direction: column;
         text-align: center;
-        margin-bottom: 10px;
     }
-    h1 { letter-spacing:-.04rem; }
-    .hero { min-height:470px; }
 }
