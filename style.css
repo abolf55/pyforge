@@ -321,3 +321,86 @@ body {
     grid-template-columns: 1fr;
   }
 }
+/* استایل‌های اختصاصی صفحات فرعی پروژه */
+.project-detail-box {
+  background: var(--bg-card);
+  border: 1px solid var(--border-line);
+  border-radius: var(--radius-card);
+  padding: 40px;
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  margin-bottom: 40px;
+}
+
+.project-detail-header {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  padding-bottom: 30px;
+  border-bottom: 1px solid var(--border-line);
+  margin-bottom: 30px;
+}
+
+.detail-section {
+  margin-bottom: 32px;
+}
+
+.detail-section h2 {
+  font-size: 1.3rem;
+  font-weight: 800;
+  color: var(--primary-light);
+  margin-bottom: 12px;
+}
+
+.detail-section p {
+  color: var(--text-body);
+  font-size: 1rem;
+  line-height: 1.8;
+}
+
+.feature-list {
+  list-style: none;
+  padding: 0;
+}
+
+.feature-list li {
+  position: relative;
+  padding-right: 24px;
+  margin-bottom: 10px;
+  color: var(--text-body);
+  font-size: 0.98rem;
+}
+
+.feature-list li::before {
+  content: "✦";
+  position: absolute;
+  right: 0;
+  color: var(--cyan);
+}
+
+.download-card {
+  background: rgba(255, 255, 255, 0.03);
+  border: 1px solid var(--border-line);
+  border-radius: 16px;
+  padding: 24px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 20px;
+  margin-top: 40px;
+}
+
+.download-buttons {
+  min-width: 200px;
+}
+
+@media (max-width: 600px) {
+  .project-detail-box {
+    padding: 24px;
+  }
+  .download-card {
+    flex-direction: column;
+    align-items: stretch;
+  }
+}
