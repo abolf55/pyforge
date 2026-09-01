@@ -2,26 +2,39 @@
 <html lang="fa" dir="rtl">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width,initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>PyForge | Projects</title>
     <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Vazirmatn:wght@300;400;600;700;900&display=swap" rel="stylesheet">
 </head>
 <body>
     <div class="container">
-        <nav>
-            <a class="logo" href="index.html">Py<span>Forge</span></a>
-            <a class="nav-link" href="#projects">پروژه‌ها</a>
-        </nav>
+        <header class="header">
+            <div class="container" style="padding: 0;">
+                <a class="logo" href="index.html">Py<span>Forge</span></a>
+                <nav class="nav">
+                    <a class="nav-link" href="#projects">پروژه‌ها</a>
+                    <a class="nav-link" href="https://github.com/abolf55" target="_blank" rel="noopener noreferrer">گیت‌هاب</a>
+                </nav>
+            </div>
+        </header>
+
         <main>
             <section class="hero">
-                <div class="badge">● Python Developer & Creator</div>
-                <h1>پروژه‌های <span class="accent">PyForge</span></h1>
+                <div class="hero-badge">● Python Developer & Creator</div>
+                <h1>پروژه‌های <span>PyForge</span></h1>
                 <p>مجموعه‌ای از پروژه‌های پایتون، ابزارهای کاربردی، رابط‌های گرافیکی و تجربه‌های من در برنامه‌نویسی.</p>
                 <a class="btn primary" href="#projects">دیدن پروژه‌ها ↓</a>
             </section>
-            <section class="section" id="projects">
-                <h2 class="section-title">پروژه‌های منتخب</h2>
-                <p class="section-subtitle">برای مشاهده توضیحات و دانلود، روی هر پروژه کلیک کن.</p>
+
+            <section class="projects-section" id="projects">
+                <div class="section-header">
+                    <div>
+                        <h2 class="section-title">پروژه‌های منتخب</h2>
+                        <p class="section-subtitle">برای مشاهده توضیحات و دانلود، روی هر پروژه کلیک کن.</p>
+                    </div>
+                </div>
+
                 <div class="grid">
                     <!-- 1. Easy CMD -->
                     <article class="card">
@@ -35,6 +48,7 @@
                         </div>
                         <a class="btn secondary" href="pages/easy-cmd.html">مشاهدهٔ جزئیات ←</a>
                     </article>
+
                     <!-- 2. RGB Color Picker -->
                     <article class="card">
                         <div class="icon">🎨</div>
@@ -47,6 +61,7 @@
                         </div>
                         <a class="btn secondary" href="pages/rgb-color-picker.html">مشاهدهٔ جزئیات ←</a>
                     </article>
+
                     <!-- 3. Supermarket App -->
                     <article class="card">
                         <div class="icon">🛒</div>
@@ -59,6 +74,7 @@
                         </div>
                         <a class="btn secondary" href="pages/supermarket-app.html">مشاهدهٔ جزئیات ←</a>
                     </article>
+
                     <!-- 4. Turtle Flowers -->
                     <article class="card">
                         <div class="icon">✿</div>
@@ -71,6 +87,7 @@
                         </div>
                         <a class="btn secondary" href="pages/turtle-flowers.html">مشاهدهٔ جزئیات ←</a>
                     </article>
+
                     <!-- 5. Calculator -->
                     <article class="card">
                         <div class="icon">₽</div> 
@@ -82,6 +99,7 @@
                         </div>
                         <a class="btn secondary" href="pages/calculator.html">مشاهدهٔ جزئیات ←</a>
                     </article>
+
                     <!-- 6. PyVault -->
                     <article class="card">
                         <div class="icon">🔒</div> 
@@ -94,6 +112,7 @@
                         </div>
                         <a class="btn secondary" href="pages/pyvault.html">مشاهدهٔ جزئیات ←</a>
                     </article>
+
                     <!-- 7. Auth Framework -->
                     <article class="card">
                         <div class="icon">👤</div> 
@@ -106,6 +125,7 @@
                         </div>
                         <a class="btn secondary" href="pages/auth-framework.html">مشاهدهٔ جزئیات ←</a>
                     </article>
+
                     <!-- 8. PyVault 2 -->
                     <article class="card">
                         <div class="icon">🛡️</div> 
@@ -119,6 +139,7 @@
                         </div>
                         <a class="btn secondary" href="pages/pyvault2.html">مشاهدهٔ جزئیات ←</a>
                     </article>
+
                     <!-- 9. YouTube Downloader -->
                     <article class="card">
                         <div class="icon">🎬</div>
@@ -131,26 +152,26 @@
                         </div>
                         <a class="btn secondary" href="pages/download-from-youtube.html">مشاهدهٔ جزئیات ←</a>
                     </article>
-                        <article class="card">
-                            <div class="icon">🗄️</div>
-                                <h3>Database_reader</h3>
-                                    <p>خواندن فایل های دیتابیس با برنامه DATABASE_READER</p>
-                                    <div class="tags">
-                                    <span class="tag">Python</span>
-                                    <span class="tag">Tkinter</span>
-                                    <span class="tag">select file</span>
-                            </div>
-                         <a class="btn secondary" href="pages/database-viewer.html">مشاهدهٔ جزئیات ←</a>
-                    </article>
 
+                    <!-- 10. Database Reader -->
+                    <article class="card">
+                        <div class="icon">🗄️</div>
+                        <h3>Database_reader</h3>
+                        <p>خواندن و مشاهده آسان محتوای فایل‌های دیتابیس با برنامه DATABASE_READER.</p>
+                        <div class="tags">
+                            <span class="tag">Python</span>
+                            <span class="tag">Tkinter</span>
+                            <span class="tag">SQLite</span>
+                        </div>
+                        <a class="btn secondary" href="pages/database-viewer.html">مشاهدهٔ جزئیات ←</a>
+                    </article>
                 </div>
             </section>
         </main>
 
-        <footer>
-            ساخته‌شده توسط PyForge — 2026
-            <div class="visitor-counter">
-                <p>بازدید سایت</p>
+        <footer class="footer">
+            <p>ساخته‌شده توسط PyForge — 2026</p>
+            <div class="counter-badge" style="margin-top: 10px;">
                 <a href="https://hits.seeyoufarm.com/" target="_blank" rel="noopener noreferrer">
                     <img src="https://hits.seeyoufarm.com/api/count/incr/badge.svg?url=https%3A%2F%2Fabolf55.github.io%2Fpyforge%2F&count_bg=%236C63FF&title_bg=%23151522&icon=&icon_color=%23E7E7E7&title=views&edge_flat=false" alt="Visitor Counter">
                 </a>
