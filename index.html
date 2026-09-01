@@ -3,177 +3,201 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>PyForge | Projects</title>
+    <title>PyForge | مهندسی و ساخت نرم‌افزار</title>
     <link rel="stylesheet" href="style.css">
-    <link href="https://fonts.googleapis.com/css2?family=Vazirmatn:wght@300;400;600;700;900&display=swap" rel="stylesheet">
 </head>
 <body>
+    <!-- پس‌زمینه‌های نوری نئونی -->
+    <div class="bg-glow-1"></div>
+    <div class="bg-glow-2"></div>
+
     <div class="container">
+        <!-- هدر شناور مدرن -->
         <header class="header">
-            <div class="container" style="padding: 0;">
+            <div class="header-inner">
                 <a class="logo" href="index.html">Py<span>Forge</span></a>
                 <nav class="nav">
                     <a class="nav-link" href="#projects">پروژه‌ها</a>
-                    <a class="nav-link" href="https://github.com/abolf55" target="_blank" rel="noopener noreferrer">گیت‌هاب</a>
+                    <a class="nav-link nav-btn" href="https://github.com/abolf55" target="_blank" rel="noopener noreferrer">گیت‌هاب من ↗</a>
                 </nav>
             </div>
         </header>
 
         <main>
+            <!-- بخش Hero چشم‌نواز -->
             <section class="hero">
-                <div class="hero-badge">● Python Developer & Creator</div>
-                <h1>پروژه‌های <span>PyForge</span></h1>
-                <p>مجموعه‌ای از پروژه‌های پایتون، ابزارهای کاربردی، رابط‌های گرافیکی و تجربه‌های من در برنامه‌نویسی.</p>
-                <a class="btn primary" href="#projects">دیدن پروژه‌ها ↓</a>
+                <div class="hero-badge">⚡ دنیای توسعه پایتون و ابزارهای کاربردی</div>
+                <h1>پروژه‌های مدرن <span>PyForge</span></h1>
+                <p>مجموعه‌ای کامل از ابزارهای دسکتاپ، اسکریپت‌های کاربردی، رابط‌های کاربری مدرن و تجربیات توسعه نرم‌افزار من.</p>
+                <a class="btn btn-primary" href="#projects">کاوش پروژه‌ها ↓</a>
             </section>
 
+            <!-- گرید پروژه‌ها -->
             <section class="projects-section" id="projects">
                 <div class="section-header">
-                    <div>
-                        <h2 class="section-title">پروژه‌های منتخب</h2>
-                        <p class="section-subtitle">برای مشاهده توضیحات و دانلود، روی هر پروژه کلیک کن.</p>
-                    </div>
+                    <h2 class="section-title">پروژه‌های منتخب</h2>
+                    <p class="section-subtitle">برای مشاهده توضیحات کامل، سورس‌کد و دانلود، هر پروژه را انتخاب کن.</p>
                 </div>
 
                 <div class="grid">
                     <!-- 1. Easy CMD -->
                     <article class="card">
-                        <div class="icon">⌘</div>
+                        <div class="card-top">
+                            <div class="card-icon">⌘</div>
+                        </div>
                         <h3>Easy CMD</h3>
-                        <p>ابزار چندکارهٔ CMD برای انجام سریع کارهای سیستمی، شبکه و پایتون.</p>
+                        <p>ابزار چندکاره و سریع خط فرمان برای انجام خودکار امور سیستمی، مدیریت شبکه و اجرای تسک‌های پایتون.</p>
                         <div class="tags">
                             <span class="tag">Python</span>
                             <span class="tag">PyInstaller</span>
                             <span class="tag">Pillow</span>
                         </div>
-                        <a class="btn secondary" href="pages/easy-cmd.html">مشاهدهٔ جزئیات ←</a>
+                        <a class="btn btn-card" href="pages/easy-cmd.html">مشاهده جزئیات و دانلود ←</a>
                     </article>
 
                     <!-- 2. RGB Color Picker -->
                     <article class="card">
-                        <div class="icon">🎨</div>
+                        <div class="card-top">
+                            <div class="card-icon">🎨</div>
+                        </div>
                         <h3>انتخابگر رنگ RGB</h3>
-                        <p>ابزار وب برای انتخاب رنگ، تبدیل HEX به RGB و کپی سریع کد رنگ.</p>
+                        <p>ابزار وب شیک برای طراحان و برنامه‌نویسان جهت انتخاب رنگ، تبدیل سریع HEX به RGB و کپی آسان کدها.</p>
                         <div class="tags">
-                            <span class="tag">HTML</span>
-                            <span class="tag">CSS</span>
+                            <span class="tag">HTML5</span>
+                            <span class="tag">CSS3</span>
                             <span class="tag">JavaScript</span>
                         </div>
-                        <a class="btn secondary" href="pages/rgb-color-picker.html">مشاهدهٔ جزئیات ←</a>
+                        <a class="btn btn-card" href="pages/rgb-color-picker.html">مشاهده جزئیات و دانلود ←</a>
                     </article>
 
                     <!-- 3. Supermarket App -->
                     <article class="card">
-                        <div class="icon">🛒</div>
+                        <div class="card-top">
+                            <div class="card-icon">🛒</div>
+                        </div>
                         <h3>Supermarket App</h3>
-                        <p>یک برنامهٔ دسکتاپ با رابط گرافیکی برای مدیریت فروشگاه یا سوپرمارکت.</p>
+                        <p>سیستم دسکتاپ پیشرفته مدیریت فروشگاه با قابلیت ثبت فاکتور، مدیریت موجودی و پایگاه داده محلی.</p>
                         <div class="tags">
-                            <span class="tag">Python</span>
                             <span class="tag">CustomTkinter</span>
                             <span class="tag">SQLite</span>
+                            <span class="tag">GUI</span>
                         </div>
-                        <a class="btn secondary" href="pages/supermarket-app.html">مشاهدهٔ جزئیات ←</a>
+                        <a class="btn btn-card" href="pages/supermarket-app.html">مشاهده جزئیات و دانلود ←</a>
                     </article>
 
                     <!-- 4. Turtle Flowers -->
                     <article class="card">
-                        <div class="icon">✿</div>
-                        <h3>رسم شکل و گل‌های تو در تو</h3>
-                        <p>برنامه‌ای گرافیکی و آموزشی برای تولید نقش‌ها و الگوهای زیبا.</p>
+                        <div class="card-top">
+                            <div class="card-icon">✿</div>
+                        </div>
+                        <h3>رسم گل و اشکال هندسی</h3>
+                        <p>خلق الگوها و موتیف‌های ریاضیاتی و هندسی پیچیده به کمک الگوریتم‌های گرافیکی و ماژول ترتل پایتون.</p>
                         <div class="tags">
                             <span class="tag">Python</span>
                             <span class="tag">Turtle</span>
-                            <span class="tag">Tkinter</span>
+                            <span class="tag">Algorithms</span>
                         </div>
-                        <a class="btn secondary" href="pages/turtle-flowers.html">مشاهدهٔ جزئیات ←</a>
+                        <a class="btn btn-card" href="pages/turtle-flowers.html">مشاهده جزئیات و دانلود ←</a>
                     </article>
 
                     <!-- 5. Calculator -->
                     <article class="card">
-                        <div class="icon">₽</div> 
+                        <div class="card-top">
+                            <div class="card-icon">🧮</div> 
+                        </div>
                         <h3>ماشین حساب پایتون</h3>
-                        <p>یک ماشین حساب ساده و کاربردی با رابط گرافیکی پایتون.</p>
+                        <p>یک ماشین حساب سریع با رابط کاربری اختصاصی برای انجام محاسبات ریاضی استاندارد و مهندسی.</p>
                         <div class="tags">
                             <span class="tag">Python</span>
                             <span class="tag">Tkinter</span>
                         </div>
-                        <a class="btn secondary" href="pages/calculator.html">مشاهدهٔ جزئیات ←</a>
+                        <a class="btn btn-card" href="pages/calculator.html">مشاهده جزئیات و دانلود ←</a>
                     </article>
 
                     <!-- 6. PyVault -->
                     <article class="card">
-                        <div class="icon">🔒</div> 
+                        <div class="card-top">
+                            <div class="card-icon">🔒</div> 
+                        </div>
                         <h3>PyVault</h3>
-                        <p>مدیریت امن رمز عبور با رابط کاربری گرافیکی و ذخیره‌سازی محلی.</p>
+                        <p>مدیریت امن رمزهای عبور با دیتابیس لوکال رمزنگاری‌شده و طراحی رابط کاربری مدرن تیره.</p>
                         <div class="tags">
-                            <span class="tag">Python</span>
                             <span class="tag">CustomTkinter</span>
                             <span class="tag">SQLite</span>
+                            <span class="tag">Security</span>
                         </div>
-                        <a class="btn secondary" href="pages/pyvault.html">مشاهدهٔ جزئیات ←</a>
+                        <a class="btn btn-card" href="pages/pyvault.html">مشاهده جزئیات و دانلود ←</a>
                     </article>
 
                     <!-- 7. Auth Framework -->
                     <article class="card">
-                        <div class="icon">👤</div> 
+                        <div class="card-top">
+                            <div class="card-icon">👤</div> 
+                        </div>
                         <h3>User Authentication Framework</h3>
-                        <p>چارچوب امن برای ثبت‌نام و ورود کاربران با پایگاه داده اختصاصی.</p>
+                        <p>معماری پایه احراز هویت، ثبت‌نام و ورود کاربران با اعتبارسنجی ورودی‌ها و پایگاه داده اختصاصی.</p>
                         <div class="tags">
-                            <span class="tag">Python</span>
                             <span class="tag">Tkinter</span>
                             <span class="tag">SQLite</span>
+                            <span class="tag">Auth</span>
                         </div>
-                        <a class="btn secondary" href="pages/auth-framework.html">مشاهدهٔ جزئیات ←</a>
+                        <a class="btn btn-card" href="pages/auth-framework.html">مشاهده جزئیات و دانلود ←</a>
                     </article>
 
                     <!-- 8. PyVault 2 -->
                     <article class="card">
-                        <div class="icon">🛡️</div> 
+                        <div class="card-top">
+                            <div class="card-icon">🛡️</div> 
+                        </div>
                         <h3>PyVault 2</h3>
-                        <p>سامانه پیشرفته مدیریت رمزهای عبور برای تولید، ذخیره و ویرایش امن رمزها.</p>
+                        <p>نسخه دوم و ارتقایافته مدیریت پسوردها با قابلیت ویرایش سریع، امنیت بالاتر و فایل اجرایی مستقل.</p>
                         <div class="tags">
                             <span class="tag">Python</span>
-                            <span class="tag">Tkinter</span>
                             <span class="tag">SQLite</span>
                             <span class="tag">PyInstaller</span>
                         </div>
-                        <a class="btn secondary" href="pages/pyvault2.html">مشاهدهٔ جزئیات ←</a>
+                        <a class="btn btn-card" href="pages/pyvault2.html">مشاهده جزئیات و دانلود ←</a>
                     </article>
 
                     <!-- 9. YouTube Downloader -->
                     <article class="card">
-                        <div class="icon">🎬</div>
+                        <div class="card-top">
+                            <div class="card-icon">🎬</div>
+                        </div>
                         <h3>Download From YouTube</h3>
-                        <p>دانلود ویدئو و صوت از یوتیوب با کیفیت دلخواه.</p>
+                        <p>دانلودر اختصاصی ویدیو و صوت از یوتیوب با امکان انتخاب کیفیت و تبدیل فرمت به کمک yt-dlp.</p>
                         <div class="tags">
-                            <span class="tag">Python</span>
                             <span class="tag">Tkinter</span>
                             <span class="tag">yt-dlp</span>
+                            <span class="tag">Media</span>
                         </div>
-                        <a class="btn secondary" href="pages/download-from-youtube.html">مشاهدهٔ جزئیات ←</a>
+                        <a class="btn btn-card" href="pages/download-from-youtube.html">مشاهده جزئیات و دانلود ←</a>
                     </article>
 
                     <!-- 10. Database Reader -->
                     <article class="card">
-                        <div class="icon">🗄️</div>
-                        <h3>Database_reader</h3>
-                        <p>خواندن و مشاهده آسان محتوای فایل‌های دیتابیس با برنامه DATABASE_READER.</p>
+                        <div class="card-top">
+                            <div class="card-icon">🗄️</div>
+                        </div>
+                        <h3>Database Reader</h3>
+                        <p>ابزار سبک و سریع برای باز کردن، خواندن و آنالیز محتوای جداول فایل‌های دیتابیس SQLite.</p>
                         <div class="tags">
                             <span class="tag">Python</span>
                             <span class="tag">Tkinter</span>
-                            <span class="tag">SQLite</span>
+                            <span class="tag">Database</span>
                         </div>
-                        <a class="btn secondary" href="pages/database-viewer.html">مشاهدهٔ جزئیات ←</a>
+                        <a class="btn btn-card" href="pages/database-viewer.html">مشاهده جزئیات و دانلود ←</a>
                     </article>
                 </div>
             </section>
         </main>
 
+        <!-- فوتر -->
         <footer class="footer">
-            <p>ساخته‌شده توسط PyForge — 2026</p>
-            <div class="counter-badge" style="margin-top: 10px;">
+            <p>© 2026 PyForge — MADE BY ABOLFAZL NIKBAKHT</p>
+            <div class="counter-badge">
                 <a href="https://hits.seeyoufarm.com/" target="_blank" rel="noopener noreferrer">
-                    <img src="https://hits.seeyoufarm.com/api/count/incr/badge.svg?url=https%3A%2F%2Fabolf55.github.io%2Fpyforge%2F&count_bg=%236C63FF&title_bg=%23151522&icon=&icon_color=%23E7E7E7&title=views&edge_flat=false" alt="Visitor Counter">
+                    <img src="https://hits.seeyoufarm.com/api/count/incr/badge.svg?url=https%3A%2F%2Fabolf55.github.io%2Fpyforge%2F&count_bg=%236366f1&title_bg=%23101426&icon=&icon_color=%23E7E7E7&title=views&edge_flat=false" alt="Visitor Counter">
                 </a>
             </div>
         </footer>
