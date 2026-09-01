@@ -1,69 +1,136 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="fa" dir="rtl">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width,initial-scale=1.0">
-    <title>ماشین حساب پایتون | PyForge</title>
-    <link rel="stylesheet" href="../style.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ماشین حساب پایتون | PyForge</title>
+  <link rel="stylesheet" href="../style.css">
 </head>
 <body>
-    <div class="container">
-        <nav>
-            <a class="logo" href="../index.html">ABOLF<span>AZL</span>.DEV</a>
-            <a class="nav-link" href="../index.html#projects">همه پروژه‌ها</a>
-        </nav>
-        <main>
-            <section class="page-hero">
-                <a class="back" href="../index.html#projects">→ بازگشت به پروژه‌ها</a>
-                <h1 class="project-title">ماشین حساب</h1>
-                <p class="lead">یک ماشین حساب ساده و کاربردی نوشته شده با پایتون</p>
-            </section>
-            <section class="project-layout">
-                <div>
-                    <div class="content-box">
-                        <h2>دربارهٔ پروژه</h2>
-                        <p>این پروژه یک ماشین حساب ساده به زبان پایتون است که عملیات‌های ریاضی پایه را به راحتی انجام می‌دهد. این برنامه به عنوان یک پروژه آموزشی عالی برای درک ساختارهای منطقی و دریافت ورودی از کاربر در پایتون است.</p>
-                    </div>
-                    <div class="content-box" style="margin-top:22px">
-                        <h2>قابلیت‌ها</h2>
-                        <ul>
-                            <li>انجام عملیات ریاضی پایه (جمع، تفریق، ضرب، تقسیم)</li>
-                            <li>رابط کاربری ساده در محیط خط فرمان</li>
-                            <li>کنترل خطاهای ورودی (مانند تقسیم بر صفر)</li>
-                            <li>امکان تکرار عملیات بدون نیاز به اجرای مجدد برنامه</li>
-                        </ul>
-                    </div>
-                    <div class="content-box" style="margin-top:22px">
-                        <h2>روش اجرا / استفاده</h2>
-                        <p>پس از دانلود فایل، ترمینال یا خط فرمان (CMD) خود را در مسیر فایل باز کنید و دستور زیر را بنویسید:</p>
-                        <pre dir="ltr"><code>python calculator.py</code></pre>
-                    </div>
-                    <div class="download">
-                        <h2>دانلود پروژه</h2>
-                        <p>برای دانلود فایل پایتون ماشین حساب، روی دکمهٔ زیر کلیک کنید:</p>
-                        <!-- دکمه دانلود فایل پایتون ماشین حساب -->
-                        <a href="../calculator.py" download="calculator.py" class="btn primary">دانلود فایل پایتون (py)</a>
-                    </div>
-                </div>
-                <aside class="info">
-                    <h3>اطلاعات فنی</h3>
-                    <p><b>فناوری‌ها:</b></p>
-                    <p dir="ltr">Python 3.x</p>
-                    <hr style="border:0;border-top:1px solid var(--line)">
-                    <p><b>نوع انتشار:</b></p>
-                    <p>کد منبع قابل دانلود</p>
-                </aside>
-            </section>
-        </main>
-        <footer>
-            ساخته‌شده توسط PyForge — 2026
-            <div class="visitor-counter">
-                <p>بازدید سایت</p>
-                <a href="https://hits.seeyoufarm.com/" target="_blank" rel="noopener noreferrer">
-                    <img src="https://hits.seeyoufarm.com/api/count/incr/badge.svg?url=https%3A%2F%2Fabolf55.github.io%2Fpyforge%2Fpages%2Fcalculator.html&count_bg=%236C63FF&title_bg=%23151522&icon=&icon_color=%23E7E7E7&title=views&edge_flat=false" alt="Visitor Counter">
-                </a>
-            </div>
-        </footer>
+
+  <!-- نورپردازی پس‌زمینه -->
+  <div class="ambient-light-1"></div>
+  <div class="ambient-light-2"></div>
+
+  <div class="container">
+    
+    <!-- نوار ناوبری -->
+    <header class="navbar">
+      <a href="../index.html" class="brand">Py<span>Forge</span></a>
+      <nav class="nav-links">
+        <a href="../index.html">بازگشت به پروژه‌ها</a>
+      </nav>
+    </header>
+
+    <!-- ۱. هدر معرفی پروژه -->
+    <section class="detail-hero-card">
+      <div class="detail-header-top">
+        <div class="project-big-icon">🧮</div>
+        <div class="project-title-area">
+          <h1>ماشین حساب پایتون</h1>
+          <div class="project-badge-pill">
+            <span class="status-dot"></span>
+            <span>نسخه فعال و تست‌شده</span>
+          </div>
+        </div>
+      </div>
+      <p class="detail-description">
+        یک ماشین حساب سبک، سریع و کاربردی به زبان پایتون برای انجام دقیق محاسبات ریاضی در محیط خط فرمان با کنترل کامل خطاها.
+      </p>
+    </section>
+
+    <!-- ۲. مشخصات سریع فنی -->
+    <div class="specs-grid">
+      <div class="spec-item">
+        <div class="spec-title">زبان توسعه</div>
+        <div class="spec-value">Python 3.x</div>
+      </div>
+      <div class="spec-item">
+        <div class="spec-title">محیط اجرا</div>
+        <div class="spec-value">CLI / CMD</div>
+      </div>
+      <div class="spec-item">
+        <div class="spec-title">نوع انتشار</div>
+        <div class="spec-value">Source Code</div>
+      </div>
+      <div class="spec-item">
+        <div class="spec-title">سطح پروژه</div>
+        <div class="spec-value">مقدماتی / کاربردی</div>
+      </div>
     </div>
+
+    <!-- ۳. توضیحات پروژه -->
+    <section class="feature-card" style="margin-bottom: 25px;">
+      <h2 style="font-size: 1.25rem; font-weight: 800; color: #fff; margin-bottom: 12px;">📌 دربارهٔ پروژه</h2>
+      <p style="color: var(--text-body); font-size: 0.98rem; line-height: 1.8;">
+        این پروژه یک ماشین حساب ساده به زبان پایتون است که عملیات‌های ریاضی پایه را به‌راحتی و بدون پیچیدگی انجام می‌دهد. این برنامه یک نمونه عالی برای درک ساختارهای شرطی، توابع منطقی و دریافت ورودی صحیح از کاربر در پایتون است.
+      </p>
+    </section>
+
+    <!-- ۴. قابلیت‌ها و ویژگی‌ها -->
+    <h2 class="section-title">✨ قابلیت‌های کلیدی</h2>
+    <div class="features-grid">
+      <div class="feature-card">
+        <span class="icon">➕</span>
+        <h3>عملیات پایه ریاضی</h3>
+        <p>پشتیبانی کامل از جمع، تفریق، ضرب و تقسیم با دقت بالا.</p>
+      </div>
+
+      <div class="feature-card">
+        <span class="icon">⚡</span>
+        <h3>م. راهنمای اجرا -->
+    <section class="feature-card" style="margin-bottom: 3خانه‌های سنگین.</p>
+      </div>
+
+      <div class="feature-card">
+        <span class="icon">🛡️</span>
+        <h3>کنترل خطاهای ورودی</h3>
+        <p>مدیریت هوشمند خطاها مانند تقسیم بر صفر و ورودی‌های نامعتبر.</p>
+      </div>
+
+      <div class="feature-card">
+        <span class="icon">🔄</span>
+        <h3>حلقه تکرار عملیات</h3>
+        <p>امکان انجام محاسبات پیاپی بدون نیاز به اجرای مجدد اسکریپت.</p>
+      </div>
+    </div>
+
+    <!-- ۵. راهنمای اجرا -->
+    <section class="feature-card" style="margin-bottom: 30px;">
+      <h2 style="font-size: 1.25rem; font-weight: 800; color: #fff; margin-bottom: 12px;">💻 روش اجرا و استفاده</h2>
+      <p style="color: var(--text-body); font-size: 0.95rem; margin-bottom: 15px;">
+        پس از دانلود فایل، ترمینال یا CMD را در پوشه فایل باز کنید و دستور زیر را اجرا کنید:
+      </p>
+      <div style="background: rgba(5, 7, 14, 0.7); border: 1px solid var(--border-line); border-radius: 12px; padding: 14px 18px;">
+        <pre dir="ltr" style="margin: 0; font-family: monospace; color: var(--cyan); font-size: 0.95rem;"><code>python calculator.py</code></pre>
+      </div>
+    </section>
+
+    <!-- ۶. ایستگاه دانلود -->
+    <section class="download-station">
+      <div class="download-info">
+        <h3>دانلود سورس کد ماشین حساب</h3>
+        <p>دریافت مستقیم فایل پایتون پروژه (.py)</p>
+      </div>
+      <div class="download-buttons">
+        <a href="../calculator.py" download="calculator.py" class="btn-luxury-download">
+          <span>📥</span>
+          <span>دانلود فایل پایتون (py)</span>
+        </a>
+      </div>
+    </section>
+
+    <!-- فوتر با شمارنده بازدید -->
+    <footer class="footer">
+      <p>© 2026 PyForge. ساخته شده توسط Abolfazl Nikbakht</p>
+      <div style="margin-top: 15px; display: flex; flex-direction: column; align-items: center; gap: 8px;">
+        <span style="font-size: 0.82rem; color: var(--text-muted);">بازدید صفحه:</span>
+        <a href="https://hits.seeyoufarm.com/" target="_blank" rel="noopener noreferrer">
+          <img src="https://hits.seeyoufarm.com/api/count/incr/badge.svg?url=https%3A%2F%2Fabolf55.github.io%2Fpyforge%2Fpages%2Fcalculator.html&count_bg=%236C63FF&title_bg=%23151522&icon=&icon_color=%23E7E7E7&title=views&edge_flat=false" alt="Visitor Counter">
+        </a>
+      </div>
+    </footer>
+
+  </div>
 </body>
 </html>
