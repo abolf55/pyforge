@@ -261,3 +261,36 @@
     </script>
 </body>
 </html>
+<script>
+    // رفع مشکل بازگشت مرورگر و پاکسازی کش تاریخچه
+    window.addEventListener('pageshow', function(event) {
+        // اگر صفحه از کش BFCache مرورگر خوانده شده باشد
+        if (event.persisted) {
+            window.location.reload();
+        }
+        
+        // بازنشانی فیلتر روی حالت پیش‌فرض (همه پروژه‌ها)
+        filterProjects('all');
+    });
+
+    // تابع اصلاح شده فیلتر
+    function filterProjects(category) {
+        const buttons = document.querySelectorAll('.filter-btn');
+        buttons.forEach(btn => {
+            if (btn.getAttribute('onclick')?.includes(`'${category}'`)) {
+                btn.classList.add('active');
+            } else {
+                btn.classList.remove('active');
+            }
+        });
+
+        const cards = document.querySelectorAll('.project-card');
+        cards.forEach(card => {
+            if (category === 'all' || card.getAttribute('data-category') === category) {
+                card.style.display = 'flex';
+            } else {
+                card.style.display = 'none';
+            }
+        });
+    }
+</script>
