@@ -4,79 +4,89 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>انتخابگر رنگ RGB | PyForge</title>
-    <link rel="stylesheet" href="../download-pages.css">
+    <!-- اتصال به فایل CSS مشترک اصلی -->
+    <link rel="stylesheet" href="../style.css">
 </head>
-<body class="project-detail-page">
+<body>
 
-    <!-- نوبار استاندارد -->
-    <header class="main-header">
-        <div class="header-container">
-            <a href="../index.html" class="brand-logo">Py<span>Forge</span></a>
-            <nav class="nav-links">
-                <a href="../index.html#projects" class="nav-link">همه پروژه‌ها</a>
-            </nav>
-        </div>
-    </header>
-
-    <main class="project-container">
-
-        <!-- بخش معرفی و هیرو -->
-        <section class="hero-minimal">
-            <a href="../index.html#projects" class="back-link">→ بازگشت به پروژه‌ها</a>
-            <h1 class="project-title">انتخابگر رنگ RGB</h1>
-            <p class="project-subtitle">دستیار هوشمند رنگ برای توسعه‌دهندگان پایتون و طراحان وب</p>
-        </section>
-
-        <!-- کادر ۱: درباره پروژه و مشخصات فنی -->
-        <section class="content-box">
-            <h2 class="box-title">درباره پروژه</h2>
-            <p class="box-description">
-                یک ابزار وب سبک و کاربردی برای انتخاب رنگ و دریافت سریع کدهای HEX و RGB. این ابزار مخصوصاً برای استفاده در رابط‌های گرافیکی Tkinter / CustomTkinter، بازی‌های Pygame و پروژه‌های وب توسعه یافته است.
-            </p>
-            <div class="specs-inline">
-                <span class="spec-tag">تکنولوژی‌ها: HTML5, CSS3, JavaScript</span>
-                <span class="spec-tag">نوع پروژه: ابزار وب / اجرای کاملاً آفلاین</span>
-                <span class="spec-tag">پیش‌نیاز: مرورگر وب مدرن</span>
-                <span class="spec-tag">سطح: کاربردی / ابزار توسعه</span>
-            </div>
-        </section>
-
-        <!-- کادر ۲: قابلیت‌ها و ویژگی‌ها -->
-        <section class="content-box">
-            <h2 class="box-title">قابلیت‌های اصلی</h2>
-            <ul class="features-list">
-                <li>انتخاب دقیق رنگ با ابزار پالت رنگ داخلی مرورگر</li>
-                <li>پیش‌نمایش زنده و لحظه‌ای رنگ انتخاب‌شده</li>
-                <li>محاسبه و ارائه فوری کد HEX استاندارد (مانند <code>#36D7FF</code>)</li>
-                <li>تولید خودکار مقادیر سه‌گانه عددی RGB سازگار با کتابخانه‌های پایتون</li>
-                <li>امکان کپی سریع کد رنگ‌ها با یک کلیک</li>
-                <li>طراحی ریسپانسیو، مدرن و کاملاً بدون نیاز به اینترنت</li>
-            </ul>
-        </section>
-
-        <!-- کادر ۳: ایستگاه دانلود و راه‌اندازی -->
-        <section class="content-box download-box">
-            <h2 class="box-title">ایستگاه دانلود و راه‌اندازی</h2>
-            <p class="download-guide">برای استفاده از برنامه، فایل HTML پروژه را دریافت کرده و در مرورگر خود باز کنید.</p>
-            <div class="download-actions">
-                <a href="../rgb-color-picker.html" download="rgb-color-picker.html" class="btn primary">
-                    دانلود ابزار رنگ (rgb-color-picker.html)
-                </a>
-            </div>
-        </section>
-
-    </main>
-
-    <!-- فوتر با شمارنده بازدید -->
-    <footer class="main-footer">
-        <p>© 2026 PyForge. ساخته شده توسط Abolfazl Nikbakht</p>
-        <div class="visitor-counter">
-            <span>بازدید صفحه:</span>
-            <a href="https://hits.seeyoufarm.com/" target="_blank" rel="noopener noreferrer">
-                <img src="https://hits.seeyoufarm.com/api/count/incr/badge.svg?url=https%3A%2F%2Fabolf55.github.io%2Fpyforge%2Fpages%2Frgb-color-picker.html&count_bg=%236C63FF&title_bg=%23151522&icon=&icon_color=%23E7E7E7&title=views&edge_flat=false" alt="Visitor Counter">
+    <div class="container">
+        <!-- هدر سایت -->
+        <nav>
+            <a href="../index.html" class="logo">
+                Py<span>Forge</span>
             </a>
-        </div>
-    </footer>
+            <a href="../index.html#projects" class="nav-link">همه پروژه‌ها</a>
+        </nav>
+
+        <main>
+            <!-- بخش معرفی اصلی پروژه -->
+            <section class="page-hero">
+                <a href="../index.html#projects" class="back">← بازگشت به پروژه‌ها</a>
+                <h1 class="project-title">انتخابگر رنگ RGB</h1>
+                <p class="lead">
+                    ابزار سبک، سریع و فارسی برای انتخاب رنگ و تبدیل هم‌زمان به کدهای HEX و RGB جهت استفاده در پروژه‌های پایتون و طراحی وب.
+                </p>
+            </section>
+
+            <!-- چیدمان دو ستونه صفحه جزئیات -->
+            <section class="project-layout">
+                
+                <!-- ستون اصلی (محتوا و توضیحات) -->
+                <div class="main-content" style="display: flex; flex-direction: column; gap: 22px;">
+                    
+                    <article class="content-box">
+                        <h2>توضیحات پروژه</h2>
+                        <p>
+                            این ابزار یک دستیار کاربردی برای برنامه‌نویسان و طراحان است. به کمک این برنامه می‌توانید رنگ دلخواه خود را به‌صورت زنده انتخاب کرده و مقادیر استاندارد HEX و همچنین کدهای سه‌تایی RGB سازگار با کتابخانه‌های Tkinter، CustomTkinter و Pygame را بدون نیاز به نرم‌افزارهای سنگین کپی کنید.
+                        </p>
+                        
+                        <h2>ویژگی‌های کلیدی پروژه</h2>
+                        <ul>
+                            <li><strong>پالت رنگ پیشرفته:</strong> انتخاب دقیق هر طیف رنگی با ابزار رنگ استاندارد مرورگر.</li>
+                            <li><strong>تبدیل هم‌زمان:</strong> محاسبه آنی کد هگزادسیمال (HEX) و کدهای سه‌گانه عددی RGB.</li>
+                            <li><strong>کپی سریع:</strong> دکمه‌های مجزا برای کپی فوری کدها در کلیپ‌بورد با یک کلیک.</li>
+                            <li><strong>اجرای کاملاً آفلاین:</strong> عدم وابستگی به هیچ کتابخانه جانبی یا سرور اینترنتی.</li>
+                            <li><strong>رابط کاربری مدرن:</strong> محیط دارک، واکنش‌گرا و سازگار با انواع سایز مانیتور.</li>
+                        </ul>
+                    </article>
+
+                    <!-- بخش دانلود -->
+                    <article class="download">
+                        <h2>دریافت ابزار انتخاب رنگ</h2>
+                        <p>برای استفاده از این ابزار، فایل HTML را دانلود کرده و مستقیماً در مرورگر خود باز کنید.</p>
+                        <a href="../rgb-color-picker.html" download="rgb-color-picker.html" class="btn primary">
+                            📥 دانلود فایل پروژه (HTML)
+                        </a>
+                    </article>
+
+                </div>
+
+                <!-- ستون کناری (اطلاعات فنی) -->
+                <aside class="info">
+                    <h3>اطلاعات فنی</h3>
+                    <p><strong>تکنولوژی‌ها:</strong> HTML5 / CSS3 / JS</p>
+                    <p><strong>نوع پروژه:</strong> Web Tool / Offline</p>
+                    <p><strong>محیط اجرا:</strong> تمام مرورگرهای مدرن</p>
+                    <p><strong>کاربرد:</strong> UI/UX & Python GUI</p>
+                    <p><strong>نسخه پایدار:</strong> 1.0.0</p>
+                    
+                    <div class="tags" style="margin-top: 15px;">
+                        <span class="tag">Color Picker</span>
+                        <span class="tag">RGB</span>
+                        <span class="tag">HEX</span>
+                        <span class="tag">FrontEnd</span>
+                        <span class="tag">Web Tool</span>
+                    </div>
+                </aside>
+
+            </section>
+        </main>
+
+        <!-- فوتر سایت -->
+        <footer>
+            <p>© 2026 PyForge. ساخته شده توسط Abolfazl Nikbakht</p>
+        </footer>
+    </div>
 
 </body>
 </html>
