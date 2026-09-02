@@ -1,152 +1,99 @@
 <!DOCTYPE html>
 <html lang="fa" dir="rtl">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>User Authentication Framework | PyForge</title>
-  <link rel="stylesheet" href="../style.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>User Authentication Framework | PyForge</title>
+    <link rel="stylesheet" href="../download-pages.css">
 </head>
-<body>
+<body class="project-detail-page">
 
-  <div class="ambient-light-1"></div>
-  <div class="ambient-light-2"></div>
-
-  <div class="container">
-    
-    <!-- نوار ناوبری -->
-    <header class="navbar">
-      <a href="../index.html" class="brand">Py<span>Forge</span></a>
-      <nav class="nav-links">
-        <a href="../index.html">بازگشت به پروژه‌ها</a>
-      </nav>
+    <!-- نوبار استاندارد -->
+    <header class="main-header">
+        <div class="header-container">
+            <a href="../index.html" class="brand-logo">Py<span>Forge</span></a>
+            <nav class="nav-links">
+                <a href="../index.html#projects" class="nav-link">همه پروژه‌ها</a>
+            </nav>
+        </div>
     </header>
 
-    <!-- هدر معرفی پروژه -->
-    <section class="detail-hero-card">
-      <div class="detail-header-top">
-        <div class="project-big-icon">🔑</div>
-        <div class="project-title-area">
-          <h1>User Authentication Framework</h1>
-          <div class="project-badge-pill">
-            <span class="status-dot"></span>
-            <span>نسخه پایدار ۱.۰.۰</span>
-          </div>
-        </div>
-      </div>
-      <p class="detail-description">
-        یک چارچوب امن، سبک و ماژولار برای ثبت‌نام، ورود و مدیریت سطوح دسترسی کاربران با رابط کاربری اختصاصی Tkinter / CustomTkinter و پایگاه داده SQLite.
-      </p>
-    </section>
+    <main class="project-container">
 
-    <!-- مشخصات سریع فنی -->
-    <div class="specs-grid">
-      <div class="spec-item">
-        <div class="spec-title">زبان توسعه</div>
-        <div class="spec-value">Python</div>
-      </div>
-      <div class="spec-item">
-        <div class="spec-title">رابط کاربری</div>
-        <div class="spec-value">CustomTkinter</div>
-      </div>
-      <div class="spec-item">
-        <div class="spec-title">پایگاه داده</div>
-        <div class="spec-value">SQLite 3</div>
-      </div>
-      <div class="spec-item">
-        <div class="spec-title">سطح امنیت</div>
-        <div class="spec-value">Local Check</div>
-      </div>
-    </div>
+        <!-- بخش معرفی و هیرو -->
+        <section class="hero-minimal">
+            <a href="../index.html#projects" class="back-link">→ بازگشت به پروژه‌ها</a>
+            <h1 class="project-title">User Authentication Framework</h1>
+            <p class="project-subtitle">یک چارچوب امن، سبک و ماژولار برای ثبت‌نام، ورود و مدیریت سطوح دسترسی کاربران با رابط کاربری اختصاصی CustomTkinter و پایگاه داده SQLite.</p>
+        </section>
 
-    <!-- توضیحات پروژه -->
-    <section class="feature-card">
-      <h2 class="section-subtitle">📌 توضیحات پروژه</h2>
-      <p class="detail-description">
-        این پروژه یک فریم‌ورک آماده برای احراز هویت کاربران در برنامه‌های دسکتاپ پایتون است. با استفاده از این سیستم می‌توانید بخش ثبت‌نام و ورود برنامه خود را بدون نیاز به کدنویسی مجدد، به پایگاه داده متصل کرده و از امنیت داده‌های کاربران اطمینان حاصل کنید.
-      </p>
-    </section>
+        <!-- کادر ۱: درباره پروژه و مشخصات فنی -->
+        <section class="content-box">
+            <h2 class="box-title">درباره پروژه</h2>
+            <p class="box-description">
+                این پروژه یک فریم‌ورک آماده برای احراز هویت کاربران در برنامه‌های دسکتاپ پایتون است. با استفاده از این سیستم می‌توانید بخش ثبت‌نام و ورود برنامه خود را بدون نیاز به کدنویسی مجدد، به پایگاه داده متصل کرده و داده‌های کاربران را مدیریت کنید.
+            </p>
+            <div class="specs-inline">
+                <span class="spec-tag">زبان توسعه: Python</span>
+                <span class="spec-tag">رابط کاربری: Tkinter / CustomTkinter</span>
+                <span class="spec-tag">پایگاه داده: SQLite 3</span>
+                <span class="spec-tag">نسخه: پایدار ۱.۰.۰</span>
+            </div>
+        </section>
 
-    <!-- ویژگی‌های کلیدی -->
-    <h2 class="section-title">✨ ویژگی‌های کلیدی</h2>
-    <div class="features-grid">
-      <div class="feature-card">
-        <span class="icon">🛡️</span>
-        <h3>احراز هویت دو مرحله‌ای منطقی</h3>
-        <p>بررسی نام کاربری و تطابق رمز عبور به صورت رمزنگاری شده.</p>
-      </div>
-      <div class="feature-card">
-        <span class="icon">🗄️</span>
-        <h3>پایگاه داده محلی</h3>
-        <p>استفاده از SQLite3 جهت ذخیره‌سازی بهینه مشخصات بدون نیاز به سرور خارجی.</p>
-      </div>
-      <div class="feature-card">
-        <span class="icon">🎨</span>
-        <h3>طراحی مدرن دسکتاپ</h3>
-        <p>پیاده‌سازی رابط کاربری زیبا با Tkinter و CustomTkinter.</p>
-      </div>
-      <div class="feature-card">
-        <span class="icon">⚠️</span>
-        <h3>کنترل خطاهای پیشرفته</h3>
-        <p>بررسی صحت ایمیل، طول رمز عبور و جلوگیری از ثبت‌نام‌های تکراری.</p>
-      </div>
-    </div>
+        <!-- کادر ۲: قابلیت‌ها و ویژگی‌ها -->
+        <section class="content-box">
+            <h2 class="box-title">ویژگی‌های کلیدی</h2>
+            <ul class="features-list">
+                <li>احراز هویت دقیق نام کاربری و تطابق رمز عبور</li>
+                <li>پایگاه داده سبک محلی با SQLite3 بدون نیاز به نصب سرور خارجی</li>
+                <li>طراحی مدرن دسکتاپ با استفاده از فریم‌ورک CustomTkinter</li>
+                <li>کنترل خطاهای پیشرفته، بررسی فرمت ورودی‌ها و عدم ثبت نام کاربری تکراری</li>
+                <li>امکان گسترش و اتصال سریع به دیگر پروژه‌های نرم‌افزاری دسکتاپ</li>
+                <li>ساختار ماژولار و تفکیک شده برای توسعه راحت‌تر</li>
+            </ul>
+        </section>
 
-    <!-- پنل مدیریت داخلی -->
-    <section class="feature-card">
-      <div class="feature-header">
-        <span class="feature-icon">⚙️</span>
-        <div>
-          <h2 class="feature-title">پنل مدیریت داخلی (Admin Panel)</h2>
-          <p class="feature-subtitle">دسترسی سطح بالا برای مدیریت پایگاه داده کاربران</p>
-        </div>
-      </div>
+        <!-- کادر ۳: پنل مدیریت و اطلاعات تست -->
+        <section class="content-box">
+            <h2 class="box-title">بخش مدیریت و تست اولیه</h2>
+            <p class="box-description">
+                سیستم دارای بخش مدیریت داخلی برای بررسی لیست کاربران و وضعیت دسترسی‌ها است. اطلاعات تست پیش‌فرض:
+            </p>
+            
+            <div style="margin-top: 18px; display: grid; gap: 10px; background: rgba(5, 7, 14, 0.6); border: 1px solid rgba(255, 255, 255, 0.08); border-radius: 14px; padding: 16px 20px;">
+                <div style="display: flex; justify-content: space-between; align-items: center;">
+                    <span style="color: var(--download-muted); font-size: 0.95rem;">نام کاربری (Username):</span>
+                    <code>admin</code>
+                </div>
+                <div style="display: flex; justify-content: space-between; align-items: center;">
+                    <span style="color: var(--download-muted); font-size: 0.95rem;">رمز عبور (Password):</span>
+                    <code>admin123</code>
+                </div>
+            </div>
 
-      <p class="detail-description">
-        این فریم‌ورک شامل یک بخش مدیریتی مجزا است که به ادمین سیستم اجازه می‌دهد لیست تمام کاربران ثبت‌نام شده را مشاهده کند، دسترسی‌ها را تغییر دهد یا کاربری را حذف کند.
-      </p>
+            <div style="margin-top: 14px; padding: 12px 16px; border-radius: 12px; background: rgba(40, 217, 210, 0.06); border: 1px solid rgba(40, 217, 210, 0.2); color: var(--download-muted); font-size: 0.9rem;">
+                <strong style="color: var(--download-cyan);">نکته امنیتی:</strong> این مشخصات صرفاً برای تست آزمایشی است و در نسخه نهایی باید تغییر یابد.
+            </div>
+        </section>
 
-      <!-- اطلاعات ورود دمو -->
-      <div class="credential-box">
-        <h3 class="credential-title">🔑 اطلاعات ورود پیش‌فرض (جهت تست)</h3>
-        <div class="credential-row">
-          <span>نام کاربری (Username):</span>
-          <code class="credential-code">admin</code>
-        </div>
-        <div class="credential-row">
-          <span>رمز عبور (Password):</span>
-          <code class="credential-code">admin123</code>
-        </div>
-      </div>
+        <!-- کادر ۴: ایستگاه دانلود -->
+        <section class="content-box download-box">
+            <h2 class="box-title">ایستگاه دانلود سورس پروژه</h2>
+            <p class="download-guide">سورس کد کامل پایتون به همراه ساختار اولیه دیتابیس SQLite را دریافت نمایید.</p>
+            <div class="download-actions">
+                <a href="https://github.com/abolf55/pyforge/raw/main/user_login.rar" class="btn primary">
+                    دانلود فایل سورس (user_login.rar)
+                </a>
+            </div>
+        </section>
 
-      <!-- هشدار امنیتی -->
-      <div class="security-alert">
-        <span class="alert-icon">💡</span>
-        <div class="alert-text">
-          <strong class="text-cyan">توصیه امنیتی:</strong>
-          این اطلاعات ورود صرفاً برای تست اولیه تنظیم شده است. برای استفاده واقعی، حتماً رمز عبور را تغییر داده و از هش‌سازی (مثل bcrypt) استفاده کنید.
-        </div>
-      </div>
-    </section>
+    </main>
 
-    <!-- ایستگاه دانلود -->
-    <section class="download-station">
-      <div class="download-info">
-        <h3>دریافت سورس کد پروژه</h3>
-        <p>سورس کامل پایتون به همراه دیتابیس آماده SQLite را دانلود کنید.</p>
-      </div>
-      <div class="download-buttons">
-        <a href="https://github.com/abolf55/pyforge/raw/main/user_login.rar" class="btn-luxury-download">
-          <span>📦</span>
-          <span>دانلود فایل سورس (RAR)</span>
-        </a>
-      </div>
-    </section>
-
-    <!-- فوتر -->
-    <footer class="footer">
-      <p>© 2026 PyForge. ساخته شده توسط Abolfazl Nikbakht</p>
+    <!-- فوتر استاندارد -->
+    <footer class="main-footer">
+        <p>© 2026 PyForge. ساخته شده توسط Abolfazl Nikbakht</p>
     </footer>
 
-  </div>
 </body>
 </html>
