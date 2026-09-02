@@ -477,6 +477,339 @@ body {
         font-size: 1.8rem;
     }
 }
+/* =========================
+   Universal Project Layout
+========================= */
+
+.detail-page {
+    position: relative;
+    padding-bottom: 70px;
+}
+
+.detail-hero-card {
+    position: relative;
+    overflow: hidden;
+    margin: 48px 0 22px;
+    padding: 36px;
+    border: 1px solid rgba(54, 215, 255, .28);
+    border-radius: 26px;
+    background:
+        linear-gradient(135deg, rgba(21, 29, 47, .96), rgba(11, 16, 30, .94));
+    box-shadow: 0 25px 70px rgba(0, 0, 0, .28);
+}
+
+.detail-hero-card::before {
+    content: '';
+    position: absolute;
+    width: 260px;
+    height: 260px;
+    left: -90px;
+    top: -110px;
+    border-radius: 50%;
+    background: rgba(54, 215, 255, .12);
+    filter: blur(10px);
+}
+
+.detail-header-top {
+    position: relative;
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.project-big-icon {
+    display: grid;
+    place-items: center;
+    width: 82px;
+    height: 82px;
+    flex-shrink: 0;
+    border: 1px solid rgba(54, 215, 255, .3);
+    border-radius: 22px;
+    background: linear-gradient(
+        145deg,
+        rgba(54, 215, 255, .18),
+        rgba(138, 112, 255, .15)
+    );
+    font-size: 2.7rem;
+    box-shadow: 0 12px 35px rgba(54, 215, 255, .12);
+}
+
+.project-title-area h1 {
+    margin: 0 0 8px;
+    font-size: clamp(2rem, 5vw, 3.7rem);
+}
+
+.project-badge-pill {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    padding: 4px 12px;
+    border: 1px solid rgba(78, 232, 168, .25);
+    border-radius: 999px;
+    color: var(--green);
+    background: rgba(78, 232, 168, .09);
+    font-size: .85rem;
+}
+
+.status-dot {
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    background: var(--green);
+    box-shadow: 0 0 12px var(--green);
+}
+
+.detail-description {
+    position: relative;
+    max-width: 820px;
+    margin: 25px 0 0;
+    color: var(--muted);
+    font-size: 1.08rem;
+}
+
+/* دو ستون اصلی */
+.detail-main-grid {
+    display: grid;
+    grid-template-columns: minmax(0, 1.7fr) minmax(270px, .8fr);
+    gap: 22px;
+    align-items: start;
+}
+
+.detail-box {
+    height: 100%;
+    padding: 27px;
+    border: 1px solid var(--line);
+    border-radius: 22px;
+    background: linear-gradient(
+        145deg,
+        rgba(21, 29, 47, .9),
+        rgba(11, 16, 30, .94)
+    );
+    transition: .25s ease;
+}
+
+.detail-box:hover {
+    border-color: rgba(54, 215, 255, .55);
+    transform: translateY(-4px);
+    box-shadow: 0 18px 45px rgba(0, 0, 0, .22);
+}
+
+.detail-box h2,
+.detail-box h3 {
+    margin-top: 0;
+}
+
+.about-box {
+    min-height: 250px;
+}
+
+.specs-box {
+    min-height: 250px;
+}
+
+/* مشخصات فنی داخل کارت‌های کوچک */
+.specs-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 12px;
+}
+
+.spec-item {
+    padding: 15px;
+    border: 1px solid rgba(255, 255, 255, .08);
+    border-radius: 14px;
+    background: rgba(255, 255, 255, .035);
+}
+
+.spec-title {
+    margin-bottom: 3px;
+    color: var(--muted);
+    font-size: .82rem;
+}
+
+.spec-value {
+    direction: ltr;
+    color: var(--cyan);
+    font-family: 'JetBrains Mono', monospace;
+    font-size: .9rem;
+}
+
+/* قابلیت‌ها */
+.features-section {
+    margin-top: 22px;
+}
+
+.features-section > h2 {
+    margin: 0 0 16px;
+}
+
+.features-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 16px;
+}
+
+.feature-card {
+    min-height: 175px;
+    padding: 22px;
+    border: 1px solid var(--line);
+    border-radius: 19px;
+    background: rgba(16, 22, 37, .82);
+    transition: .25s ease;
+}
+
+.feature-card:hover {
+    border-color: rgba(138, 112, 255, .65);
+    transform: translateY(-5px);
+    box-shadow: 0 18px 38px rgba(0, 0, 0, .22);
+}
+
+.feature-card .icon {
+    display: grid;
+    place-items: center;
+    width: 46px;
+    height: 46px;
+    border: 1px solid rgba(138, 112, 255, .28);
+    border-radius: 13px;
+    background: rgba(138, 112, 255, .12);
+    font-size: 1.45rem;
+}
+
+.feature-card h3 {
+    margin: 14px 0 5px;
+    font-size: 1.1rem;
+}
+
+.feature-card p {
+    margin: 0;
+    color: var(--muted);
+    font-size: .9rem;
+    line-height: 1.8;
+}
+
+/* استفاده و دانلود کنار هم */
+.action-grid {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) minmax(320px, .8fr);
+    gap: 22px;
+    margin-top: 22px;
+}
+
+.usage-box {
+    min-height: 220px;
+}
+
+.usage-box pre {
+    overflow-x: auto;
+    margin: 15px 0 0;
+    padding: 18px;
+    direction: ltr;
+    text-align: left;
+    border: 1px solid rgba(54, 215, 255, .15);
+    border-radius: 14px;
+    background: #080c16;
+    color: #c9f5ff;
+    font: .85rem/1.8 'JetBrains Mono', monospace;
+}
+
+.download-station {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    min-height: 220px;
+    padding: 27px;
+    border: 1px solid rgba(78, 232, 168, .3);
+    border-radius: 22px;
+    background:
+        linear-gradient(
+            135deg,
+            rgba(78, 232, 168, .12),
+            rgba(54, 215, 255, .07)
+        );
+}
+
+.download-info h2,
+.download-info h3 {
+    margin: 0 0 8px;
+}
+
+.download-info p {
+    margin: 0;
+    color: var(--muted);
+}
+
+.download-buttons {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin-top: 25px;
+}
+
+.download-buttons .btn {
+    flex: 1;
+    min-width: 145px;
+}
+
+/* فاصله مناسب برای بخش‌ها */
+.section-title {
+    margin-top: 30px;
+}
+
+/* موبایل */
+@media (max-width: 850px) {
+    .detail-main-grid,
+    .action-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .features-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 560px) {
+    .container {
+        width: calc(100% - 20px);
+        padding: 0 10px;
+    }
+
+    .detail-hero-card {
+        padding: 24px;
+        margin-top: 28px;
+    }
+
+    .detail-header-top {
+        align-items: flex-start;
+    }
+
+    .project-big-icon {
+        width: 62px;
+        height: 62px;
+        font-size: 2rem;
+    }
+
+    .project-title-area h1 {
+        font-size: 1.8rem;
+    }
+
+    .features-grid,
+    .specs-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .detail-box,
+    .download-station {
+        padding: 21px;
+    }
+
+    .download-buttons {
+        flex-direction: column;
+    }
+
+    .download-buttons .btn {
+        width: 100%;
+    }
+}
 
 /* این‌ها کلاس‌های کمکی برای بخش پنل ادمین هستند */
 .feature-header { display: flex; align-items: center; gap: 14px; margin-bottom: 16px; }
