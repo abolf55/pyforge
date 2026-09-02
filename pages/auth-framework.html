@@ -4,96 +4,82 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>User Authentication Framework | PyForge</title>
-    <link rel="stylesheet" href="../download-pages.css">
+    <!-- اتصال به فایل CSS مشترک اصلی -->
+    <link rel="stylesheet" href="../style.css">
 </head>
-<body class="project-detail-page">
+<body>
 
-    <!-- نوبار استاندارد -->
-    <header class="main-header">
-        <div class="header-container">
-            <a href="../index.html" class="brand-logo">Py<span>Forge</span></a>
-            <nav class="nav-links">
-                <a href="../index.html#projects" class="nav-link">همه پروژه‌ها</a>
-            </nav>
-        </div>
-    </header>
+    <div class="container">
+        <!-- هدر سایت -->
+        <nav>
+            <a href="../index.html" class="logo">
+                Py<span>Forge</span>
+            </a>
+            <a href="../index.html#projects" class="nav-link">همه پروژه‌ها</a>
+        </nav>
 
-    <main class="project-container">
+        <main>
+            <!-- بخش معرفی اصلی پروژه -->
+            <section class="page-hero">
+                <a href="../index.html#projects" class="back">← بازگشت به پروژه‌ها</a>
+                <h1 class="project-title">User Authentication Framework</h1>
+                <p class="lead">
+                    چارچوب ماژولار و امن برای مدیریت ثبت‌نام و ورود کاربران با رابط گرافیکی CustomTkinter و پایگاه داده SQLite 3.
+                </p>
+            </section>
 
-        <!-- بخش معرفی و هیرو -->
-        <section class="hero-minimal">
-            <a href="../index.html#projects" class="back-link">→ بازگشت به پروژه‌ها</a>
-            <h1 class="project-title">User Authentication Framework</h1>
-            <p class="project-subtitle">یک چارچوب امن، سبک و ماژولار برای ثبت‌نام، ورود و مدیریت سطوح دسترسی کاربران با رابط کاربری اختصاصی CustomTkinter و پایگاه داده SQLite.</p>
-        </section>
+            <!-- چیدمان دو ستونه صفحه جزئیات -->
+            <section class="project-layout">
+                
+                <!-- ستون اصلی (محتوا و توضیحات) -->
+                <div class="main-content" style="display: flex; flex-direction: column; gap: 22px;">
+                    
+                    <article class="content-box">
+                        <h2>توضیحات پروژه</h2>
+                        <p>
+                            این فریم‌ورک یک سیستم کامل برای احراز هویت و ثبت‌نام کاربران در برنامه‌های دسکتاپ پایتون است. با استفاده از این ساختار آماده، می‌توانید سیستم ورود و عضویت را در چند دقیقه به نرم‌افزارهای دسکتاپ خود اضافه کرده و داده‌های کاربری را با دیتابیس لوکال مدیریت کنید.
+                        </p>
+                        
+                        <h2>ویژگی‌های کلیدی پروژه</h2>
+                        <ul>
+                            <li><strong>احراز هویت دقیق:</strong> تطابق اعتبارنامه‌های کاربری با دیتابیس محلی.</li>
+                            <li><strong>پایگاه داده SQLite 3:</strong> ذخیره‌سازی بهینه داده‌های کاربری بدون نیاز به راه‌اندازی سرور مجزا.</li>
+                            <li><strong>رابط کاربری مدرن:</strong> پیاده‌سازی شده با CustomTkinter به همراه پشتیبانی از تم دارک.</li>
+                            <li><strong>کنترل خطاهای ورودی:</strong> بررسی صحت مقادیر فیلدها و جلوگیری از ثبت نام‌های کاربری تکراری.</li>
+                        </ul>
+                    </article>
 
-        <!-- کادر ۱: درباره پروژه و مشخصات فنی -->
-        <section class="content-box">
-            <h2 class="box-title">درباره پروژه</h2>
-            <p class="box-description">
-                این پروژه یک فریم‌ورک آماده برای احراز هویت کاربران در برنامه‌های دسکتاپ پایتون است. با استفاده از این سیستم می‌توانید بخش ثبت‌نام و ورود برنامه خود را بدون نیاز به کدنویسی مجدد، به پایگاه داده متصل کرده و داده‌های کاربران را مدیریت کنید.
-            </p>
-            <div class="specs-inline">
-                <span class="spec-tag">زبان توسعه: Python</span>
-                <span class="spec-tag">رابط کاربری: Tkinter / CustomTkinter</span>
-                <span class="spec-tag">پایگاه داده: SQLite 3</span>
-                <span class="spec-tag">نسخه: پایدار ۱.۰.۰</span>
-            </div>
-        </section>
+                    <!-- بخش دانلود سورس پروژه -->
+                    <article class="download">
+                        <h2>دریافت سورس کد پروژه</h2>
+                        <p>سورس کامل پایتون به همراه ساختار اولیه دیتابیس SQLite را دانلود کنید.</p>
+                        <a href="https://github.com/abolf55/pyforge/raw/main/user_login.rar" class="btn primary">
+                            📥 دانلود فایل سورس (RAR)
+                        </a>
+                    </article>
 
-        <!-- کادر ۲: قابلیت‌ها و ویژگی‌ها -->
-        <section class="content-box">
-            <h2 class="box-title">ویژگی‌های کلیدی</h2>
-            <ul class="features-list">
-                <li>احراز هویت دقیق نام کاربری و تطابق رمز عبور</li>
-                <li>پایگاه داده سبک محلی با SQLite3 بدون نیاز به نصب سرور خارجی</li>
-                <li>طراحی مدرن دسکتاپ با استفاده از فریم‌ورک CustomTkinter</li>
-                <li>کنترل خطاهای پیشرفته، بررسی فرمت ورودی‌ها و عدم ثبت نام کاربری تکراری</li>
-                <li>امکان گسترش و اتصال سریع به دیگر پروژه‌های نرم‌افزاری دسکتاپ</li>
-                <li>ساختار ماژولار و تفکیک شده برای توسعه راحت‌تر</li>
-            </ul>
-        </section>
-
-        <!-- کادر ۳: پنل مدیریت و اطلاعات تست -->
-        <section class="content-box">
-            <h2 class="box-title">بخش مدیریت و تست اولیه</h2>
-            <p class="box-description">
-                سیستم دارای بخش مدیریت داخلی برای بررسی لیست کاربران و وضعیت دسترسی‌ها است. اطلاعات تست پیش‌فرض:
-            </p>
-            
-            <div style="margin-top: 18px; display: grid; gap: 10px; background: rgba(5, 7, 14, 0.6); border: 1px solid rgba(255, 255, 255, 0.08); border-radius: 14px; padding: 16px 20px;">
-                <div style="display: flex; justify-content: space-between; align-items: center;">
-                    <span style="color: var(--download-muted); font-size: 0.95rem;">نام کاربری (Username):</span>
-                    <code>admin</code>
                 </div>
-                <div style="display: flex; justify-content: space-between; align-items: center;">
-                    <span style="color: var(--download-muted); font-size: 0.95rem;">رمز عبور (Password):</span>
-                    <code>admin123</code>
-                </div>
-            </div>
 
-            <div style="margin-top: 14px; padding: 12px 16px; border-radius: 12px; background: rgba(40, 217, 210, 0.06); border: 1px solid rgba(40, 217, 210, 0.2); color: var(--download-muted); font-size: 0.9rem;">
-                <strong style="color: var(--download-cyan);">نکته امنیتی:</strong> این مشخصات صرفاً برای تست آزمایشی است و در نسخه نهایی باید تغییر یابد.
-            </div>
-        </section>
-
-        <!-- کادر ۴: ایستگاه دانلود -->
-        <section class="content-box download-box">
-            <h2 class="box-title">ایستگاه دانلود سورس پروژه</h2>
-            <p class="download-guide">سورس کد کامل پایتون به همراه ساختار اولیه دیتابیس SQLite را دریافت نمایید.</p>
-            <div class="download-actions">
-                <a href="https://github.com/abolf55/pyforge/raw/main/user_login.rar" class="btn primary">
-                    دانلود فایل سورس (user_login.rar)
-                </a>
-            </div>
-        </section>
-
-    </main>
-
-    <!-- فوتر استاندارد -->
-    <footer class="main-footer">
-        <p>© 2026 PyForge. ساخته شده توسط Abolfazl Nikbakht</p>
-    </footer>
+                <!-- ستون کناری (اطلاعات فنی) -->
+                <aside class="info">
+                    <h3>اطلاعات فنی</h3>
+                    <p><strong>زبان توسعه:</strong> Python</p>
+                    <p><strong>رابط کاربری:</strong> CustomTkinter / Tkinter</p>
+                    <p><strong>پایگاه داده:</strong> SQLite 3</p>
+                    <p><strong>سطح امنیت:</strong> Local Verification</p>
+                    <p><strong>نسخه پایدار:</strong> 1.0.0</p>
+                    
+                    <div class="tags" style="margin-top: 15px;">
+                        <>
+                    <p><strong>رابط کاربری:</strong> CustomTkinter / Tkinter</p>
+                    <p><strong>پایگاه داده:</strong> SQLite 3</p>
+                    <p><strong>سطح امنیت:</strong> Local Verification</p>
+                    <p><strong>نسخه پایدار:</strong> 1.0.0</p>
+                    
+                    <div class="tags" style="margin-top: 15px;">
+                        <bakht</p>
+        </footer>
+    </div>
 
 </body>
 </html>
