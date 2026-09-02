@@ -3,87 +3,89 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Database Viewer - PyForge</title>
+    <title>Database Viewer | PyForge</title>
+    <!-- اتصال به همان فایل style.css که بقیه صفحات از آن استفاده می‌کنند -->
     <link rel="stylesheet" href="../style.css">
-    <link href="https://fonts.googleapis.com/css2?family=Vazirmatn:wght@300;400;600;700;900&display=swap" rel="stylesheet">
 </head>
 <body>
-    <header class="header">
-        <div class="container">
-            <a href="../index.html" class="logo">⚡ PyForge</a>
-            <nav class="nav">
-                <a href="../index.html">خانه</a>
-                <a href="../index.html#projects">پروژه‌ها</a>
-            </nav>
-        </div>
-    </header>
 
-    <main class="project-detail container">
-        <a href="../index.html#projects" class="back-link">← بازگشت به لیست پروژه‌ها</a>
+    <div class="container">
+        <!-- هدر سایت -->
+        <nav>
+            <a href="../index.html" class="logo">
+                Py<span>Forge</span>
+            </a>
+            <a href="../index.html#projects" class="nav-link">همه پروژه‌ها</a>
+        </nav>
 
-        <div class="project-hero">
-            <div class="hero-icon">🗄️</div>
-            <div class="hero-info">
-                <h1>نمایش‌دهنده دیتابیس (Database Viewer)</h1>
-                <p class="hero-subtitle">ابزار سبک و کاربردی پایتونی برای باز کردن، خواندن و مشاهده اطلاعات جداول دیتابیس.</p>
-            </div>
-        </div>
+        <main>
+            <!-- بخش معرفی اصلی پروژه -->
+            <section class="page-hero">
+                <a href="../index.html#projects" class="back">← بازگشت به پروژه‌ها</a>
+                <h1 class="project-title">نمایش‌دهنده دیتابیس (Database Viewer)</h1>
+                <p class="lead">
+                    ابزار سبک و کاربردی پایتونی برای باز کردن، خواندن و مشاهده اطلاعات جداول دیتابیس به صورت منظم و خوانا.
+                </p>
+            </section>
 
-        <div class="project-content-grid">
-            <!-- ستون اصلی: توضیحات و ویژگی‌ها -->
-            <div class="main-content">
-                <section class="section-card">
-                    <h2>درباره پروژه</h2>
-                    <p>
-                        این پروژه یک نرم‌افزار دسکتاپ توسعه‌داده‌شده با پایتون است که امکان اتصال به فایل‌های دیتابیس، خواندن داده‌ها و نمایش آن‌ها در قالبی منظم و خوانا را فراهم می‌کند. هدف از ساخت این برنامه، ساده‌سازی فرایند بازبینی اطلاعات و مدیریت آسان‌تر رکوردهای پایگاه داده بدون نیاز به نصب نرم‌افزارهای سنگین جانبی است.
-                    </p>
-                </section>
+            <!-- چیدمان دو ستونه صفحه جزئیات -->
+            <section class="project-layout">
+                
+                <!-- ستون اصلی (محتوا و توضیحات) -->
+                <div class="main-content" style="display: flex; flex-direction: column; gap: 22px;">
+                    
+                    <article class="content-box">
+                        <h2>توضیحات پروژه</h2>
+                        <p>
+                            این پروژه یک نرم‌افزار دسکتاپ توسعه‌داده‌شده با پایتون است که امکان اتصال به فایل‌های دیتابیس، خواندن داده‌ها و نمایش آن‌ها در قالبی منظم را فراهم می‌کند. هدف از ساخت این برنامه، ساده‌سازی فرایند بازبینی اطلاعات و مدیریت آسان‌تر رکوردهای پایگاه داده بدون نیاز به نصب نرم‌افزارهای سنگین است.
+                        </p>
+                        
+                        <h2>ویژگی‌های کلیدی پروژه</h2>
+                        <ul>
+                            <li>قابلیت انتخاب و باز کردن آسان فایل‌های پایگاه داده.</li>
+                            <li>خواندن خودکار ساختار جداول و واکشی سریع رکوردها.</li>
+                            <li>نمایش منظم و جدول‌بندی‌شده اطلاعات در محیط کاربری.</li>
+                            <li>طراحی مینیمال و بهینه برای مانیتورینگ سریع داده‌ها.</li>
+                        </ul>
+                    </article>
 
-                <section class="section-card">
-                    <h2>ویژگی‌های کلیدی</h2>
-                    <ul class="feature-list">
-                        <li>قابلیت انتخاب و باز کردن آسان فایل پایگاه داده</li>
-                        <li>خواندن خودکار ساختار جداول و واکشی رکوردها</li>
-                        <li>نمایش منظم و جدول‌بندی‌شده اطلاعات در محیط کاربری</li>
-                        <li>رابط کاربری ساده، سبک و سریع بدون مصرف منابع اضافه</li>
-                        <li>طراحی مینیمال و مناسب برای استفاده‌های آموزشی و مانیتورینگ سریع داده‌ها</li>
-                    </ul>
-                </section>
+                    <!-- بخش دانلود -->
+                    <article class="download">
+                        <h2>دریافت سورس پروژه</h2>
+                        <p>برای دریافت سورس کد یا فایل این پروژه، روی لینک زیر کلیک کنید:</p>
+                        <a href="../database-viewer.rar" class="btn primary">
+                            📥 دانلود سورس پروژه (RAR)
+                        </a>
+                    </article>
 
-                <section class="section-card download-section">
-                    <h2>دریافت پروژه</h2>
-                    <p>برای دریافت سورس کد یا فایل این پروژه، روی لینک زیر کلیک کنید:</p>
-                    <a class="btn primary" href="../database-viewer.rar" download>
-                        📦 دانلود سورس پروژه
-                    </a>
-                </section>
-            </div>
-
-            <!-- ستون کناری: مشخصات فنی و تگ‌ها -->
-            <aside class="sidebar">
-                <div class="section-card">
-                    <h3>اطلاعات فنی</h3>
-                    <ul class="tech-specs">
-                        <li><strong>زبان:</strong> Python</li>
-                        <li><strong>پایگاه داده:</strong> SQLite / Database Engine</li>
-                        <li><strong>رابط کاربری:</strong> GUI Desktop</li>
-                        <li><strong>پیش‌نیازها:</strong> Python 3.x</li>
-                        <li><strong>وضعیت:</strong> سورس باز (Open Source)</li>
-                    </ul>
                 </div>
 
-                <div class="section-card">
-                    <h3>تگ‌ها</h3>
-                    <div class="tags">
+                <!-- ستون کناری (اطلاعات فنی) -->
+                <aside class="info">
+                    <h3>اطلاعات فنی</h3>
+                    <p><strong>زبان توسعه:</strong> Python</p>
+                    <p><strong>پایگاه داده:</strong> SQLite</p>
+                    <p><strong>رابط کاربری:</strong> GUI Desktop</p>
+                    <p><strong>وضعیت:</strong> سورس باز (Open Source)</p>
+                    <p><strong>پیش‌نیازها:</strong> Python 3.x</p>
+                    
+                    <div class="tags" style="margin-top: 15px;">
                         <span class="tag">Python</span>
                         <span class="tag">Database</span>
                         <span class="tag">SQLite</span>
                         <span class="tag">GUI</span>
                         <span class="tag">Viewer</span>
                     </div>
-                </div>
-            </aside>
-        </div>
-    </main>
+                </aside>
+
+            </section>
+        </main>
+
+        <!-- فوتر سایت -->
+        <footer>
+            <p>© 2026 PyForge. ساخته شده توسط Abolfazl Nikbakht</p>
+        </footer>
+    </div>
+
 </body>
 </html>
